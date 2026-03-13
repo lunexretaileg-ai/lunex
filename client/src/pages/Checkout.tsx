@@ -1,13 +1,30 @@
 import { useState } from "react";
 import { useCart } from "@/store/use-cart";
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
 import Cards from "react-credit-cards-2";
 import "react-credit-cards-2/dist/es/styles-compiled.css";
+import { useToast } from "@/hooks/use-toast";
+import { CheckCircle2, CreditCard, Smartphone, Banknote } from "lucide-react";
 
 export default function CheckoutPage() {
-  const { items } = useCart();
-  const [paymentMethod, setPaymentMethod] = useState<"card" | "wallet">("card");
+  const { items, clearCart } = useCart();
+  const [, setLocation] = useLocation();
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [orderComplete, setOrderComplete] = useState(false);
+  const [paymentMethod, setPaymentMethod] = useState<"card" | "wallet" | "cod">("cod");
   const [selectedWallet, setSelectedWallet] = useState<"Vodafone" | "Orange" | "Etisalat" | "WE">("Vodafone");
+  
+  // Form State
+  const [formData, setFormData] = useState({
+    customerName: "",
+    customerEmail: "",
+    customerPhone: "",
+    governorate: "Cairo",
+    city: "",
+    address: "",
+  });
+
   const [cardData, setCardData] = useState({
     number: "",
     name: "",
@@ -21,6 +38,11 @@ export default function CheckoutPage() {
     setCardData((prev) => ({ ...prev, [name]: value }));
   };
 
+  const handleFormChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
   const handleInputFocus = (e: React.FocusEvent<HTMLInputElement>) => {
     setCardData((prev) => ({ ...prev, focus: e.target.name }));
   };
@@ -29,9 +51,74 @@ export default function CheckoutPage() {
     (total, item) => total + item.price * item.quantity,
     0,
   );
+  
+  const totalQuantity = items.reduce((total, item) => total + item.quantity, 0);
 
-  const delivery = subtotal > 1000 ? 0 : 80;
-  const total = subtotal + delivery;
+  // Dynamic Shipping Logic
+  let delivery = 400; // Default (was 80, changed to 300-400 per user request)
+  let deliveryTime = "1-2 days";
+  
+  if (formData.governorate === "Cairo" || formData.governorate === "Giza") {
+    delivery = 300;
+    deliveryTime = "1-2 days";
+  } else if (formData.governorate === "Alexandria") {
+    delivery = 350;
+    deliveryTime = "2-3 days";
+  } else {
+    delivery = 400;
+    deliveryTime = "3-5 days";
+  }
+
+  // Wholesale Logic
+  const isWholesale = totalQuantity >= 10;
+  const wholesaleDiscount = isWholesale ? Math.round(subtotal * 0.15) : 0; // 15% discount
+  
+  const total = subtotal - wholesaleDiscount + delivery;
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    
+    try {
+      // POST to our new backend route
+      const res = await fetch("/api/orders", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          ...formData, // name, email, phone, gov, city, address
+          subtotal,
+          shippingFee: delivery,
+          discount: wholesaleDiscount,
+          totalAmount: total,
+          paymentMethod,
+          paymentWallet: paymentMethod === "wallet" ? selectedWallet : null,
+          items: items.map(item => ({
+            productVariantId: item.variantId,
+            quantity: item.quantity,
+            unitPrice: item.price,
+            subtotal: item.price * item.quantity,
+          }))
+        })
+      });
+
+      if (!res.ok) throw new Error("Failed to place order");
+
+      setOrderComplete(true);
+      clearCart();
+      toast({
+        title: "Order Placed Successfully",
+        description: "Thank you for your purchase. Your order is being processed.",
+      });
+    } catch (error) {
+      toast({
+        variant: "destructive",
+        title: "Order Failed",
+        description: "There was an error processing your checkout. Please try again.",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <div className="min-h-screen bg-background pt-16 pb-24">
@@ -60,8 +147,21 @@ export default function CheckoutPage() {
               </button>
             </Link>
           </div>
+        ) : orderComplete ? (
+          <div className="bg-surface rounded-[2rem] border border-border/60 py-20 px-6 text-center animate-in fade-in duration-500">
+            <CheckCircle2 className="w-16 h-16 text-primary mx-auto mb-4" />
+            <p className="text-2xl font-bold mb-2">Order Confirmed!</p>
+            <p className="text-muted-foreground mb-8 max-w-md mx-auto">
+              Thank you for choosing Lunex. We have received your order and will begin processing it right away.
+            </p>
+            <Link href="/shop">
+              <button className="px-8 py-3 rounded-full bg-foreground text-background font-semibold hover:opacity-90 transition">
+                Continue Shopping
+              </button>
+            </Link>
+          </div>
         ) : (
-          <div className="grid md:grid-cols-[minmax(0,2fr)_minmax(0,1.4fr)] gap-10 items-start">
+          <form className="grid md:grid-cols-[minmax(0,2fr)_minmax(0,1.4fr)] gap-10 items-start" onSubmit={handleSubmit}>
             {/* Left: Form steps (simplified multi-step in one screen) */}
             <section className="space-y-8">
               {/* Customer info */}
@@ -73,6 +173,10 @@ export default function CheckoutPage() {
                       Full name
                     </label>
                     <input
+                      name="customerName"
+                      value={formData.customerName}
+                      onChange={handleFormChange}
+                      required
                       className="w-full rounded-xl border border-border bg-background px-3 py-2 text-sm"
                       placeholder="Your full name"
                     />
@@ -83,6 +187,10 @@ export default function CheckoutPage() {
                     </label>
                     <input
                       type="email"
+                      name="customerEmail"
+                      value={formData.customerEmail}
+                      onChange={handleFormChange}
+                      required
                       className="w-full rounded-xl border border-border bg-background px-3 py-2 text-sm"
                       placeholder="you@example.com"
                     />
@@ -92,6 +200,11 @@ export default function CheckoutPage() {
                       Phone (Egypt)
                     </label>
                     <input
+                      type="tel"
+                      name="customerPhone"
+                      value={formData.customerPhone}
+                      onChange={handleFormChange}
+                      required
                       className="w-full rounded-xl border border-border bg-background px-3 py-2 text-sm"
                       placeholder="0100 000 0000"
                     />
@@ -107,11 +220,16 @@ export default function CheckoutPage() {
                     <label className="block text-xs font-medium text-muted-foreground mb-1">
                       Governorate
                     </label>
-                    <select className="w-full rounded-xl border border-border bg-background px-3 py-2 text-sm">
-                      <option>Cairo</option>
-                      <option>Giza</option>
-                      <option>Alexandria</option>
-                      <option>Other</option>
+                    <select 
+                      name="governorate"
+                      value={formData.governorate}
+                      onChange={handleFormChange}
+                      className="w-full rounded-xl border border-border bg-background px-3 py-2 text-sm"
+                    >
+                      <option value="Cairo">Cairo</option>
+                      <option value="Giza">Giza</option>
+                      <option value="Alexandria">Alexandria</option>
+                      <option value="Other">Other</option>
                     </select>
                   </div>
                   <div>
@@ -119,6 +237,10 @@ export default function CheckoutPage() {
                       City / Area
                     </label>
                     <input
+                      name="city"
+                      value={formData.city}
+                      onChange={handleFormChange}
+                      required
                       className="w-full rounded-xl border border-border bg-background px-3 py-2 text-sm"
                       placeholder="Nasr City, Maadi, etc."
                     />
@@ -128,6 +250,10 @@ export default function CheckoutPage() {
                       Full address
                     </label>
                     <input
+                      name="address"
+                      value={formData.address}
+                      onChange={handleFormChange}
+                      required
                       className="w-full rounded-xl border border-border bg-background px-3 py-2 text-sm"
                       placeholder="Street, building, floor, apartment"
                     />
@@ -140,6 +266,20 @@ export default function CheckoutPage() {
                 <h2 className="text-lg font-semibold">Payment method</h2>
                 <div className="grid md:grid-cols-2 gap-4 mb-4">
                   <button
+                    type="button"
+                    onClick={() => setPaymentMethod("cod")}
+                    className={`p-4 rounded-xl border flex flex-col items-center justify-center gap-2 transition ${
+                      paymentMethod === "cod"
+                        ? "border-primary bg-primary/5 text-primary"
+                        : "border-border text-muted-foreground hover:bg-muted/50"
+                    }`}
+                  >
+                    <Banknote className="w-6 h-6" />
+                    <span className="font-medium">Cash on Delivery</span>
+                  </button>
+
+                  <button
+                    type="button"
                     onClick={() => setPaymentMethod("card")}
                     className={`p-4 rounded-xl border flex flex-col items-center justify-center gap-2 transition ${
                       paymentMethod === "card"
@@ -147,49 +287,24 @@ export default function CheckoutPage() {
                         : "border-border text-muted-foreground hover:bg-muted/50"
                     }`}
                   >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    >
-                      <rect width="20" height="14" x="2" y="5" rx="2" />
-                      <line x1="2" x2="22" y1="10" y2="10" />
-                    </svg>
+                    <CreditCard className="w-6 h-6" />
                     <span className="font-medium">Credit / Debit Card</span>
                   </button>
 
                   <button
+                    type="button"
                     onClick={() => {
                         setPaymentMethod("wallet");
                         if (!selectedWallet) setSelectedWallet("Vodafone");
                     }}
-                    className={`p-4 rounded-xl border flex flex-col items-center justify-center gap-2 transition ${
+                    className={`p-4 rounded-xl border flex flex-col items-center justify-center gap-2 transition md:col-span-2 sm:col-span-1 ${
                       paymentMethod === "wallet"
                         ? "border-primary bg-primary/5 text-primary"
                         : "border-border text-muted-foreground hover:bg-muted/50"
                     }`}
                   >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    >
-                      <rect x="5" y="2" width="14" height="20" rx="2" ry="2" />
-                      <line x1="12" x2="12.01" y1="18" y2="18" />
-                    </svg>
-                    <span className="font-medium">Mobile Wallet Virtual Card</span>
+                    <Smartphone className="w-6 h-6" />
+                    <span className="font-medium">Mobile Wallet</span>
                   </button>
                 </div>
 
@@ -390,32 +505,43 @@ export default function CheckoutPage() {
                   <span className="text-muted-foreground">Subtotal</span>
                   <span>EGP {subtotal.toLocaleString()}</span>
                 </div>
+                
+                {isWholesale && (
+                  <div className="flex justify-between text-[hsl(var(--success))] font-medium">
+                    <span>Wholesale Discount (15%)</span>
+                    <span>- EGP {wholesaleDiscount.toLocaleString()}</span>
+                  </div>
+                )}
+                
                 <div className="flex justify-between">
-                  <span className="text-muted-foreground">
-                    Estimated delivery
-                  </span>
+                  <div className="flex flex-col">
+                    <span className="text-muted-foreground">Shipping ({formData.governorate})</span>
+                    <span className="text-[10px] text-muted-foreground opacity-70">Estimated: {deliveryTime}</span>
+                  </div>
                   <span>
-                    {delivery === 0
-                      ? "Free (orders above 1,000 EGP)"
-                      : `EGP ${delivery.toLocaleString()}`}
+                    EGP {delivery.toLocaleString()}
                   </span>
                 </div>
+                
                 <div className="flex justify-between text-base font-semibold pt-2">
                   <span>Total</span>
                   <span>EGP {total.toLocaleString()}</span>
                 </div>
               </div>
 
-              <button className="mt-4 w-full py-3 rounded-full bg-foreground text-background font-semibold hover:opacity-90 hover:scale-[1.01] transition">
-                Place order (demo)
+              <button 
+                type="submit" 
+                disabled={isSubmitting}
+                className="mt-4 w-full py-3 rounded-full bg-foreground text-background font-semibold hover:opacity-90 hover:scale-[1.01] transition disabled:opacity-70 disabled:pointer-events-none"
+              >
+                {isSubmitting ? "Processing..." : "Confirm Order"}
               </button>
               <p className="text-[11px] text-muted-foreground text-center mt-2">
                 This is a demo checkout. In production, your order and payment
-                would be processed securely through Lunex servers and payment
-                gateway.
+                would be processed securely through Lunex servers and payment gateway.
               </p>
             </aside>
-          </div>
+          </form>
         )}
       </div>
     </div>

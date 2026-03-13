@@ -4,7 +4,7 @@ import { storage } from "./storage";
 import { api } from "@shared/routes";
 import { z } from "zod";
 import { db } from "./db";
-import { products, productVariants, wishlist } from "@shared/schema";
+import { products, productVariants, wishlist, orders, orderItems } from "@shared/schema";
 import { eq, and } from "drizzle-orm";
 
 export async function registerRoutes(
@@ -105,15 +105,77 @@ export async function registerRoutes(
       res.status(500).json({ message: "Failed to remove from wishlist" });
     }
   });
+  // Orders endpoints
+  app.post("/api/orders", async (req, res) => {
+    try {
+      const orderData = req.body;
+      // In a production app, we would validate orderData with Zod schema here
+      // For now, assume it exactly matches InsertOrder type + an items array
+
+      const result = await db.transaction(async (tx) => {
+        // 1. Insert Order
+        const [newOrder] = await tx
+          .insert(orders)
+          .values({
+            customerName: orderData.customerName,
+            customerEmail: orderData.customerEmail,
+            customerPhone: orderData.customerPhone,
+            governorate: orderData.governorate,
+            city: orderData.city,
+            address: orderData.address,
+            subtotal: orderData.subtotal,
+            shippingFee: orderData.shippingFee,
+            discount: orderData.discount,
+            totalAmount: orderData.totalAmount,
+            paymentMethod: orderData.paymentMethod,
+            paymentWallet: orderData.paymentWallet,
+            status: "pending",
+          })
+          .returning();
+
+        // 2. Insert Order Items
+        if (orderData.items && orderData.items.length > 0) {
+          const itemsToInsert = orderData.items.map((item: any) => ({
+            orderId: newOrder.id,
+            productVariantId: item.productVariantId,
+            quantity: item.quantity,
+            unitPrice: item.unitPrice,
+            subtotal: item.subtotal,
+          }));
+          await tx.insert(orderItems).values(itemsToInsert);
+          
+          // Optional: Decrement stock here in a real app
+        }
+
+        return newOrder;
+      });
+
+      res.status(201).json(result);
+    } catch (error) {
+      console.error("Failed to create order", error);
+      res.status(500).json({ message: "Failed to create order" });
+    }
+  });
+
   // Admin API - Orders
   app.get("/api/admin/orders", async (req, res) => {
     // In a production app, we would verify the user is actually an admin via session/token
-    const userId = req.headers["x-user-id"];
-    // if (!userId) return res.status(401).json({ message: "Unauthorized" });
-
     try {
-      const { orders } = await import("@shared/schema");
-      const allOrders = await db.select().from(orders).orderBy(orders.id);
+      // Use Drizzle Relational Queries for deep fetching
+      const allOrders = await db.query.orders.findMany({
+        with: {
+          items: {
+            with: {
+              productVariant: {
+                with: {
+                  product: true
+                }
+              }
+            }
+          }
+        },
+        orderBy: (orders, { desc }) => [desc(orders.createdAt)],
+      });
       res.json(allOrders);
     } catch (error) {
       console.error("Failed to fetch admin orders", error);

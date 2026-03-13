@@ -81,10 +81,26 @@ export const orders = pgTable("orders", {
   id: serial("id").primaryKey(),
   userId: integer("user_id").references(() => users.id),
   status: text("status").notNull().default("pending"), // pending, processing, shipped, delivered, cancelled
+  
+  // Storing these directly so guest checkout works perfectly
+  customerName: text("customer_name").notNull(),
+  customerEmail: text("customer_email").notNull(),
+  customerPhone: text("customer_phone").notNull(),
+  
+  // Shipping details split out
+  governorate: text("governorate").notNull(),
+  city: text("city").notNull(),
+  address: text("address").notNull(),
+  
+  // Order financials
+  subtotal: integer("subtotal").notNull(),
+  shippingFee: integer("shipping_fee").notNull(),
+  discount: integer("discount").notNull().default(0),
   totalAmount: integer("total_amount").notNull(),
-  shippingAddress: text("shipping_address").notNull(), // stored as JSON string for simplicity
-  paymentMethod: text("payment_method").notNull(),
-  deliveryOption: text("delivery_option").notNull(),
+  
+  paymentMethod: text("payment_method").notNull(), 
+  paymentWallet: text("payment_wallet"), // if applicable (Vodafone, Orange, etc)
+  
   createdAt: timestamp("created_at").defaultNow(),
 });
 
@@ -123,6 +139,14 @@ export const orderItemsRelations = relations(orderItems, ({ one }) => ({
   order: one(orders, { fields: [orderItems.orderId], references: [orders.id] }),
   productVariant: one(productVariants, { fields: [orderItems.productVariantId], references: [productVariants.id] }),
 }));
+
+export const insertOrderSchema = createInsertSchema(orders).omit({ id: true, createdAt: true });
+export type Order = typeof orders.$inferSelect;
+export type InsertOrder = z.infer<typeof insertOrderSchema>;
+
+export const insertOrderItemSchema = createInsertSchema(orderItems).omit({ id: true });
+export type OrderItem = typeof orderItems.$inferSelect;
+export type InsertOrderItem = z.infer<typeof insertOrderItemSchema>;
 
 export const reviews = pgTable("reviews", {
   id: serial("id").primaryKey(),

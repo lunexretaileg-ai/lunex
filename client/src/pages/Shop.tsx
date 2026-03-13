@@ -3,8 +3,10 @@ import { useLocation, useSearch } from "wouter";
 import { useProducts } from "@/hooks/use-products";
 import { ProductCard } from "@/components/ProductCard";
 import { Filter, SlidersHorizontal, Search } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 export default function Shop() {
+  const { t } = useTranslation();
   const searchString = useSearch();
   const searchParams = new URLSearchParams(searchString);
   const initialCategory = searchParams.get('category') || '';
@@ -25,11 +27,11 @@ export default function Shop() {
   }, [searchString]);
 
   const categories = [
-    { id: '', name: 'All Devices' },
-    { id: 'iphone', name: 'iPhone' },
-    { id: 'mac', name: 'Mac' },
-    { id: 'ipad', name: 'iPad' },
-    { id: 'watch', name: 'Watch' },
+    { id: '', name: t('shop.allDevices', 'All Devices') },
+    { id: 'iphone', name: t('nav.iphone', 'iPhone') },
+    { id: 'mac', name: t('nav.mac', 'Mac') },
+    { id: 'ipad', name: t('nav.ipad', 'iPad') },
+    { id: 'watch', name: t('nav.watch', 'Watch') },
   ];
 
   return (
@@ -39,10 +41,12 @@ export default function Shop() {
         {/* Header */}
         <div className="mb-12">
           <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-4 capitalize">
-            {category ? category : 'All Devices'}
+            {category && category !== '' 
+              ? t(`nav.${category}`, categories.find(c => c.id === category)?.name || category) 
+              : t('shop.allDevices', 'All Devices')}
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl">
-            Explore our curated selection of fully tested, premium Apple devices. Use the filters to find the perfect match for your needs and budget.
+            {t('shop.description', 'Explore our curated selection of fully tested, premium Apple devices. Use the filters to find the perfect match for your needs and budget.')}
           </p>
         </div>
 
@@ -51,16 +55,16 @@ export default function Shop() {
           {/* Mobile Filter Toggle */}
           <div className="md:hidden flex items-center gap-2 mb-4 border-b border-border pb-4">
             <button className="flex items-center gap-2 text-sm font-medium px-4 py-2 bg-surface rounded-full">
-              <SlidersHorizontal className="w-4 h-4" /> Filters
+              <SlidersHorizontal className="w-4 h-4" /> {t('shop.filters', 'Filters')}
             </button>
           </div>
 
           {/* Sidebar Filters */}
-          <div className="hidden md:block w-64 flex-shrink-0 space-y-10 pr-8 border-r border-border">
+          <div className="hidden md:block w-64 flex-shrink-0 space-y-10 ltr:pr-8 rtl:pl-8 border-r rtl:border-r-0 rtl:border-l border-border opacity-100">
             
             {/* Category Filter */}
             <div>
-              <h3 className="font-bold mb-4 text-sm tracking-wider uppercase text-muted-foreground">Category</h3>
+              <h3 className="font-bold mb-4 text-sm tracking-wider uppercase text-muted-foreground">{t('shop.category', 'Category')}</h3>
               <div className="space-y-3">
                 {categories.map((c) => (
                   <label key={c.id} className="flex items-center gap-3 cursor-pointer group">
@@ -82,8 +86,8 @@ export default function Shop() {
             {/* Condition Filter */}
             <div>
               <h3 className="font-bold mb-4 text-sm tracking-wider uppercase text-muted-foreground flex justify-between">
-                Min Condition 
-                <span className="text-primary">{minCondition}/10</span>
+                {t('shop.minCondition', 'Min Condition')}
+                <span className="text-primary ltr:ml-auto rtl:mr-auto pl-2 pr-2">{minCondition}/10</span>
               </h3>
               <input 
                 type="range" 
@@ -95,19 +99,19 @@ export default function Shop() {
                 className="w-full h-2 bg-secondary rounded-lg appearance-none cursor-pointer accent-primary"
               />
               <div className="flex justify-between text-xs text-muted-foreground mt-2">
-                <span>Good (7)</span>
-                <span>Pristine (10)</span>
+                <span>{t('shop.good', 'Good')} (7)</span>
+                <span>{t('shop.pristine', 'Pristine')} (10)</span>
               </div>
             </div>
 
             {/* Device Type Filter */}
             <div>
-              <h3 className="font-bold mb-4 text-sm tracking-wider uppercase text-muted-foreground">Type</h3>
+              <h3 className="font-bold mb-4 text-sm tracking-wider uppercase text-muted-foreground">{t('shop.type', 'Type')}</h3>
               <div className="space-y-3">
                 {[
-                  { id: '', name: 'Any' },
-                  { id: 'refurbished', name: 'Refurbished' },
-                  { id: 'assembled', name: 'Assembled' },
+                  { id: '', name: t('shop.any', 'Any') },
+                  { id: 'refurbished', name: t('shop.refurbished', 'Refurbished') },
+                  { id: 'assembled', name: t('shop.assembled', 'Assembled') },
                 ].map((t) => (
                   <label key={t.id} className="flex items-center gap-3 cursor-pointer group">
                     <input 
@@ -137,12 +141,12 @@ export default function Shop() {
               </div>
             ) : error ? (
               <div className="text-center py-20 bg-surface rounded-[2rem]">
-                <p className="text-destructive font-semibold">Failed to load products.</p>
+                <p className="text-destructive font-semibold">{t('shop.failedLoad', 'Failed to load products.')}</p>
               </div>
             ) : products && products.length > 0 ? (
               <>
                 <div className="flex justify-between items-center mb-6">
-                  <p className="text-sm text-muted-foreground">Showing {products.length} results</p>
+                  <p className="text-sm text-muted-foreground">{t('shop.showingResults', 'Showing {{count}} results', { count: products.length })}</p>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                   {products.map((product) => (
@@ -153,15 +157,15 @@ export default function Shop() {
             ) : (
               <div className="text-center py-32 bg-surface rounded-[2rem] border border-border/50">
                 <Search className="w-12 h-12 text-muted-foreground mx-auto mb-4 opacity-50" />
-                <h3 className="text-xl font-bold mb-2">No products found</h3>
+                <h3 className="text-xl font-bold mb-2">{t('shop.noProducts', 'No products found')}</h3>
                 <p className="text-muted-foreground max-w-sm mx-auto mb-6">
-                  We couldn't find any devices matching your current filters.
+                  {t('shop.noProductsDesc', "We couldn't find any devices matching your current filters.")}
                 </p>
                 <button 
                   onClick={() => { setCategory(''); setMinCondition(7); setDeviceType(''); }}
                   className="px-6 py-2 bg-foreground text-background font-medium rounded-full"
                 >
-                  Clear Filters
+                  {t('shop.clearFilters', 'Clear Filters')}
                 </button>
               </div>
             )}

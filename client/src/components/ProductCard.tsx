@@ -5,8 +5,21 @@ import { useAuth } from "@/hooks/use-auth";
 import { useWishlist } from "@/hooks/use-wishlist";
 import { cn } from "@/lib/utils";
 
+// Using Omit and intersection to handle the serialized Date and decimals from the API
+import type { ProductVariant } from "@shared/schema";
+
+export interface SerializedProductVariant extends Omit<ProductVariant, 'lunexPrice' | 'marketPrice'> {
+  lunexPrice: string | number;
+  marketPrice: string | number;
+}
+
+export interface SerializedProductWithVariants extends Omit<ProductWithVariants, 'createdAt' | 'variants'> {
+  createdAt: string | Date | null;
+  variants: SerializedProductVariant[];
+}
+
 interface ProductCardProps {
-  product: ProductWithVariants;
+  product: SerializedProductWithVariants;
 }
 
 export function ProductCard({ product }: ProductCardProps) {

@@ -1,0 +1,83 @@
+{
+  "nav": {
+    "iphone": "iPhone",
+    "mac": "Mac",
+    "ipad": "iPad",
+    "watch": "Watch",
+    "airpods": "AirPods",
+    "accessories": "Accessories"
+  },
+  "header": {
+    "searchPlaceholder": "Search devices...",
+    "shop": "Shop",
+    "build": "Build",
+    "compare": "Compare",
+    "admin": "Admin",
+    "logout": "Logout",
+    "login": "Sign In"
+  },
+  "cart": {
+    "title": "Your Bag",
+    "total": "Total",
+    "checkout": "Checkout"
+  },
+  "home": {
+    "heroTitle": "Full power.",
+    "heroSubtitle": "Refurbished right.",
+    "heroDesc": "Premium Apple devices professionally tested, guaranteed, and priced up to 40% less than retail in Egypt.",
+    "shopAll": "Shop All Devices",
+    "learnMore": "How Lunex Works",
+    "trust1Title": "Professionally Tested",
+    "trust1Desc": "Every device undergoes a strict 40-point inspection before it reaches you.",
+    "trust2Title": "Unbeatable Value",
+    "trust2Desc": "Save up to 40% compared to brand new retail prices in Egypt.",
+    "trust3Title": "Warranty Included",
+    "trust3Desc": "Buy with confidence with our standard 3-6 month hardware warranty.",
+    "featuredTitle": "Pristine Condition.",
+    "featuredDesc": "Our highest graded devices, ready to ship.",
+    "viewAll": "View all",
+    "shopByCategory": "Shop by Category",
+    "explore": "Explore"
+  },
+  "shop": {
+    "allDevices": "All Devices",
+    "description": "Explore our curated selection of fully tested, premium Apple devices. Use the filters to find the perfect match for your needs and budget.",
+    "filters": "Filters",
+    "category": "Category",
+    "minCondition": "Min Condition",
+    "good": "Good",
+    "pristine": "Pristine",
+    "type": "Type",
+    "any": "Any",
+    "refurbished": "Refurbished",
+    "assembled": "Assembled",
+    "showingResults": "Showing {{count}} results",
+    "failedLoad": "Failed to load products.",
+    "noProducts": "No products found",
+    "clearFilters": "Clear Filters"
+  },
+  "product": {
+    "notFound": "Product Not Found",
+    "shop": "Shop",
+    "refurbished": "Refurbished",
+    "assembled": "Assembled",
+    "save": "Save {{discount}}%",
+    "marketPrice": "Market Price",
+    "freeShipping": "Free Shipping",
+    "storage": "Storage.",
+    "howMuchSpace": "How much space do you need?",
+    "color": "Color.",
+    "pickFavorite": "Pick your favorite.",
+    "condition": "Device Condition",
+    "pristineCondition": "Pristine - Like New",
+    "batteryHealth": "Battery Health",
+    "originalBattery": "Original Superior Battery",
+    "addToCart": "Add to Cart",
+    "outOfStock": "Out of Stock",
+    "shippingDesc": "Fast shipping to all governorates within 24-48 hours.",
+    "warrantyDesc": "Certified with 30-day free replacement and 6-month warranty.",
+    "reviews": "Customer Reviews",
+    "verifiedBuyer": "Verified Buyer",
+    "noReviews": "No reviews for this product yet. Be the first to review!"
+  }
+}
