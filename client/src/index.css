@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    
+    /* Apple-style minimalist light theme */
+    --background: 0 0% 100%;
+    --surface: 240 5% 96%; /* #F5F5F7 */
+    --foreground: 240 5% 11%; /* #1D1D1F */
+    
+    --card: 0 0% 100%;
+    --card-foreground: 240 5% 11%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 5% 11%;
+    
+    --primary: 210 100% 45%; /* #0071E3 Apple Blue */
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 240 5% 96%;
+    --secondary-foreground: 240 5% 11%;
+    
+    --muted: 240 5% 96%;
+    --muted-foreground: 240 4% 46%; /* #6E6E73 */
+    
+    --accent: 210 100% 45%;
+    --accent-foreground: 0 0% 100%;
+    
+    --destructive: 0 84% 60%; /* #FF3B30 */
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 135 59% 49%; /* #34C759 */
+    --warning: 35 100% 50%; /* #FF9500 */
+    
+    --border: 240 6% 90%;
+    --input: 240 6% 90%;
+    --ring: 210 100% 45%;
+    
+    --radius: 1rem;
+  }
+
+  .dark {
+    /* Apple-style minimalist dark theme */
+    --background: 0 0% 0%;
+    --surface: 240 4% 11%; /* #1C1C1E */
+    --foreground: 0 0% 98%;
+    
+    --card: 240 4% 11%;
+    --card-foreground: 0 0% 98%;
+    
+    --popover: 240 4% 11%;
+    --popover-foreground: 0 0% 98%;
+    
+    --primary: 210 100% 55%; /* Lighter blue for dark mode */
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 240 4% 16%;
+    --secondary-foreground: 0 0% 98%;
+    
+    --muted: 240 4% 16%;
+    --muted-foreground: 240 5% 65%;
+    
+    --accent: 210 100% 55%;
+    --accent-foreground: 0 0% 100%;
+    
+    --destructive: 0 84% 65%;
+    --destructive-foreground: 0 0% 98%;
+    
+    --success: 135 59% 45%;
+    --warning: 35 100% 50%;
+    
+    --border: 240 4% 20%;
+    --input: 240 4% 20%;
+    --ring: 210 100% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased selection:bg-primary/20 selection:text-primary;
+    font-family: var(--font-sans);
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply tracking-tight;
+  }
+}
+
+@layer utilities {
+  .glass-panel {
+    @apply bg-background/80 backdrop-blur-xl border-b border-border/50 supports-[backdrop-filter]:bg-background/60;
+  }
+  .surface-panel {
+    @apply bg-[hsl(var(--surface))] rounded-3xl;
+  }
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-foreground to-foreground/60;
+  }
+  .hover-scale {
+    @apply transition-transform duration-300 ease-out hover:scale-[1.02];
+  }
+}
