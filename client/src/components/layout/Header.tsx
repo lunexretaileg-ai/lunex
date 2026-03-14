@@ -1,7 +1,9 @@
 import { Link, useLocation } from "wouter";
-import { Search, ShoppingBag, Menu, X, ArrowRight, User, Globe } from "lucide-react";
+import { Search, ShoppingBag, Menu, X, ArrowRight, User, Globe, Heart } from "lucide-react";
 import { useState, useEffect } from "react";
 import { useCart } from "@/store/use-cart";
+import { useWishlist } from "@/hooks/use-wishlist";
+import { useWishlistDrawer } from "@/store/use-wishlist-drawer";
 import { AnimatePresence, motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 
@@ -11,6 +13,8 @@ export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const { toggleCart, items } = useCart();
+  const { wishlistItems } = useWishlist();
+  const { toggleWishlist } = useWishlistDrawer();
   const { t, i18n } = useTranslation();
   
   const toggleLanguage = () => {
@@ -36,12 +40,13 @@ export function Header() {
   }, []);
 
   const navLinks = [
-    { name: t('nav.mac', 'Mac'), href: "/mac" },
-    { name: t('nav.ipad', 'iPad'), href: "/ipad" },
-    { name: t('nav.iphone', 'iPhone'), href: "/iphone" },
-    { name: t('nav.watch', 'Watch'), href: "/watch" },
+    { name: t('header.shop', 'Shop'), href: "/shop" },
+    { name: t('nav.iphone', 'iPhone'), href: "/shop?category=iphone" },
+    { name: t('nav.mac', 'Mac'),    href: "/shop?category=mac" },
+    { name: t('nav.ipad', 'iPad'),  href: "/shop?category=ipad" },
+    { name: t('nav.watch', 'Watch'), href: "/shop?category=watch" },
+    { name: t('nav.airpods', 'AirPods'), href: "/shop?category=airpods" },
     { name: t('header.compare', 'Compare'), href: "/compare" },
-    { name: t('header.build', 'Build Device'), href: "/build" },
   ];
 
   return (
@@ -54,13 +59,14 @@ export function Header() {
         </Link>
       </div>
 
-      <header 
+      <header
         className={`sticky top-0 z-40 w-full transition-all duration-300 ${
           isScrolled ? "glass-panel" : "bg-background"
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
+          {/* Use relative so the nav can be absolutely centered */}
+          <div className="relative flex items-center justify-between h-16">
             {/* Mobile menu button */}
             <div className="flex items-center md:hidden">
               <button
@@ -71,20 +77,20 @@ export function Header() {
               </button>
             </div>
 
-            {/* Logo */}
-            <div className="flex-shrink-0">
+            {/* Logo — left */}
+            <div className="flex-shrink-0 z-10">
               <Link href="/" className="text-xl font-bold tracking-tighter text-foreground hover:opacity-80 transition-opacity">
                 LUNEX.
               </Link>
             </div>
 
-            {/* Desktop Navigation */}
-            <nav className="hidden md:flex space-x-8">
+            {/* Desktop Navigation — absolutely centered */}
+            <nav className="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center gap-7">
               {navLinks.map((link) => (
-                <Link 
-                  key={link.name} 
+                <Link
+                  key={link.name}
                   href={link.href}
-                  className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
+                  className="text-sm font-medium text-foreground/75 hover:text-foreground transition-colors whitespace-nowrap"
                 >
                   {link.name}
                 </Link>
@@ -116,7 +122,22 @@ export function Header() {
               <Link href="/account" className="text-foreground/80 hover:text-foreground transition-colors" aria-label="Account">
                 <User className="h-5 w-5" />
               </Link>
-              
+
+              {/* Wishlist */}
+              <button
+                className="text-foreground/80 hover:text-red-500 transition-colors relative"
+                onClick={toggleWishlist}
+                aria-label="Wishlist"
+              >
+                <Heart className={`h-5 w-5 transition-colors ${wishlistItems.length > 0 ? 'text-red-500 fill-current' : ''}`} />
+                {wishlistItems.length > 0 && (
+                  <span className="absolute -top-1.5 -right-1.5 bg-red-500 text-white text-[10px] font-bold h-4 w-4 rounded-full flex items-center justify-center">
+                    {wishlistItems.length}
+                  </span>
+                )}
+              </button>
+
+              {/* Cart */}
               <button 
                 className="text-foreground/80 hover:text-foreground transition-colors relative"
                 onClick={toggleCart}

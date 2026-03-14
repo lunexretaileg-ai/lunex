@@ -20,10 +20,20 @@ const productVariantSchema = z.object({
   color: z.string().nullable(),
   conditionScore: z.number(),
   batteryHealth: z.number(),
+  cosmeticCondition: z.string().nullable(),
   lunexPrice: z.union([z.string(), z.number()]),
   marketPrice: z.union([z.string(), z.number()]),
   stockQuantity: z.number(),
   isAvailable: z.boolean(),
+});
+
+const productSpecSchema = z.object({
+  id: z.number(),
+  productId: z.number(),
+  variantId: z.number().nullable(),
+  specKey: z.string(),
+  specValue: z.string(),
+  sortOrder: z.number(),
 });
 
 const productSchema = z.object({
@@ -39,8 +49,10 @@ const productSchema = z.object({
 });
 
 const productWithVariantsSchema = productSchema.extend({
-  variants: z.array(productVariantSchema)
+  variants: z.array(productVariantSchema),
+  specs: z.array(productSpecSchema).optional(),
 });
+
 
 export const api = {
   products: {

@@ -1,8 +1,9 @@
 import { Link } from "wouter";
 import type { ProductWithVariants } from "@shared/schema";
-import { Battery, ArrowRight, Heart } from "lucide-react";
+import { Battery, ArrowRight, Heart, Sparkles, PackageOpen, Wrench, Cpu, Clock } from "lucide-react";
 import { useAuth } from "@/hooks/use-auth";
 import { useWishlist } from "@/hooks/use-wishlist";
+import { useWishlistDrawer } from "@/store/use-wishlist-drawer";
 import { cn } from "@/lib/utils";
 
 // Using Omit and intersection to handle the serialized Date and decimals from the API
@@ -22,9 +23,24 @@ interface ProductCardProps {
   product: SerializedProductWithVariants;
 }
 
+// Styled badge config per device type — with icons
+const DEVICE_TYPE_CONFIG: Record<string, { label: string; className: string; icon: React.ElementType }> = {
+  new:          { label: "New",         icon: Sparkles,    className: "bg-emerald-500/15 text-emerald-400 border border-emerald-500/25" },
+  open_box:     { label: "Open Box",    icon: PackageOpen, className: "bg-sky-500/15 text-sky-400 border border-sky-500/25" },
+  refurbished:  { label: "Refurbished", icon: Wrench,      className: "bg-amber-500/15 text-amber-400 border border-amber-500/25" },
+  assembled:    { label: "Assembled",   icon: Cpu,         className: "bg-violet-500/15 text-violet-400 border border-violet-500/25" },
+  used:         { label: "Used",        icon: Clock,       className: "bg-zinc-400/15 text-zinc-400 border border-zinc-400/25" },
+};
+
+export function getDeviceTypeBadge(deviceType: string) {
+  return DEVICE_TYPE_CONFIG[deviceType] ?? { label: deviceType, icon: Cpu, className: "bg-secondary text-secondary-foreground" };
+}
+
+
 export function ProductCard({ product }: ProductCardProps) {
   const { user } = useAuth();
   const { isInWishlist, addToWishlist, removeFromWishlist, getWishlistItemId } = useWishlist();
+  const { openWishlist } = useWishlistDrawer();
 
   // Use the best variant for display (cheapest or default)
   const displayVariant = product.variants.length > 0 
@@ -38,12 +54,16 @@ export function ProductCard({ product }: ProductCardProps) {
   const discountPercent = Math.round(((marketPrice - lunexPrice) / marketPrice) * 100);
 
   const isSaved = isInWishlist(displayVariant.id);
+  const { label: typeLabel, className: typeClass } = getDeviceTypeBadge(product.deviceType);
 
   const handleWishlistToggle = (e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
-    if (!user) return; // Optional: could show a toast asking to login
-
+    if (!user) {
+      // Open the wishlist drawer for non-logged-in users (shows login prompt)
+      openWishlist();
+      return;
+    }
     if (isSaved) {
       const id = getWishlistItemId(displayVariant.id);
       if (id) removeFromWishlist.mutate(id);
@@ -59,9 +79,19 @@ export function ProductCard({ product }: ProductCardProps) {
         {/* Actions Bar */}
         <div className="absolute top-6 left-6 right-6 z-10 flex justify-between items-start">
           <div className="flex flex-col gap-2">
-            <span className="inline-flex px-3 py-1 text-[11px] font-semibold uppercase tracking-wider rounded-full bg-secondary text-secondary-foreground">
-              {product.deviceType === 'refurbished' ? 'Refurbished' : 'Assembled'}
-            </span>
+            {/* Device Type Badge */}
+            {(() => {
+              const TypeIcon = getDeviceTypeBadge(product.deviceType).icon;
+              return (
+                <span className={cn(
+                  "inline-flex items-center gap-1.5 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wider rounded-full",
+                  typeClass
+                )}>
+                  <TypeIcon className="w-3 h-3" />
+                  {typeLabel}
+                </span>
+              );
+            })()}
             {discountPercent > 0 && (
               <span className="inline-flex px-3 py-1 text-[11px] font-bold uppercase tracking-wider rounded-full bg-[hsl(var(--success))] text-white shadow-sm">
                 Save {discountPercent}%
@@ -69,18 +99,17 @@ export function ProductCard({ product }: ProductCardProps) {
             )}
           </div>
 
-          {user && (
-            <button 
-              onClick={handleWishlistToggle}
-              disabled={addToWishlist.isPending || removeFromWishlist.isPending}
-              className={cn(
-                "p-2.5 rounded-full bg-background/80 backdrop-blur border border-border/50 hover:bg-background transition-colors text-muted-foreground hover:text-red-500",
-                isSaved && "text-red-500"
-              )}
-            >
-              <Heart className={cn("w-4 h-4 transition-colors", isSaved && "fill-current")} />
-            </button>
-          )}
+          {/* Always show heart button — for logged-out users it opens the login prompt drawer */}
+          <button 
+            onClick={handleWishlistToggle}
+            disabled={addToWishlist.isPending || removeFromWishlist.isPending}
+            className={cn(
+              "p-2.5 rounded-full bg-background/80 backdrop-blur border border-border/50 hover:bg-background transition-colors text-muted-foreground hover:text-red-500",
+              isSaved && "text-red-500"
+            )}
+          >
+            <Heart className={cn("w-4 h-4 transition-colors", isSaved && "fill-current")} />
+          </button>
         </div>
 
         {/* Image */}
@@ -99,9 +128,11 @@ export function ProductCard({ product }: ProductCardProps) {
           </h3>
           
           <div className="flex flex-wrap gap-2 mb-6 text-xs">
-            <span className="px-2 py-1 bg-surface rounded text-muted-foreground font-medium">
-              {displayVariant.storage}
-            </span>
+            {displayVariant.storage && (
+              <span className="px-2 py-1 bg-surface rounded text-muted-foreground font-medium">
+                {displayVariant.storage}
+              </span>
+            )}
             <span className="px-2 py-1 bg-surface rounded text-muted-foreground font-medium flex items-center gap-1">
               <span className="w-4 h-4 text-warning"><Battery className="w-full h-full" /></span>
               {displayVariant.batteryHealth}%
@@ -109,6 +140,11 @@ export function ProductCard({ product }: ProductCardProps) {
             <span className="px-2 py-1 bg-surface rounded text-muted-foreground font-medium">
               Cond {displayVariant.conditionScore}/10
             </span>
+            {(displayVariant as any).cosmeticCondition && (
+              <span className="px-2 py-1 bg-surface rounded text-muted-foreground font-medium truncate max-w-[140px]" title={(displayVariant as any).cosmeticCondition}>
+                {(displayVariant as any).cosmeticCondition}
+              </span>
+            )}
           </div>
           
           <div className="mt-auto pt-4 border-t border-border flex items-end justify-between">

@@ -1,0 +1,4102 @@
+{
+  "meta": {
+    "store": "Lunex",
+    "currency": "EGP",
+    "discount_rate": "~40% below Egypt market price",
+    "generated": "2026-03-14",
+    "total_products": 30,
+    "notes": "All fields in English. Reviews in Egyptian Arabic dialect. Mix of positive and neutral sentiment."
+  },
+  "products": [
+    {
+      "product_id": "PRD-001",
+      "name": "iPhone 15 Pro Max",
+      "slug": "iphone-15-pro-max",
+      "category": "iphone",
+      "device_type": "refurbished",
+      "release_year": 2023,
+      "description": "The iPhone 15 Pro Max is Apple's most powerful smartphone ever. Built with an aerospace-grade titanium frame, a Super Retina XDR ProMotion 120Hz display, and the A17 Pro chip built on 3nm technology. Features a professional 5x periscope telephoto camera system and ProRAW shooting. Every unit is fully inspected and certified by the Lunex team.",
+      "image_url": "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?w=800",
+      "specs": {
+        "display": "6.7-inch Super Retina XDR OLED, ProMotion 120Hz, Always-On, 2796x1290px, 460 ppi",
+        "chip": "Apple A17 Pro, 6-core CPU, 6-core GPU, 3nm",
+        "ram": "8GB",
+        "storage_options": [
+          "256GB",
+          "512GB",
+          "1TB"
+        ],
+        "rear_camera": "48MP main f/1.78 + 12MP ultrawide + 12MP 5x periscope telephoto",
+        "front_camera": "12MP TrueDepth, Face ID",
+        "video": "4K 60fps ProRes, Cinematic Mode 4K 30fps",
+        "battery": "4422 mAh, MagSafe, USB-C",
+        "battery_video_playback": "29 hours",
+        "operating_system": "iOS 17",
+        "weight": "221g",
+        "dimensions": "159.9 x 76.7 x 8.25 mm",
+        "connectivity": "5G, Wi-Fi 6E, Bluetooth 5.3, NFC, USB-C 3.0",
+        "water_resistance": "IP68 — 6m for 30 minutes",
+        "frame": "Grade 5 Titanium",
+        "available_colors": [
+          "Black Titanium",
+          "White Titanium",
+          "Blue Titanium",
+          "Natural Titanium"
+        ]
+      },
+      "variants": [
+        {
+          "variant_id": "VAR-001-1",
+          "storage": "256GB",
+          "color": "Black Titanium",
+          "condition_score": 9,
+          "battery_health": 94,
+          "cosmetic_condition": "Very light micro-scratches only visible under direct bright light. Screen and frame are pristine.",
+          "lunex_price": 46500,
+          "market_price": 76500,
+          "stock_quantity": 4,
+          "is_available": true
+        },
+        {
+          "variant_id": "VAR-001-2",
+          "storage": "256GB",
+          "color": "Natural Titanium",
+          "condition_score": 10,
+          "battery_health": 100,
+          "cosmetic_condition": "Like new. Used only a handful of times. No marks whatsoever.",
+          "lunex_price": 49000,
+          "market_price": 76500,
+          "stock_quantity": 2,
+          "is_available": true
+        },
+        {
+          "variant_id": "VAR-001-3",
+          "storage": "512GB",
+          "color": "Blue Titanium",
+          "condition_score": 9,
+          "battery_health": 91,
+          "cosmetic_condition": "Light scratches on the frame only. Screen is completely clean.",
+          "lunex_price": 54000,
+          "market_price": 88000,
+          "stock_quantity": 3,
+          "is_available": true
+        },
+        {
+          "variant_id": "VAR-001-4",
+          "storage": "1TB",
+          "color": "White Titanium",
+          "condition_score": 8,
+          "battery_health": 88,
+          "cosmetic_condition": "Minor wear on the back panel. Screen has no scratches.",
+          "lunex_price": 61000,
+          "market_price": 102000,
+          "stock_quantity": 1,
+          "is_available": true
+        }
+      ],
+      "product_photos": [
+        {
+          "photo_id": "PRD-001-PH-1",
+          "url": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800",
+          "caption": "Front display",
+          "sort_order": 0
+        },
+        {
+          "photo_id": "PRD-001-PH-2",
+          "url": "https://images.unsplash.com/photo-1556656793-08538906a9f8?w=800",
+          "caption": "Back panel",
+          "sort_order": 1
+        },
+        {
+          "photo_id": "PRD-001-PH-3",
+          "url": "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=800",
+          "caption": "Camera detail",
+          "sort_order": 2
+        }
+      ],
+      "reviews": [
+        {
+          "review_id": "REV-001-1",
+          "user_name": "أحمد محمود",
+          "rating": 5,
+          "title": "أحسن موبايل اشتريته في حياتي",
+          "body": "الجهاز وصل بسرعة والحالة أحسن من المتوقع. البطارية 94% زي ما مكتوب بالظبط. الكاميرا خرافية والأداء سلس جداً. شكراً Lunex!",
+          "is_verified_purchase": true,
+          "review_date": "2025-11-15"
+        },
+        {
+          "review_id": "REV-001-2",
+          "user_name": "سارة خالد",
+          "rating": 5,
+          "title": "صفقة ممتازة",
+          "body": "اشتريت الـ 256GB Natural Titanium وما شاء الله عليه. التغليف محترم جداً والجهاز نظيف بالكامل. فرق السعر عن السوق يستاهل فعلاً.",
+          "is_verified_purchase": true,
+          "review_date": "2025-10-28"
+        },
+        {
+          "review_id": "REV-001-3",
+          "user_name": "محمد عبد الله",
+          "rating": 5,
+          "title": "الكاميرا أحسن من توقعاتي",
+          "body": "كنت خايف من الشراء أونلاين بس جربت Lunex وندمتش. الكاميرا شغالة تمام والزووم الـ 5x رائع جداً للسياحة.",
+          "is_verified_purchase": true,
+          "review_date": "2025-12-01"
+        },
+        {
+          "review_id": "REV-001-4",
+          "user_name": "نور إبراهيم",
+          "rating": 4,
+          "title": "كويس جداً مع ملاحظة بسيطة",
+          "body": "الجهاز في حالة 9/10 زي المكتوب. في خدشة صغيرة على الإطار بس مش واضحة. الأداء والبطارية تمام 100%.",
+          "is_verified_purchase": true,
+          "review_date": "2025-09-20"
+        },
+        {
+          "review_id": "REV-001-5",
+          "user_name": "عمر فاروق",
+          "rating": 5,
+          "title": "تم التسليم نفس اليوم",
+          "body": "طلبت الجهاز الساعة 9 الصبح ووصل الساعة 3 العصر! الجهاز شغال زي الجديد تماماً.",
+          "is_verified_purchase": true,
+          "review_date": "2025-11-30"
+        },
+        {
+          "review_id": "REV-001-6",
+          "user_name": "ياسمين حسن",
+          "rating": 5,
+          "title": "تاني مرة أشتري من Lunex",
+          "body": "ده المرة التانية أشتري من Lunex. دايماً الجهاز بييجي أحسن مما كنت متوقع. مش هشتري من غيرهم.",
+          "is_verified_purchase": true,
+          "review_date": "2025-12-10"
+        },
+        {
+          "review_id": "REV-001-7",
+          "user_name": "كريم السيد",
+          "rating": 4,
+          "title": "الأداء ممتاز",
+          "body": "Face ID شغال من أول لحظة والشاشة نقية. بس كنت أتمنى يجيلي كابل جديد مع الجهاز. على العموم كويس.",
+          "is_verified_purchase": true,
+          "review_date": "2025-10-05"
+        },
+        {
+          "review_id": "REV-001-8",
+          "user_name": "دينا مصطفى",
+          "rating": 5,
+          "title": "التصوير الليلي مذهل",
+          "body": "التصوير في الأماكن قليلة الإضاءة رهيب جداً. فرق واضح عن أي هاتف تاني جربته قبل كده.",
+          "is_verified_purchase": true,
+          "review_date": "2025-11-22"
+        },
+        {
+          "review_id": "REV-001-9",
+          "user_name": "مصطفى علي",
+          "rating": 5,
+          "title": "A17 Pro مش طبيعي",
+          "body": "جربت كل الجيمز الثقيلة والجهاز ما سخنش ومافيش أي تقطيع خالص. A17 Pro مش بيتكلم عنه بعدل.",
+          "is_verified_purchase": true,
+          "review_date": "2025-12-05"
+        },
+        {
+          "review_id": "REV-001-10",
+          "user_name": "هاني طارق",
+          "rating": 3,
+          "title": "كويس بس كنت أتوقع أحسن",
+          "body": "الجهاز شغال كويس والبطارية مقبولة. بس الخدشة على الإطار أوضح شوية مما كتبوا. يمكن توقعاتي كانت عالية.",
+          "is_verified_purchase": false,
+          "review_date": "2025-08-18"
+        }
+      ]
+    },
+    {
+      "product_id": "PRD-002",
+      "name": "iPhone 15 Pro",
+      "slug": "iphone-15-pro",
+      "category": "iphone",
+      "device_type": "refurbished",
+      "release_year": 2023,
+      "description": "The iPhone 15 Pro features a lightweight titanium frame, the A17 Pro chip, and a 48MP professional camera system with 3x optical zoom. Every unit is fully tested and certified by the Lunex team.",
+      "image_url": "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?w=800",
+      "specs": {
+        "display": "6.1-inch Super Retina XDR OLED, ProMotion 120Hz, 2556x1179px, 460 ppi",
+        "chip": "Apple A17 Pro, 3nm",
+        "ram": "8GB",
+        "storage_options": [
+          "128GB",
+          "256GB",
+          "512GB",
+          "1TB"
+        ],
+        "rear_camera": "48MP main f/1.78 + 12MP ultrawide + 12MP 3x telephoto",
+        "front_camera": "12MP TrueDepth, Face ID",
+        "battery": "3274 mAh, USB-C, MagSafe",
+        "battery_video_playback": "23 hours",
+        "operating_system": "iOS 17",
+        "weight": "187g",
+        "dimensions": "146.6 x 70.6 x 8.25 mm",
+        "connectivity": "5G, Wi-Fi 6E, Bluetooth 5.3, NFC, USB-C 3.0",
+        "water_resistance": "IP68",
+        "available_colors": [
+          "Black Titanium",
+          "White Titanium",
+          "Blue Titanium",
+          "Natural Titanium"
+        ]
+      },
+      "variants": [
+        {
+          "variant_id": "VAR-002-1",
+          "storage": "128GB",
+          "color": "Natural Titanium",
+          "condition_score": 9,
+          "battery_health": 92,
+          "cosmetic_condition": "No visible scratches. Excellent condition.",
+          "lunex_price": 37500,
+          "market_price": 62000,
+          "stock_quantity": 5,
+          "is_available": true
+        },
+        {
+          "variant_id": "VAR-002-2",
+          "storage": "256GB",
+          "color": "Black Titanium",
+          "condition_score": 10,
+          "battery_health": 98,
+          "cosmetic_condition": "Perfect condition. Like new.",
+          "lunex_price": 42000,
+          "market_price": 69000,
+          "stock_quantity": 3,
+          "is_available": true
+        },
+        {
+          "variant_id": "VAR-002-3",
+          "storage": "512GB",
+          "color": "Blue Titanium",
+          "condition_score": 8,
+          "battery_health": 87,
+          "cosmetic_condition": "Light scratches on back panel. Screen is completely clean.",
+          "lunex_price": 47000,
+          "market_price": 78000,
+          "stock_quantity": 2,
+          "is_available": true
+        }
+      ],
+      "product_photos": [
+        {
+          "photo_id": "PRD-002-PH-1",
+          "url": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800",
+          "caption": "Front display",
+          "sort_order": 0
+        },
+        {
+          "photo_id": "PRD-002-PH-2",
+          "url": "https://images.unsplash.com/photo-1556656793-08538906a9f8?w=800",
+          "caption": "Back panel",
+          "sort_order": 1
+        },
+        {
+          "photo_id": "PRD-002-PH-3",
+          "url": "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=800",
+          "caption": "Camera detail",
+          "sort_order": 2
+        }
+      ],
+      "reviews": [
+        {
+          "review_id": "REV-002-1",
+          "user_name": "علي حمدي",
+          "rating": 5,
+          "title": "مفيش فرق عن الجديد",
+          "body": "جربت الجهاز لمدة أسبوع ومفيش فرق بينه وبين الجديد إطلاقاً. البطارية 92% والأداء سريع جداً. شكراً Lunex.",
+          "is_verified_purchase": true,
+          "review_date": "2025-11-08"
+        },
+        {
+          "review_id": "REV-002-2",
+          "user_name": "رانيا عمرو",
+          "rating": 5,
+          "title": "الحجم المثالي",
+          "body": "كنت بدور على موبايل مش كبير أوي وده بالظبط اللي محتاجاه. الأداء ممتاز والكاميرا 3x كافية جداً.",
+          "is_verified_purchase": true,
+          "review_date": "2025-10-14"
+        },
+        {
+          "review_id": "REV-002-3",
+          "user_name": "إسلام محمد",
+          "rating": 4,
+          "title": "تجربة شراء كويسة",
+          "body": "الموقع سهل الاستخدام والجهاز وصل في الوقت. البطارية 87% مقبولة بس كنت أتمنى أكتر شوية.",
+          "is_verified_purchase": true,
+          "review_date": "2025-09-30"
+        },
+        {
+          "review_id": "REV-002-4",
+          "user_name": "لمياء سعد",
+          "rating": 5,
+          "title": "خدمة ممتازة",
+          "body": "تواصلت مع الدعم قبل الشراء وردوا بسرعة وشرحولي كل حاجة. الجهاز وصل أحسن مما توقعت.",
+          "is_verified_purchase": true,
+          "review_date": "2025-12-03"
+        },
+        {
+          "review_id": "REV-002-5",
+          "user_name": "محمد الشريف",
+          "rating": 5,
+          "title": "ProRes للفيديو رهيب",
+          "body": "أنا مصور فيديو واشتريت الـ 512GB عشان ProRes. الجهاز بيسجل 4K ProRes بجودة خرافية.",
+          "is_verified_purchase": true,
+          "review_date": "2025-11-25"
+        },
+        {
+          "review_id": "REV-002-6",
+          "user_name": "وائل كمال",
+          "rating": 3,
+          "title": "كويس بس في ملاحظات",
+          "body": "الجهاز شغال كويس من ناحية الأداء. بس البطارية 87% بتحس فيها بعد نص اليوم بشكل واضح. السعر كويس.",
+          "is_verified_purchase": false,
+          "review_date": "2025-08-12"
+        },
+        {
+          "review_id": "REV-002-7",
+          "user_name": "أميرة طه",
+          "rating": 5,
+          "title": "استثمار ذكي",
+          "body": "اشتريت بدل ما أشتري جهاز جديد بسعر أعلى بكتير. نفس التجربة بسعر أقل. ده اسمه ذكاء مش توفير.",
+          "is_verified_purchase": true,
+          "review_date": "2025-11-18"
+        },
+        {
+          "review_id": "REV-002-8",
+          "user_name": "هدى أحمد",
+          "rating": 5,
+          "title": "شاشة خرافية",
+          "body": "الشاشة OLED بالـ ProMotion مختلفة تماماً عن أي هاتف تاني. الألوان نابضة بالحياة والـ 120Hz ملحوظ.",
+          "is_verified_purchase": true,
+          "review_date": "2025-10-20"
+        }
+      ]
+    },
+    {
+      "product_id": "PRD-003",
+      "name": "iPhone 15",
+      "slug": "iphone-15",
+      "category": "iphone",
+      "device_type": "refurbished",
+      "release_year": 2023,
+      "description": "The iPhone 15 brings a 48MP main camera, Dynamic Island, and USB-C charging for the first time in a standard iPhone. Powered by the A16 Bionic chip for excellent everyday performance.",
+      "image_url": "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?w=800",
+      "specs": {
+        "display": "6.1-inch Super Retina XDR OLED, 2556x1179px, 460 ppi",
+        "chip": "Apple A16 Bionic, 4nm",
+        "ram": "6GB",
+        "storage_options": [
+          "128GB",
+          "256GB",
+          "512GB"
+        ],
+        "rear_camera": "48MP main f/1.6 + 12MP ultrawide, 2x optical zoom",
+        "front_camera": "12MP TrueDepth",
+        "battery": "3877 mAh, USB-C",
+        "battery_video_playback": "20 hours",
+        "operating_system": "iOS 17",
+        "weight": "171g",
+        "dimensions": "147.6 x 71.6 x 7.8 mm",
+        "connectivity": "5G, Wi-Fi 6, Bluetooth 5.3, NFC, USB-C",
+        "available_colors": [
+          "Black",
+          "Blue",
+          "Green",
+          "Yellow",
+          "Pink"
+        ]
+      },
+      "variants": [
+        {
+          "variant_id": "VAR-003-1",
+          "storage": "128GB",
+          "color": "Black",
+          "condition_score": 9,
+          "battery_health": 93,
+          "cosmetic_condition": "Excellent condition. Very light scratches on back only.",
+          "lunex_price": 28500,
+          "market_price": 47700,
+          "stock_quantity": 6,
+          "is_available": true
+        },
+        {
+          "variant_id": "VAR-003-2",
+          "storage": "128GB",
+          "color": "Blue",
+          "condition_score": 10,
+          "battery_health": 100,
+          "cosmetic_condition": "Absolutely like new. No marks at all.",
+          "lunex_price": 28500,
+          "market_price": 47700,
+          "stock_quantity": 4,
+          "is_available": true
+        },
+        {
+          "variant_id": "VAR-003-3",
+          "storage": "256GB",
+          "color": "Pink",
+          "condition_score": 9,
+          "battery_health": 95,
+          "cosmetic_condition": "9/10 excellent condition.",
+          "lunex_price": 32000,
+          "market_price": 52500,
+          "stock_quantity": 3,
+          "is_available": true
+        },
+        {
+          "variant_id": "VAR-003-4",
+          "storage": "512GB",
+          "color": "Yellow",
+          "condition_score": 8,
+          "battery_health": 89,
+          "cosmetic_condition": "Minor scratches on frame. Screen is perfect.",
+          "lunex_price": 37000,
+          "market_price": 61000,
+          "stock_quantity": 2,
+          "is_available": true
+        }
+      ],
+      "product_photos": [
+        {
+          "photo_id": "PRD-003-PH-1",
+          "url": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800",
+          "caption": "Front display",
+          "sort_order": 0
+        },
+        {
+          "photo_id": "PRD-003-PH-2",
+          "url": "https://images.unsplash.com/photo-1556656793-08538906a9f8?w=800",
+          "caption": "Back panel",
+          "sort_order": 1
+        },
+        {
+          "photo_id": "PRD-003-PH-3",
+          "url": "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=800",
+          "caption": "Camera detail",
+          "sort_order": 2
+        }
+      ],
+      "reviews": [
+        {
+          "review_id": "REV-003-1",
+          "user_name": "مريم سامي",
+          "rating": 5,
+          "title": "أول آيفون ليا وأنا مبسوطة",
+          "body": "اشتريت أول آيفون ليا من Lunex وكان اختيار صح. الجهاز في حالة ممتازة والكاميرا أحسن من أي أندرويد جربته.",
+          "is_verified_purchase": true,
+          "review_date": "2025-11-10"
+        },
+        {
+          "review_id": "REV-003-2",
+          "user_name": "تامر رشيد",
+          "rating": 5,
+          "title": "USB-C أخيراً في الآيفون",
+          "body": "كنت مستني الآيفون بـ USB-C وأخيراً جه. السعر من Lunex مناسب جداً ومقدرتش أجد أرخص.",
+          "is_verified_purchase": true,
+          "review_date": "2025-10-22"
+        },
+        {
+          "review_id": "REV-003-3",
+          "user_name": "شيماء عبدالعزيز",
+          "rating": 4,
+          "title": "كويس جداً",
+          "body": "الجهاز كويس في كل حاجة. بس كنت متوقع تشطيب أعلى شوية. البطارية 93% شغالة ممتاز.",
+          "is_verified_purchase": true,
+          "review_date": "2025-09-15"
+        },
+        {
+          "review_id": "REV-003-4",
+          "user_name": "يوسف ماهر",
+          "rating": 5,
+          "title": "التغليف احترافي",
+          "body": "الجهاز جاء في تغليف محترم جداً. واضح إن Lunex بتهتم بالتفاصيل. الجهاز شغال تمام.",
+          "is_verified_purchase": true,
+          "review_date": "2025-12-07"
+        },
+        {
+          "review_id": "REV-003-5",
+          "user_name": "نادية حسين",
+          "rating": 5,
+          "title": "كاميرا 48MP مذهلة",
+          "body": "الكاميرا الـ 48MP في الموديل العادي ده أحسن بكتير من توقعاتي. الصور في النهار رائعة جداً.",
+          "is_verified_purchase": true,
+          "review_date": "2025-11-03"
+        },
+        {
+          "review_id": "REV-003-6",
+          "user_name": "بسام عادل",
+          "rating": 3,
+          "title": "الجهاز كويس بس التوصيل اتأخر",
+          "body": "الجهاز شغال كويس والحالة مقبولة. بس التوصيل اتأخر يومين عن الموعد. على أي حال المنتج بنفسه تمام.",
+          "is_verified_purchase": true,
+          "review_date": "2025-10-29"
+        },
+        {
+          "review_id": "REV-003-7",
+          "user_name": "فاطمة حمدان",
+          "rating": 5,
+          "title": "Dynamic Island حلو جداً",
+          "body": "كنت مش متخيلة إن Dynamic Island هيكون مفيد كده. إشعارات الموسيقى والمكالمات عليه راحة جداً.",
+          "is_verified_purchase": true,
+          "review_date": "2025-11-20"
+        },
+        {
+          "review_id": "REV-003-8",
+          "user_name": "محمد الحسيني",
+          "rating": 5,
+          "title": "أنصح بيه",
+          "body": "لو بتفكر تشتري آيفون بسعر كويس Lunex هي الخيار. الجهاز ده ما خذلنيش.",
+          "is_verified_purchase": true,
+          "review_date": "2025-08-25"
+        }
+      ]
+    },
+    {
+      "product_id": "PRD-004",
+      "name": "iPhone 14 Pro Max",
+      "slug": "iphone-14-pro-max",
+      "category": "iphone",
+      "device_type": "assembled",
+      "release_year": 2022,
+      "description": "The iPhone 14 Pro Max assembled with original-grade components. Features the first Dynamic Island cutout, a 48MP main camera, Always-On display, and A16 Bionic chip. Assembled and tested to professional standards by the Lunex team.",
+      "image_url": "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?w=800",
+      "specs": {
+        "display": "6.7-inch Super Retina XDR OLED, ProMotion 120Hz, Always-On, 2796x1290px",
+        "chip": "Apple A16 Bionic, 4nm",
+        "ram": "6GB",
+        "storage_options": [
+          "128GB",
+          "256GB",
+          "512GB",
+          "1TB"
+        ],
+        "rear_camera": "48MP main f/1.78 + 12MP ultrawide + 12MP 3x telephoto",
+        "front_camera": "12MP TrueDepth, Face ID",
+        "battery": "4323 mAh, Lightning",
+        "battery_video_playback": "29 hours",
+        "operating_system": "iOS 16 (upgradable to iOS 18)",
+        "weight": "240g",
+        "dimensions": "160.7 x 77.6 x 7.85 mm",
+        "connectivity": "5G, Wi-Fi 6, Bluetooth 5.3, NFC",
+        "available_colors": [
+          "Deep Purple",
+          "Space Black",
+          "Silver",
+          "Gold"
+        ]
+      },
+      "variants": [
+        {
+          "variant_id": "VAR-004-1",
+          "storage": "128GB",
+          "color": "Deep Purple",
+          "condition_score": 9,
+          "battery_health": 91,
+          "cosmetic_condition": "Light scratches on frame. Screen is pristine.",
+          "lunex_price": 30000,
+          "market_price": 50000,
+          "stock_quantity": 5,
+          "is_available": true
+        },
+        {
+          "variant_id": "VAR-004-2",
+          "storage": "256GB",
+          "color": "Space Black",
+          "condition_score": 10,
+          "battery_health": 99,
+          "cosmetic_condition": "Perfect. Like new.",
+          "lunex_price": 34000,
+          "market_price": 56000,
+          "stock_quantity": 3,
+          "is_available": true
+        },
+        {
+          "variant_id": "VAR-004-3",
+          "storage": "512GB",
+          "color": "Gold",
+          "condition_score": 8,
+          "battery_health": 86,
+          "cosmetic_condition": "Minor wear on back. Screen is scratch-free.",
+          "lunex_price": 39000,
+          "market_price": 65000,
+          "stock_quantity": 2,
+          "is_available": true
+        }
+      ],
+      "product_photos": [
+        {
+          "photo_id": "PRD-004-PH-1",
+          "url": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800",
+          "caption": "Front display",
+          "sort_order": 0
+        },
+        {
+          "photo_id": "PRD-004-PH-2",
+          "url": "https://images.unsplash.com/photo-1556656793-08538906a9f8?w=800",
+          "caption": "Back panel",
+          "sort_order": 1
+        },
+        {
+          "photo_id": "PRD-004-PH-3",
+          "url": "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=800",
+          "caption": "Camera detail",
+          "sort_order": 2
+        }
+      ],
+      "reviews": [
+        {
+          "review_id": "REV-004-1",
+          "user_name": "عادل منصور",
+          "rating": 5,
+          "title": "Always-On مريح جداً",
+          "body": "الـ Always-On Display بيخليك تشوف الوقت والتنبيهات من غير ما تفتح الشاشة. تفصيلة بسيطة بس بتفرق.",
+          "is_verified_purchase": true,
+          "review_date": "2025-10-12"
+        },
+        {
+          "review_id": "REV-004-2",
+          "user_name": "ريم عاطف",
+          "rating": 5,
+          "title": "A16 سريع جداً",
+          "body": "الجهاز شغال زي الساعة. A16 Bionic مفيش بطء فيه إطلاقاً حتى مع المهام الثقيلة.",
+          "is_verified_purchase": true,
+          "review_date": "2025-11-04"
+        },
+        {
+          "review_id": "REV-004-3",
+          "user_name": "سيد حسن",
+          "rating": 4,
+          "title": "كويس للسعر ده",
+          "body": "الجهاز مُجمَّع وكل حاجة تشتغل تمام. السعر يستاهل جداً مقارنة بالجديد. بس متوقعش يبقى زي المصنع.",
+          "is_verified_purchase": true,
+          "review_date": "2025-09-28"
+        },
+        {
+          "review_id": "REV-004-4",
+          "user_name": "نجلاء الصاوي",
+          "rating": 5,
+          "title": "48MP غيرت تجربتي في التصوير",
+          "body": "الكاميرا الـ 48MP رهيبة جداً. التصوير في ProRAW بيدي نتائج احترافية.",
+          "is_verified_purchase": true,
+          "review_date": "2025-12-01"
+        },
+        {
+          "review_id": "REV-004-5",
+          "user_name": "حسام الدين",
+          "rating": 5,
+          "title": "أفضل صفقة",
+          "body": "دفعت تلاتين ألف بدل ما أدفع خمسين. نفس الجهاز نفس الأداء. ده اسمه ذكاء.",
+          "is_verified_purchase": true,
+          "review_date": "2025-11-15"
+        },
+        {
+          "review_id": "REV-004-6",
+          "user_name": "إياد فتحي",
+          "rating": 4,
+          "title": "راضي جداً",
+          "body": "الجهاز تمام والبطارية 91% شغالة كويس. الإطار فيه خدشة صغيرة بس مش مزعجة نهائي.",
+          "is_verified_purchase": true,
+          "review_date": "2025-08-30"
+        },
+        {
+          "review_id": "REV-004-7",
+          "user_name": "زياد خليل",
+          "rating": 5,
+          "title": "Dynamic Island أثبت نفسه",
+          "body": "كنت متردد بس Dynamic Island أثبت إنه ميزة حقيقية مش بس شكل. تجربة الإشعارات عليه مميزة جداً.",
+          "is_verified_purchase": true,
+          "review_date": "2025-10-15"
+        },
+        {
+          "review_id": "REV-004-8",
+          "user_name": "سلوى نوار",
+          "rating": 3,
+          "title": "الجهاز كويس بس البطارية تعبت بسرعة",
+          "body": "من ناحية الشاشة والكاميرا كل حاجة تمام. بس البطارية 86% بتخلصني قبل آخر اليوم. مناسب للسعر.",
+          "is_verified_purchase": true,
+          "review_date": "2025-09-20"
+        }
+      ]
+    },
+    {
+      "product_id": "PRD-005",
+      "name": "iPhone 14",
+      "slug": "iphone-14",
+      "category": "iphone",
+      "device_type": "assembled",
+      "release_year": 2022,
+      "description": "The iPhone 14 assembled with original-grade components. Combines the A15 Bionic chip with an improved camera system and Crash Detection safety feature. The ideal choice for everyday users who want a reliable iPhone at an affordable price.",
+      "image_url": "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?w=800",
+      "specs": {
+        "display": "6.1-inch Super Retina XDR OLED, 2532x1170px, 460 ppi",
+        "chip": "Apple A15 Bionic, 5nm",
+        "ram": "6GB",
+        "storage_options": [
+          "128GB",
+          "256GB",
+          "512GB"
+        ],
+        "rear_camera": "12MP main f/1.5 + 12MP ultrawide",
+        "front_camera": "12MP TrueDepth with autofocus",
+        "battery": "3279 mAh",
+        "battery_video_playback": "20 hours",
+        "operating_system": "iOS 16 (upgradable to iOS 18)",
+        "weight": "172g",
+        "dimensions": "146.7 x 71.5 x 7.8 mm",
+        "connectivity": "5G, Wi-Fi 6, Bluetooth 5.3, Lightning",
+        "available_colors": [
+          "Blue",
+          "Purple",
+          "Midnight",
+          "Starlight",
+          "Product Red"
+        ]
+      },
+      "variants": [
+        {
+          "variant_id": "VAR-005-1",
+          "storage": "128GB",
+          "color": "Midnight",
+          "condition_score": 9,
+          "battery_health": 90,
+          "cosmetic_condition": "Excellent condition. Near flawless.",
+          "lunex_price": 21000,
+          "market_price": 35000,
+          "stock_quantity": 7,
+          "is_available": true
+        },
+        {
+          "variant_id": "VAR-005-2",
+          "storage": "256GB",
+          "color": "Blue",
+          "condition_score": 10,
+          "battery_health": 100,
+          "cosmetic_condition": "Like new. Zero marks.",
+          "lunex_price": 24500,
+          "market_price": 40500,
+          "stock_quantity": 4,
+          "is_available": true
+        },
+        {
+          "variant_id": "VAR-005-3",
+          "storage": "128GB",
+          "color": "Product Red",
+          "condition_score": 8,
+          "battery_health": 85,
+          "cosmetic_condition": "Light scratches on back. Frame in good condition.",
+          "lunex_price": 19500,
+          "market_price": 35000,
+          "stock_quantity": 3,
+          "is_available": true
+        }
+      ],
+      "product_photos": [
+        {
+          "photo_id": "PRD-005-PH-1",
+          "url": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800",
+          "caption": "Front display",
+          "sort_order": 0
+        },
+        {
+          "photo_id": "PRD-005-PH-2",
+          "url": "https://images.unsplash.com/photo-1556656793-08538906a9f8?w=800",
+          "caption": "Back panel",
+          "sort_order": 1
+        },
+        {
+          "photo_id": "PRD-005-PH-3",
+          "url": "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=800",
+          "caption": "Camera detail",
+          "sort_order": 2
+        }
+      ],
+      "reviews": [
+        {
+          "review_id": "REV-005-1",
+          "user_name": "عبد الرحمن سالم",
+          "rating": 5,
+          "title": "أفضل آيفون للميزانية المحدودة",
+          "body": "لو ميزانيتك محدودة وعايز آيفون حقيقي بأداء ممتاز فده هو. A15 Bionic مش فارق كتير عن A16 في الاستخدام اليومي.",
+          "is_verified_purchase": true,
+          "review_date": "2025-10-18"
+        },
+        {
+          "review_id": "REV-005-2",
+          "user_name": "غادة فؤاد",
+          "rating": 5,
+          "title": "ممتاز للطلاب",
+          "body": "اشتريت لابني في الجامعة وهو مبسوط جداً. الجهاز شغال ممتاز والسعر في المتناول.",
+          "is_verified_purchase": true,
+          "review_date": "2025-09-05"
+        },
+        {
+          "review_id": "REV-005-3",
+          "user_name": "خالد الخطيب",
+          "rating": 4,
+          "title": "كويس للاستخدام اليومي",
+          "body": "الجهاز بيعمل كل حاجة محتاجها. مش محتاج Pro لو مش مصور محترف. البطارية 90% كافية.",
+          "is_verified_purchase": true,
+          "review_date": "2025-11-12"
+        },
+        {
+          "review_id": "REV-005-4",
+          "user_name": "إنجي حسنين",
+          "rating": 5,
+          "title": "التسليم كان سريع جداً",
+          "body": "طلبته الليلة وجالي الصبح. الجهاز في حالة 9/10 زي ما مكتوب. ممتنة جداً.",
+          "is_verified_purchase": true,
+          "review_date": "2025-12-08"
+        },
+        {
+          "review_id": "REV-005-5",
+          "user_name": "ماهر عزيز",
+          "rating": 5,
+          "title": "البطارية تعدي اليوم",
+          "body": "البطارية بتعدي اليوم كامل بسهولة. حتى مع الاستخدام المكثف بتوصلني لآخر اليوم.",
+          "is_verified_purchase": true,
+          "review_date": "2025-10-30"
+        },
+        {
+          "review_id": "REV-005-6",
+          "user_name": "طارق شحاتة",
+          "rating": 3,
+          "title": "كويس بس توقعت أحسن شوية",
+          "body": "الجهاز شغال كويس من ناحية الأداء. بس التشطيب على الـ Product Red مش بنفس الجودة اللي توقعتها.",
+          "is_verified_purchase": true,
+          "review_date": "2025-09-22"
+        },
+        {
+          "review_id": "REV-005-7",
+          "user_name": "سمر عادل",
+          "rating": 5,
+          "title": "أنصح بيه",
+          "body": "لو بتفكر تجيب آيفون 14 من Lunex دي فرصة مش هتلاقيها كتير. أداء ممتاز بسعر مناسب.",
+          "is_verified_purchase": true,
+          "review_date": "2025-11-07"
+        }
+      ]
+    },
+    {
+      "product_id": "PRD-006",
+      "name": "iPhone 13 Pro Max",
+      "slug": "iphone-13-pro-max",
+      "category": "iphone",
+      "device_type": "refurbished",
+      "release_year": 2021,
+      "description": "The iPhone 13 Pro Max professionally refurbished. Features ProMotion 120Hz display, the longest battery life ever in a Pro iPhone, A15 Bionic chip, and Macro photography. Ideal for getting a Pro experience at a budget-friendly price.",
+      "image_url": "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?w=800",
+      "specs": {
+        "display": "6.7-inch Super Retina XDR OLED, ProMotion 120Hz, 2778x1284px",
+        "chip": "Apple A15 Bionic, 5nm",
+        "ram": "6GB",
+        "storage_options": [
+          "128GB",
+          "256GB",
+          "512GB",
+          "1TB"
+        ],
+        "rear_camera": "12MP main f/1.5 + 12MP ultrawide + 12MP 3x telephoto, Macro Mode",
+        "front_camera": "12MP TrueDepth",
+        "battery": "4352 mAh",
+        "battery_video_playback": "28 hours",
+        "operating_system": "iOS 15 (upgradable to iOS 17)",
+        "weight": "238g",
+        "dimensions": "160.8 x 78.1 x 7.65 mm",
+        "connectivity": "5G, Wi-Fi 6, Bluetooth 5.0, Lightning",
+        "available_colors": [
+          "Graphite",
+          "Gold",
+          "Sierra Blue",
+          "Alpine Green",
+          "Silver"
+        ]
+      },
+      "variants": [
+        {
+          "variant_id": "VAR-006-1",
+          "storage": "256GB",
+          "color": "Sierra Blue",
+          "condition_score": 9,
+          "battery_health": 88,
+          "cosmetic_condition": "Light scratches on frame. Screen is clean.",
+          "lunex_price": 26000,
+          "market_price": 43500,
+          "stock_quantity": 4,
+          "is_available": true
+        },
+        {
+          "variant_id": "VAR-006-2",
+          "storage": "512GB",
+          "color": "Graphite",
+          "condition_score": 8,
+          "battery_health": 84,
+          "cosmetic_condition": "Slightly more visible wear on back. Screen is intact.",
+          "lunex_price": 30000,
+          "market_price": 50000,
+          "stock_quantity": 2,
+          "is_available": true
+        },
+        {
+          "variant_id": "VAR-006-3",
+          "storage": "128GB",
+          "color": "Gold",
+          "condition_score": 10,
+          "battery_health": 97,
+          "cosmetic_condition": "Perfect. Like new.",
+          "lunex_price": 23000,
+          "market_price": 38000,
+          "stock_quantity": 3,
+          "is_available": true
+        }
+      ],
+      "product_photos": [
+        {
+          "photo_id": "PRD-006-PH-1",
+          "url": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800",
+          "caption": "Front display",
+          "sort_order": 0
+        },
+        {
+          "photo_id": "PRD-006-PH-2",
+          "url": "https://images.unsplash.com/photo-1556656793-08538906a9f8?w=800",
+          "caption": "Back panel",
+          "sort_order": 1
+        },
+        {
+          "photo_id": "PRD-006-PH-3",
+          "url": "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=800",
+          "caption": "Camera detail",
+          "sort_order": 2
+        }
+      ],
+      "reviews": [
+        {
+          "review_id": "REV-006-1",
+          "user_name": "سامي الجوهري",
+          "rating": 5,
+          "title": "بطارية استثنائية",
+          "body": "28 ساعة تشغيل فيديو مش كلام. البطارية هي أقوى نقطة في الجهاز ده وبالفعل بيعيش أكتر من يوم كامل.",
+          "is_verified_purchase": true,
+          "review_date": "2025-10-20"
+        },
+        {
+          "review_id": "REV-006-2",
+          "user_name": "هبة الله محمد",
+          "rating": 5,
+          "title": "Macro Mode روعة",
+          "body": "التصوير المقرب للزهور والتفاصيل الصغيرة رهيب. Macro Mode ميزة مش موجودة في الموديلات الأرخص.",
+          "is_verified_purchase": true,
+          "review_date": "2025-11-05"
+        },
+        {
+          "review_id": "REV-006-3",
+          "user_name": "باسم صبري",
+          "rating": 4,
+          "title": "ممتاز للسعر ده",
+          "body": "الجهاز في حالة 8/10 والبطارية 88% وأنا عارف بالظبط إيه اللي اشتريته. ممتاز للسعر.",
+          "is_verified_purchase": true,
+          "review_date": "2025-09-18"
+        },
+        {
+          "review_id": "REV-006-4",
+          "user_name": "دعاء أحمد",
+          "rating": 5,
+          "title": "أحسن من المتوقع",
+          "body": "كنت خايفة أشتري 13 Pro Max مُجدَّد بس الجهاز فاجأني. مفيش أي مشكلة من أول يوم.",
+          "is_verified_purchase": true,
+          "review_date": "2025-12-04"
+        },
+        {
+          "review_id": "REV-006-5",
+          "user_name": "رضا حافظ",
+          "rating": 5,
+          "title": "ProMotion فرق ملحوظ",
+          "body": "الـ 120Hz على الشاشة فرق ملحوظ جداً في التنقل والجيمز. ده مش كماليات ده ضرورة.",
+          "is_verified_purchase": true,
+          "review_date": "2025-11-22"
+        },
+        {
+          "review_id": "REV-006-6",
+          "user_name": "صلاح عوض",
+          "rating": 3,
+          "title": "الجهاز كويس بس البطارية مش كافية",
+          "body": "الجهاز شغال كويس بس البطارية 84% محسوس فيها بعد نص اليوم. بس السعر كان مناسب للحالة دي.",
+          "is_verified_purchase": true,
+          "review_date": "2025-08-15"
+        },
+        {
+          "review_id": "REV-006-7",
+          "user_name": "رباب سليمان",
+          "rating": 5,
+          "title": "الأفضل في الفئة دي",
+          "body": "لو بدك آيفون ممتاز بسعر في المتناول فـ 13 Pro Max من Lunex هو الاختيار الصح.",
+          "is_verified_purchase": true,
+          "review_date": "2025-10-08"
+        }
+      ]
+    },
+    {
+      "product_id": "PRD-007",
+      "name": "iPhone 13",
+      "slug": "iphone-13",
+      "category": "iphone",
+      "device_type": "assembled",
+      "release_year": 2021,
+      "description": "The iPhone 13 assembled with original-grade components. Features A15 Bionic, an improved dual camera with Cinematic Mode, and a larger battery than its predecessor. The perfect daily driver at an unbeatable price.",
+      "image_url": "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?w=800",
+      "specs": {
+        "display": "6.1-inch Super Retina XDR OLED, 2532x1170px, 460 ppi",
+        "chip": "Apple A15 Bionic, 5nm",
+        "ram": "4GB",
+        "storage_options": [
+          "128GB",
+          "256GB",
+          "512GB"
+        ],
+        "rear_camera": "12MP main f/1.6 + 12MP ultrawide, Cinematic Mode",
+        "front_camera": "12MP TrueDepth",
+        "battery": "3227 mAh",
+        "battery_video_playback": "19 hours",
+        "operating_system": "iOS 15 (upgradable to iOS 18)",
+        "weight": "174g",
+        "dimensions": "146.7 x 71.5 x 7.65 mm",
+        "connectivity": "5G, Wi-Fi 6, Bluetooth 5.0, Lightning",
+        "available_colors": [
+          "Blue",
+          "Pink",
+          "Midnight",
+          "Starlight",
+          "Product Red",
+          "Green"
+        ]
+      },
+      "variants": [
+        {
+          "variant_id": "VAR-007-1",
+          "storage": "128GB",
+          "color": "Midnight",
+          "condition_score": 9,
+          "battery_health": 88,
+          "cosmetic_condition": "Excellent condition.",
+          "lunex_price": 14500,
+          "market_price": 24000,
+          "stock_quantity": 8,
+          "is_available": true
+        },
+        {
+          "variant_id": "VAR-007-2",
+          "storage": "256GB",
+          "color": "Blue",
+          "condition_score": 10,
+          "battery_health": 98,
+          "cosmetic_condition": "Like new.",
+          "lunex_price": 17000,
+          "market_price": 28000,
+          "stock_quantity": 5,
+          "is_available": true
+        },
+        {
+          "variant_id": "VAR-007-3",
+          "storage": "128GB",
+          "color": "Pink",
+          "condition_score": 8,
+          "battery_health": 83,
+          "cosmetic_condition": "Light scratches on back. Frame in good shape.",
+          "lunex_price": 13000,
+          "market_price": 24000,
+          "stock_quantity": 4,
+          "is_available": true
+        }
+      ],
+      "product_photos": [
+        {
+          "photo_id": "PRD-007-PH-1",
+          "url": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800",
+          "caption": "Front display",
+          "sort_order": 0
+        },
+        {
+          "photo_id": "PRD-007-PH-2",
+          "url": "https://images.unsplash.com/photo-1556656793-08538906a9f8?w=800",
+          "caption": "Back panel",
+          "sort_order": 1
+        },
+        {
+          "photo_id": "PRD-007-PH-3",
+          "url": "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=800",
+          "caption": "Camera detail",
+          "sort_order": 2
+        }
+      ],
+      "reviews": [
+        {
+          "review_id": "REV-007-1",
+          "user_name": "محمد بلال",
+          "rating": 5,
+          "title": "آيفون بسعر في المتناول",
+          "body": "14500 جنيه لآيفون 13 بحالة 9/10 ده مش كلام. A15 Bionic والكاميرا ممتازين جداً.",
+          "is_verified_purchase": true,
+          "review_date": "2025-11-05"
+        },
+        {
+          "review_id": "REV-007-2",
+          "user_name": "إيمان العتيبي",
+          "rating": 5,
+          "title": "Cinematic Mode رهيب",
+          "body": "تسجيل الفيديو بـ Cinematic Mode وتأثير الـ Depth of Field مثالي لمحتوى السوشيال ميديا.",
+          "is_verified_purchase": true,
+          "review_date": "2025-10-28"
+        },
+        {
+          "review_id": "REV-007-3",
+          "user_name": "طاهر رضا",
+          "rating": 3,
+          "title": "كويس بس البطارية اتعبت بسرعة",
+          "body": "الجهاز ممتاز في كل حاجة بس البطارية 83% محسوس فيها بعد نص اليوم. السعر مناسب للحالة دي.",
+          "is_verified_purchase": true,
+          "review_date": "2025-09-18"
+        },
+        {
+          "review_id": "REV-007-4",
+          "user_name": "حناء الغانم",
+          "rating": 5,
+          "title": "A15 لسه قوي",
+          "body": "ناس بتقول A15 قديم. بس في الواقع بيشغل كل حاجة بسرعة. مش محتاجة أكتر من كده.",
+          "is_verified_purchase": true,
+          "review_date": "2025-12-02"
+        },
+        {
+          "review_id": "REV-007-5",
+          "user_name": "إبراهيم منسي",
+          "rating": 5,
+          "title": "ممتاز للتبديل من أندرويد",
+          "body": "جيت من سامسونج وما ندمتش. iOS أسلس وأسرع ومنظم أحسن بكتير.",
+          "is_verified_purchase": true,
+          "review_date": "2025-11-18"
+        },
+        {
+          "review_id": "REV-007-6",
+          "user_name": "أمل القيسي",
+          "rating": 4,
+          "title": "كويس جداً",
+          "body": "الجهاز في حالة ممتازة والأداء سريع. بس كنت أتمنى يجي بـ 256GB بنفس السعر.",
+          "is_verified_purchase": true,
+          "review_date": "2025-10-05"
+        }
+      ]
+    },
+    {
+      "product_id": "PRD-008",
+      "name": "iPhone 12 Pro Max",
+      "slug": "iphone-12-pro-max",
+      "category": "iphone",
+      "device_type": "refurbished",
+      "release_year": 2020,
+      "description": "The iPhone 12 Pro Max — the first generation to support 5G with Dolby Vision video recording and a 2.5x telephoto camera with LiDAR Scanner. Great choice for a Pro experience at a more economical price.",
+      "image_url": "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?w=800",
+      "specs": {
+        "display": "6.7-inch Super Retina XDR OLED, 2778x1284px, 458 ppi",
+        "chip": "Apple A14 Bionic, 5nm",
+        "ram": "6GB",
+        "storage_options": [
+          "128GB",
+          "256GB",
+          "512GB"
+        ],
+        "rear_camera": "12MP main f/1.6 + 12MP ultrawide + 12MP 2.5x telephoto, LiDAR Scanner",
+        "front_camera": "12MP TrueDepth",
+        "battery": "3687 mAh, MagSafe",
+        "battery_video_playback": "20 hours",
+        "operating_system": "iOS 14 (upgradable to iOS 18)",
+        "weight": "228g",
+        "dimensions": "160.8 x 78.1 x 7.4 mm",
+        "connectivity": "5G, Wi-Fi 6, Bluetooth 5.0, Lightning",
+        "available_colors": [
+          "Pacific Blue",
+          "Gold",
+          "Graphite",
+          "Silver"
+        ]
+      },
+      "variants": [
+        {
+          "variant_id": "VAR-008-1",
+          "storage": "128GB",
+          "color": "Pacific Blue",
+          "condition_score": 8,
+          "battery_health": 84,
+          "cosmetic_condition": "Light scratches on frame. Screen clean.",
+          "lunex_price": 16000,
+          "market_price": 27000,
+          "stock_quantity": 5,
+          "is_available": true
+        },
+        {
+          "variant_id": "VAR-008-2",
+          "storage": "256GB",
+          "color": "Graphite",
+          "condition_score": 9,
+          "battery_health": 89,
+          "cosmetic_condition": "Excellent 9/10 condition.",
+          "lunex_price": 18500,
+          "market_price": 31000,
+          "stock_quantity": 3,
+          "is_available": true
+        }
+      ],
+      "product_photos": [
+        {
+          "photo_id": "PRD-008-PH-1",
+          "url": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800",
+          "caption": "Front display",
+          "sort_order": 0
+        },
+        {
+          "photo_id": "PRD-008-PH-2",
+          "url": "https://images.unsplash.com/photo-1556656793-08538906a9f8?w=800",
+          "caption": "Back panel",
+          "sort_order": 1
+        },
+        {
+          "photo_id": "PRD-008-PH-3",
+          "url": "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=800",
+          "caption": "Camera detail",
+          "sort_order": 2
+        }
+      ],
+      "reviews": [
+        {
+          "review_id": "REV-008-1",
+          "user_name": "مصطفى شعبان",
+          "rating": 5,
+          "title": "LiDAR رهيب للـ AR",
+          "body": "بستخدم تطبيقات الـ AR كتير في شغلي والـ LiDAR Scanner بيديني دقة عالية جداً.",
+          "is_verified_purchase": true,
+          "review_date": "2025-10-12"
+        },
+        {
+          "review_id": "REV-008-2",
+          "user_name": "رشا الشامي",
+          "rating": 4,
+          "title": "ممتاز للسعر",
+          "body": "الجهاز في حالة 8/10 والبطارية 84% وأنا كنت عارف ده. A14 Bionic لسه قوي جداً.",
+          "is_verified_purchase": true,
+          "review_date": "2025-11-05"
+        },
+        {
+          "review_id": "REV-008-3",
+          "user_name": "دلال فارس",
+          "rating": 5,
+          "title": "5G سريع جداً",
+          "body": "في المناطق اللي فيها 5G الإنترنت بيطير. تحميل كل حاجة بسرعة مجنونة.",
+          "is_verified_purchase": true,
+          "review_date": "2025-12-01"
+        },
+        {
+          "review_id": "REV-008-4",
+          "user_name": "هند بكر",
+          "rating": 5,
+          "title": "تجربة Pro بسعر معقول",
+          "body": "مش قادرة تشتري 15 Pro؟ جربي 12 Pro Max من Lunex. نفس تجربة البرو بسعر أقل بكتير.",
+          "is_verified_purchase": true,
+          "review_date": "2025-10-25"
+        },
+        {
+          "review_id": "REV-008-5",
+          "user_name": "عمر الزيدي",
+          "rating": 3,
+          "title": "كويس بس البطارية مشكلة",
+          "body": "الشاشة والكاميرا ممتازين. بس البطارية 84% بتخلص بسرعة مع الاستخدام المكثف. يستاهل السعر.",
+          "is_verified_purchase": true,
+          "review_date": "2025-11-18"
+        }
+      ]
+    },
+    {
+      "product_id": "PRD-009",
+      "name": "iPhone SE 3rd Generation",
+      "slug": "iphone-se-3",
+      "category": "iphone",
+      "device_type": "refurbished",
+      "release_year": 2022,
+      "description": "The iPhone SE 3rd Generation — the most powerful iPhone with a classic Home button. A15 Bionic chip in a compact body with Touch ID. Perfect for those who love the classic design with modern performance.",
+      "image_url": "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?w=800",
+      "specs": {
+        "display": "4.7-inch Retina HD LCD, 1334x750px, 326 ppi",
+        "chip": "Apple A15 Bionic",
+        "ram": "4GB",
+        "storage_options": [
+          "64GB",
+          "128GB",
+          "256GB"
+        ],
+        "rear_camera": "12MP f/1.8, Portrait Mode",
+        "front_camera": "7MP FaceTime HD, Touch ID",
+        "battery": "2018 mAh",
+        "battery_video_playback": "15 hours",
+        "operating_system": "iOS 15 (upgradable to iOS 18)",
+        "weight": "144g",
+        "dimensions": "138.4 x 67.3 x 7.3 mm",
+        "connectivity": "5G, Wi-Fi 6, Bluetooth 5.0, Lightning",
+        "available_colors": [
+          "Midnight",
+          "Starlight",
+          "Product Red"
+        ]
+      },
+      "variants": [
+        {
+          "variant_id": "VAR-009-1",
+          "storage": "64GB",
+          "color": "Midnight",
+          "condition_score": 9,
+          "battery_health": 87,
+          "cosmetic_condition": "Excellent condition.",
+          "lunex_price": 9500,
+          "market_price": 15500,
+          "stock_quantity": 7,
+          "is_available": true
+        },
+        {
+          "variant_id": "VAR-009-2",
+          "storage": "128GB",
+          "color": "Product Red",
+          "condition_score": 10,
+          "battery_health": 97,
+          "cosmetic_condition": "Like new.",
+          "lunex_price": 11500,
+          "market_price": 18500,
+          "stock_quantity": 4,
+          "is_available": true
+        }
+      ],
+      "product_photos": [
+        {
+          "photo_id": "PRD-009-PH-1",
+          "url": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800",
+          "caption": "Front display",
+          "sort_order": 0
+        },
+        {
+          "photo_id": "PRD-009-PH-2",
+          "url": "https://images.unsplash.com/photo-1556656793-08538906a9f8?w=800",
+          "caption": "Back panel",
+          "sort_order": 1
+        },
+        {
+          "photo_id": "PRD-009-PH-3",
+          "url": "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=800",
+          "caption": "Camera detail",
+          "sort_order": 2
+        }
+      ],
+      "reviews": [
+        {
+          "review_id": "REV-009-1",
+          "user_name": "سيد حمد",
+          "rating": 5,
+          "title": "أحب الشكل الكلاسيكي",
+          "body": "مش عارز Dynamic Island ولا Face ID. Touch ID والتصميم الكلاسيكي بيكفوني تماماً.",
+          "is_verified_purchase": true,
+          "review_date": "2025-10-22"
+        },
+        {
+          "review_id": "REV-009-2",
+          "user_name": "سماء صالح",
+          "rating": 5,
+          "title": "خفيف وسهل الاستخدام",
+          "body": "الجهاز خفيف جداً 144 جرام ومناسب للاستخدام بيد واحدة. مثالي لمن يفضل الحجم الصغير.",
+          "is_verified_purchase": true,
+          "review_date": "2025-11-15"
+        },
+        {
+          "review_id": "REV-009-3",
+          "user_name": "هاشم الجبوري",
+          "rating": 4,
+          "title": "A15 في جسم صغير",
+          "body": "مدهش كيف يحمل A15 في الجسم الصغير ده. الأداء سريع جداً. بس البطارية 87% بتخلص بعد نص اليوم.",
+          "is_verified_purchase": true,
+          "review_date": "2025-09-28"
+        },
+        {
+          "review_id": "REV-009-4",
+          "user_name": "منى الخطيب",
+          "rating": 5,
+          "title": "سعر لا يصدق",
+          "body": "9500 جنيه لآيفون بـ A15 Bionic و5G؟ ده كلام مش كلام. من Lunex طبعاً.",
+          "is_verified_purchase": true,
+          "review_date": "2025-12-08"
+        },
+        {
+          "review_id": "REV-009-5",
+          "user_name": "فريد الدين",
+          "rating": 3,
+          "title": "كويس بس البطارية صغيرة",
+          "body": "الجهاز شغال كويس وA15 ممتاز. بس 2018 mAh صغيرة جداً وبتخلص بسرعة. مناسب للاستخدام الخفيف.",
+          "is_verified_purchase": true,
+          "review_date": "2025-09-10"
+        }
+      ]
+    },
+    {
+      "product_id": "PRD-010",
+      "name": "iPhone 14 Plus",
+      "slug": "iphone-14-plus",
+      "category": "iphone",
+      "device_type": "assembled",
+      "release_year": 2022,
+      "description": "The iPhone 14 Plus delivers a large 6.7-inch screen at a lower price than the Pro Max. Longest battery life ever in a standard iPhone lineup, powered by A15 Bionic.",
+      "image_url": "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?w=800",
+      "specs": {
+        "display": "6.7-inch Super Retina XDR OLED, 2778x1284px, 458 ppi",
+        "chip": "Apple A15 Bionic",
+        "ram": "6GB",
+        "storage_options": [
+          "128GB",
+          "256GB",
+          "512GB"
+        ],
+        "rear_camera": "12MP main f/1.5 + 12MP ultrawide",
+        "front_camera": "12MP TrueDepth with autofocus",
+        "battery": "4323 mAh",
+        "battery_video_playback": "26 hours — longest in standard lineup",
+        "operating_system": "iOS 16 (upgradable to iOS 18)",
+        "weight": "203g",
+        "dimensions": "160.8 x 78.1 x 7.8 mm",
+        "connectivity": "5G, Wi-Fi 6, Lightning",
+        "available_colors": [
+          "Blue",
+          "Purple",
+          "Midnight",
+          "Starlight",
+          "Product Red",
+          "Yellow"
+        ]
+      },
+      "variants": [
+        {
+          "variant_id": "VAR-010-1",
+          "storage": "128GB",
+          "color": "Blue",
+          "condition_score": 9,
+          "battery_health": 91,
+          "cosmetic_condition": "Excellent condition.",
+          "lunex_price": 23000,
+          "market_price": 38000,
+          "stock_quantity": 5,
+          "is_available": true
+        },
+        {
+          "variant_id": "VAR-010-2",
+          "storage": "256GB",
+          "color": "Yellow",
+          "condition_score": 10,
+          "battery_health": 99,
+          "cosmetic_condition": "Like new.",
+          "lunex_price": 27000,
+          "market_price": 44000,
+          "stock_quantity": 3,
+          "is_available": true
+        }
+      ],
+      "product_photos": [
+        {
+          "photo_id": "PRD-010-PH-1",
+          "url": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800",
+          "caption": "Front display",
+          "sort_order": 0
+        },
+        {
+          "photo_id": "PRD-010-PH-2",
+          "url": "https://images.unsplash.com/photo-1556656793-08538906a9f8?w=800",
+          "caption": "Back panel",
+          "sort_order": 1
+        },
+        {
+          "photo_id": "PRD-010-PH-3",
+          "url": "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=800",
+          "caption": "Camera detail",
+          "sort_order": 2
+        }
+      ],
+      "reviews": [
+        {
+          "review_id": "REV-010-1",
+          "user_name": "سامر الشيخ",
+          "rating": 5,
+          "title": "26 ساعة بطارية مذهلة",
+          "body": "26 ساعة بطارية في الستاندرد آيفون؟ ده شيء مش كتير ناس عارفاه. المشتري الذكي هياخد الـ Plus.",
+          "is_verified_purchase": true,
+          "review_date": "2025-11-20"
+        },
+        {
+          "review_id": "REV-010-2",
+          "user_name": "فاتن العمر",
+          "rating": 5,
+          "title": "شاشة كبيرة بسعر مناسب",
+          "body": "بدل ما أدفع في Pro Max كتير، اخدت نفس حجم الشاشة بسعر أقل. قرار ذكي.",
+          "is_verified_purchase": true,
+          "review_date": "2025-10-14"
+        },
+        {
+          "review_id": "REV-010-3",
+          "user_name": "محمود الجابر",
+          "rating": 4,
+          "title": "كويس جداً",
+          "body": "الجهاز ممتاز. البطارية الأطول في الستاندرد بتعدي يومين أحياناً. بس الكاميرا عادية مش Pro.",
+          "is_verified_purchase": true,
+          "review_date": "2025-09-30"
+        },
+        {
+          "review_id": "REV-010-4",
+          "user_name": "رولا قاسم",
+          "rating": 5,
+          "title": "صفقة ممتازة",
+          "body": "23 ألف لآيفون 14 Plus 128GB في حالة 9/10 ده صفقة ما تتعوضش.",
+          "is_verified_purchase": true,
+          "review_date": "2025-12-05"
+        }
+      ]
+    },
+    {
+      "product_id": "PRD-011",
+      "name": "MacBook Air M2 13-inch",
+      "slug": "macbook-air-m2-13",
+      "category": "mac",
+      "device_type": "refurbished",
+      "release_year": 2022,
+      "description": "The MacBook Air M2 is the thinnest and lightest MacBook Air ever made. Features a Liquid Retina 13.6-inch display, 18-hour battery life, and a completely fanless design for total silence. Professionally refurbished.",
+      "image_url": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=800",
+      "specs": {
+        "display": "13.6-inch Liquid Retina, 2560x1664px, 224 ppi, True Tone",
+        "chip": "Apple M2, 8-core CPU, 8/10-core GPU",
+        "ram": "8GB / 16GB Unified Memory",
+        "storage_options": [
+          "256GB SSD",
+          "512GB SSD",
+          "1TB SSD",
+          "2TB SSD"
+        ],
+        "camera": "1080p FaceTime HD",
+        "battery": "52.6 Wh, up to 18 hours",
+        "operating_system": "macOS Ventura (upgradable to macOS Sequoia)",
+        "weight": "1.24 kg",
+        "dimensions": "304.1 x 215 x 11.3 mm",
+        "connectivity": "Wi-Fi 6, Bluetooth 5.0, 2x Thunderbolt 4 / USB 4, MagSafe 3",
+        "design": "Fanless — completely silent",
+        "available_colors": [
+          "Midnight",
+          "Starlight",
+          "Space Gray",
+          "Silver"
+        ]
+      },
+      "variants": [
+        {
+          "variant_id": "VAR-011-1",
+          "storage": "256GB SSD",
+          "color": "Midnight",
+          "condition_score": 9,
+          "battery_health": 92,
+          "cosmetic_condition": "Light scratches on lid. Screen perfectly clean.",
+          "lunex_price": 27500,
+          "market_price": 45990,
+          "stock_quantity": 4,
+          "is_available": true
+        },
+        {
+          "variant_id": "VAR-011-2",
+          "storage": "512GB SSD",
+          "color": "Starlight",
+          "condition_score": 10,
+          "battery_health": 99,
+          "cosmetic_condition": "Like new.",
+          "lunex_price": 33000,
+          "market_price": 54000,
+          "stock_quantity": 2,
+          "is_available": true
+        },
+        {
+          "variant_id": "VAR-011-3",
+          "storage": "512GB SSD",
+          "color": "Space Gray",
+          "condition_score": 8,
+          "battery_health": 86,
+          "cosmetic_condition": "Light wear on frame edges.",
+          "lunex_price": 30000,
+          "market_price": 54000,
+          "stock_quantity": 3,
+          "is_available": true
+        },
+        {
+          "variant_id": "VAR-011-4",
+          "storage": "1TB SSD",
+          "color": "Silver",
+          "condition_score": 9,
+          "battery_health": 94,
+          "cosmetic_condition": "One small scratch near MagSafe port.",
+          "lunex_price": 38000,
+          "market_price": 63000,
+          "stock_quantity": 2,
+          "is_available": true
+        }
+      ],
+      "product_photos": [
+        {
+          "photo_id": "PRD-011-PH-1",
+          "url": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=800",
+          "caption": "Open view",
+          "sort_order": 0
+        },
+        {
+          "photo_id": "PRD-011-PH-2",
+          "url": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=800",
+          "caption": "Keyboard",
+          "sort_order": 1
+        },
+        {
+          "photo_id": "PRD-011-PH-3",
+          "url": "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=800",
+          "caption": "Ports detail",
+          "sort_order": 2
+        }
+      ],
+      "reviews": [
+        {
+          "review_id": "REV-011-1",
+          "user_name": "عمر عبد الحكيم",
+          "rating": 5,
+          "title": "أفضل لابتوب اشتريته في حياتي",
+          "body": "الـ M2 ده شيء تاني خالص. كل حاجة بتشتغل بسرعة البرق ومن غير أي سخونة. الـ 18 ساعة بطارية حقيقية مش كلام.",
+          "is_verified_purchase": true,
+          "review_date": "2025-10-25"
+        },
+        {
+          "review_id": "REV-011-2",
+          "user_name": "أميرة الحلواني",
+          "rating": 5,
+          "title": "مثالي للشغل في المقاهي",
+          "body": "خفيف جداً وسهل الحمل. البطارية بتوصلني من الصبح لآخر اليوم من غير شاحن.",
+          "is_verified_purchase": true,
+          "review_date": "2025-11-12"
+        },
+        {
+          "review_id": "REV-011-3",
+          "user_name": "محمود دياب",
+          "rating": 4,
+          "title": "كويس جداً للشغل",
+          "body": "اشتريته للشغل على Excel والعروض التقديمية. M2 ما فيهوش أي تقطيع. بس الـ 256GB اتملت بسرعة.",
+          "is_verified_purchase": true,
+          "review_date": "2025-09-08"
+        },
+        {
+          "review_id": "REV-011-4",
+          "user_name": "رنا السيد",
+          "rating": 5,
+          "title": "الصمت ميزة خرافية",
+          "body": "اللابتوب ده صامت 100% لأنه من غير مروحة. ده شيء مش هتلاقيه في أي جهاز تاني.",
+          "is_verified_purchase": true,
+          "review_date": "2025-12-02"
+        },
+        {
+          "review_id": "REV-011-5",
+          "user_name": "فادي منير",
+          "rating": 5,
+          "title": "M2 رهيب للمصممين",
+          "body": "بشتغل على Figma وAfter Effects والجهاز خفيف زي الريشة. وفرت 18 ألف عن الجديد من Lunex.",
+          "is_verified_purchase": true,
+          "review_date": "2025-11-18"
+        },
+        {
+          "review_id": "REV-011-6",
+          "user_name": "وليد الشيخ",
+          "rating": 4,
+          "title": "شاشة ممتازة بس محتاج adapter",
+          "body": "شاشة Liquid Retina نقية ومريحة للعين. بس محتاج adapter لكل حاجة بسبب منافذ USB-C بس.",
+          "is_verified_purchase": true,
+          "review_date": "2025-08-22"
+        },
+        {
+          "review_id": "REV-011-7",
+          "user_name": "حمزة درويش",
+          "rating": 5,
+          "title": "M2 للمطورين خيار مثالي",
+          "body": "بشغّل Docker وVS Code مع 20 tab في Chrome وما فيش أي تباطؤ. M2 للناس.",
+          "is_verified_purchase": true,
+          "review_date": "2025-10-05"
+        },
+        {
+          "review_id": "REV-011-8",
+          "user_name": "نوران قاسم",
+          "rating": 5,
+          "title": "وفرت 18 ألف جنيه",
+          "body": "الجهاز زي ما مكتوب بالظبط. وفرت تقريباً 18 ألف جنيه بدل الجديد. قرار صح 100%.",
+          "is_verified_purchase": true,
+          "review_date": "2025-12-09"
+        }
+      ]
+    },
+    {
+      "product_id": "PRD-012",
+      "name": "MacBook Air M3 13-inch",
+      "slug": "macbook-air-m3-13",
+      "category": "mac",
+      "device_type": "refurbished",
+      "release_year": 2024,
+      "description": "The MacBook Air M3 — the latest generation of the best-selling laptop ever. The M3 chip is 60% faster than M1, supports two external displays for the first time, and now features Wi-Fi 6E.",
+      "image_url": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=800",
+      "specs": {
+        "display": "13.6-inch Liquid Retina, 2560x1664px, 224 ppi, True Tone",
+        "chip": "Apple M3, 8-core CPU, 10-core GPU, 3nm",
+        "ram": "8GB / 16GB / 24GB Unified Memory",
+        "storage_options": [
+          "256GB SSD",
+          "512GB SSD",
+          "1TB SSD",
+          "2TB SSD"
+        ],
+        "camera": "1080p FaceTime HD",
+        "battery": "52.6 Wh, up to 18 hours",
+        "operating_system": "macOS Sonoma (upgradable to Sequoia)",
+        "weight": "1.24 kg",
+        "dimensions": "304.1 x 215 x 11.3 mm",
+        "connectivity": "Wi-Fi 6E, Bluetooth 5.3, 2x Thunderbolt 4 / USB 4, MagSafe 3",
+        "new_feature": "Supports two external displays with lid closed",
+        "available_colors": [
+          "Midnight",
+          "Starlight",
+          "Space Gray",
+          "Silver"
+        ]
+      },
+      "variants": [
+        {
+          "variant_id": "VAR-012-1",
+          "storage": "256GB SSD",
+          "color": "Midnight",
+          "condition_score": 9,
+          "battery_health": 96,
+          "cosmetic_condition": "Excellent condition. Very light use.",
+          "lunex_price": 33000,
+          "market_price": 54000,
+          "stock_quantity": 3,
+          "is_available": true
+        },
+        {
+          "variant_id": "VAR-012-2",
+          "storage": "512GB SSD",
+          "color": "Starlight",
+          "condition_score": 10,
+          "battery_health": 100,
+          "cosmetic_condition": "Perfect.",
+          "lunex_price": 38500,
+          "market_price": 64000,
+          "stock_quantity": 2,
+          "is_available": true
+        },
+        {
+          "variant_id": "VAR-012-3",
+          "storage": "1TB SSD",
+          "color": "Space Gray",
+          "condition_score": 9,
+          "battery_health": 94,
+          "cosmetic_condition": "9/10 excellent condition.",
+          "lunex_price": 44000,
+          "market_price": 73000,
+          "stock_quantity": 2,
+          "is_available": true
+        }
+      ],
+      "product_photos": [
+        {
+          "photo_id": "PRD-012-PH-1",
+          "url": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=800",
+          "caption": "Open view",
+          "sort_order": 0
+        },
+        {
+          "photo_id": "PRD-012-PH-2",
+          "url": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=800",
+          "caption": "Keyboard",
+          "sort_order": 1
+        },
+        {
+          "photo_id": "PRD-012-PH-3",
+          "url": "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=800",
+          "caption": "Ports detail",
+          "sort_order": 2
+        }
+      ],
+      "reviews": [
+        {
+          "review_id": "REV-012-1",
+          "user_name": "تامر الهلالي",
+          "rating": 5,
+          "title": "M3 أسرع ملحوظ من M2",
+          "body": "كنت عندي M2 وبعته. الـ M3 أسرع ملحوظ في المهام الكثيفة خصوصاً تحرير الفيديو.",
+          "is_verified_purchase": true,
+          "review_date": "2025-11-14"
+        },
+        {
+          "review_id": "REV-012-2",
+          "user_name": "ريهام الأشموني",
+          "rating": 5,
+          "title": "شاشتين خارجيتين غيرت شغلي",
+          "body": "ميزة الشاشتين الخارجيتين مع الغطاء المغلق غيرت شغلي تماماً. ده اللي كنت محتاجاه.",
+          "is_verified_purchase": true,
+          "review_date": "2025-10-22"
+        },
+        {
+          "review_id": "REV-012-3",
+          "user_name": "عبد الله رمضان",
+          "rating": 5,
+          "title": "Wi-Fi 6E سريع جداً",
+          "body": "مع شبكة Wi-Fi 6E بيتحمل كل حاجة بسرعة مجنونة. نفس السعر المنخفض من Lunex.",
+          "is_verified_purchase": true,
+          "review_date": "2025-12-06"
+        },
+        {
+          "review_id": "REV-012-4",
+          "user_name": "شادي فايز",
+          "rating": 4,
+          "title": "ممتاز بكل المقاييس",
+          "body": "أداء وبطارية وتصميم ممتازين. البطارية 96% شغالة كويس جداً. بس السعر مرتفع شوية.",
+          "is_verified_purchase": true,
+          "review_date": "2025-09-30"
+        },
+        {
+          "review_id": "REV-012-5",
+          "user_name": "منة الله صبحي",
+          "rating": 5,
+          "title": "أحسن قرار اتخذته",
+          "body": "وفرت على الأقل 20 ألف جنيه مقارنة بالجديد. نفس الجهاز نفس الأداء. Lunex صح.",
+          "is_verified_purchase": true,
+          "review_date": "2025-11-02"
+        }
+      ]
+    },
+    {
+      "product_id": "PRD-013",
+      "name": "MacBook Air M1 13-inch",
+      "slug": "macbook-air-m1-13",
+      "category": "mac",
+      "device_type": "refurbished",
+      "release_year": 2020,
+      "description": "The MacBook Air M1 — the laptop that changed everything. Apple's first Mac with its own silicon chip. Still incredibly powerful in 2026 and available at an unbeatable price.",
+      "image_url": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=800",
+      "specs": {
+        "display": "13.3-inch Retina, 2560x1600px, 227 ppi, True Tone",
+        "chip": "Apple M1, 8-core CPU, 7/8-core GPU",
+        "ram": "8GB / 16GB Unified Memory",
+        "storage_options": [
+          "256GB SSD",
+          "512GB SSD",
+          "1TB SSD"
+        ],
+        "camera": "720p FaceTime",
+        "battery": "49.9 Wh, up to 18 hours",
+        "operating_system": "macOS Big Sur (upgradable to macOS Sequoia)",
+        "weight": "1.29 kg",
+        "dimensions": "304.1 x 212.4 x 16.1 mm",
+        "connectivity": "Wi-Fi 6, Bluetooth 5.0, 2x Thunderbolt / USB 4, MagSafe",
+        "design": "Fanless — completely silent",
+        "available_colors": [
+          "Space Gray",
+          "Gold",
+          "Silver"
+        ]
+      },
+      "variants": [
+        {
+          "variant_id": "VAR-013-1",
+          "storage": "256GB SSD",
+          "color": "Space Gray",
+          "condition_score": 8,
+          "battery_health": 83,
+          "cosmetic_condition": "Light scratches on lid.",
+          "lunex_price": 17000,
+          "market_price": 28500,
+          "stock_quantity": 6,
+          "is_available": true
+        },
+        {
+          "variant_id": "VAR-013-2",
+          "storage": "512GB SSD",
+          "color": "Gold",
+          "condition_score": 9,
+          "battery_health": 89,
+          "cosmetic_condition": "Excellent condition.",
+          "lunex_price": 21000,
+          "market_price": 35000,
+          "stock_quantity": 4,
+          "is_available": true
+        },
+        {
+          "variant_id": "VAR-013-3",
+          "storage": "256GB SSD",
+          "color": "Silver",
+          "condition_score": 10,
+          "battery_health": 96,
+          "cosmetic_condition": "Like new.",
+          "lunex_price": 19500,
+          "market_price": 28500,
+          "stock_quantity": 3,
+          "is_available": true
+        }
+      ],
+      "product_photos": [
+        {
+          "photo_id": "PRD-013-PH-1",
+          "url": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=800",
+          "caption": "Open view",
+          "sort_order": 0
+        },
+        {
+          "photo_id": "PRD-013-PH-2",
+          "url": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=800",
+          "caption": "Keyboard",
+          "sort_order": 1
+        },
+        {
+          "photo_id": "PRD-013-PH-3",
+          "url": "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=800",
+          "caption": "Ports detail",
+          "sort_order": 2
+        }
+      ],
+      "reviews": [
+        {
+          "review_id": "REV-013-1",
+          "user_name": "أيوب الحافي",
+          "rating": 5,
+          "title": "M1 لسه ممتاز في 2026",
+          "body": "الجهاز شغال بسرعة في كل حاجة. M1 ما زال قوي جداً ومفيش مبرر لدفع أكتر دلوقتي.",
+          "is_verified_purchase": true,
+          "review_date": "2025-10-14"
+        },
+        {
+          "review_id": "REV-013-2",
+          "user_name": "نجمة الحسين",
+          "rating": 5,
+          "title": "الأرخص والأكفأ",
+          "body": "17 ألف لماك بوك بـ M1 ده مش كلام. صفقة العمر من Lunex.",
+          "is_verified_purchase": true,
+          "review_date": "2025-11-08"
+        },
+        {
+          "review_id": "REV-013-3",
+          "user_name": "صالح الحارثي",
+          "rating": 4,
+          "title": "ممتاز للطلاب",
+          "body": "اشتريته لابني في الجامعة. M1 بيشتغل تمام على كل برامج الدراسة. بس البطارية 89% بتنزل بسرعة شوية.",
+          "is_verified_purchase": true,
+          "review_date": "2025-09-20"
+        },
+        {
+          "review_id": "REV-013-4",
+          "user_name": "ثناء عوض",
+          "rating": 5,
+          "title": "18 ساعة بطارية حقيقية",
+          "body": "18 ساعة بطارية مش إعلان فاضي. بستخدمه يومين أحياناً من غير شحن.",
+          "is_verified_purchase": true,
+          "review_date": "2025-12-05"
+        },
+        {
+          "review_id": "REV-013-5",
+          "user_name": "غنى الرياض",
+          "rating": 3,
+          "title": "كويس بس البطارية اتعبت",
+          "body": "الجهاز شغال كويس من ناحية الأداء. بس البطارية 83% بتخلص بسرعة وحاسس فيها. السعر مناسب.",
+          "is_verified_purchase": true,
+          "review_date": "2025-10-08"
+        }
+      ]
+    },
+    {
+      "product_id": "PRD-014",
+      "name": "MacBook Pro 14-inch M3",
+      "slug": "macbook-pro-14-m3",
+      "category": "mac",
+      "device_type": "refurbished",
+      "release_year": 2023,
+      "description": "The MacBook Pro 14-inch with M3 Pro. The ultimate choice for professionals in video editing, 3D design, and development. Features a Liquid Retina XDR display with ProMotion and industry-leading performance.",
+      "image_url": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=800",
+      "specs": {
+        "display": "14.2-inch Liquid Retina XDR, ProMotion 120Hz, 3024x1964px, 254 ppi, 1000 nits",
+        "chip": "Apple M3 Pro — 11-core CPU, 14-core GPU, 3nm",
+        "ram": "18GB / 36GB Unified Memory",
+        "storage_options": [
+          "512GB SSD",
+          "1TB SSD",
+          "2TB SSD"
+        ],
+        "camera": "1080p FaceTime HD",
+        "battery": "70 Wh, up to 18 hours",
+        "operating_system": "macOS Sonoma",
+        "weight": "1.61 kg",
+        "dimensions": "312.6 x 221.2 x 15.5 mm",
+        "connectivity": "Wi-Fi 6E, Bluetooth 5.3, 3x Thunderbolt 4, HDMI 2.1, SD Card, MagSafe 3",
+        "available_colors": [
+          "Space Black",
+          "Silver"
+        ]
+      },
+      "variants": [
+        {
+          "variant_id": "VAR-014-1",
+          "storage": "512GB SSD",
+          "color": "Space Black",
+          "condition_score": 9,
+          "battery_health": 93,
+          "cosmetic_condition": "Excellent condition.",
+          "lunex_price": 60000,
+          "market_price": 100000,
+          "stock_quantity": 2,
+          "is_available": true
+        },
+        {
+          "variant_id": "VAR-014-2",
+          "storage": "1TB SSD",
+          "color": "Silver",
+          "condition_score": 10,
+          "battery_health": 98,
+          "cosmetic_condition": "Like new.",
+          "lunex_price": 70000,
+          "market_price": 116000,
+          "stock_quantity": 1,
+          "is_available": true
+        }
+      ],
+      "product_photos": [
+        {
+          "photo_id": "PRD-014-PH-1",
+          "url": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=800",
+          "caption": "Open view",
+          "sort_order": 0
+        },
+        {
+          "photo_id": "PRD-014-PH-2",
+          "url": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=800",
+          "caption": "Keyboard",
+          "sort_order": 1
+        },
+        {
+          "photo_id": "PRD-014-PH-3",
+          "url": "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=800",
+          "caption": "Ports detail",
+          "sort_order": 2
+        }
+      ],
+      "reviews": [
+        {
+          "review_id": "REV-014-1",
+          "user_name": "مازن طارق",
+          "rating": 5,
+          "title": "للمحترفين فقط",
+          "body": "M3 Pro مع الـ 14 أنوية GPU بيشغل Final Cut Pro بسرعة خرافية. وفرت 40 ألف مقارنة بالجديد.",
+          "is_verified_purchase": true,
+          "review_date": "2025-11-08"
+        },
+        {
+          "review_id": "REV-014-2",
+          "user_name": "كريستين نبيل",
+          "rating": 5,
+          "title": "شاشة XDR لا مثيل لها",
+          "body": "شاشة Liquid Retina XDR بالـ 1000 نيت مذهلة لتحرير الصور والفيديو. الألوان دقيقة جداً.",
+          "is_verified_purchase": true,
+          "review_date": "2025-10-30"
+        },
+        {
+          "review_id": "REV-014-3",
+          "user_name": "علاء الرشيدي",
+          "rating": 4,
+          "title": "استثمار طويل المدى",
+          "body": "دفعت فيه بس أعرف إنه هيكون معايا 5 سنين على الأقل. بس 60 ألف مش هين على أي حد.",
+          "is_verified_purchase": true,
+          "review_date": "2025-12-01"
+        },
+        {
+          "review_id": "REV-014-4",
+          "user_name": "نهال درويش",
+          "rating": 5,
+          "title": "أفضل مشتريات 2025",
+          "body": "وفرت تقريباً 40 ألف جنيه بدل الجديد. المعالج والشاشة والبطارية كلها ممتازة. Lunex تسلم.",
+          "is_verified_purchase": true,
+          "review_date": "2025-11-25"
+        }
+      ]
+    },
+    {
+      "product_id": "PRD-015",
+      "name": "MacBook Pro 16-inch M3 Pro",
+      "slug": "macbook-pro-16-m3-pro",
+      "category": "mac",
+      "device_type": "refurbished",
+      "release_year": 2023,
+      "description": "The MacBook Pro 16-inch with M3 Pro — the ultimate solution for professionals editing 8K video, graphic designers, and software developers. Features an exceptional 16-inch XDR display.",
+      "image_url": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=800",
+      "specs": {
+        "display": "16.2-inch Liquid Retina XDR, ProMotion 120Hz, 3456x2234px, 254 ppi",
+        "chip": "Apple M3 Pro — 12-core CPU, 18-core GPU",
+        "ram": "18GB / 36GB Unified Memory",
+        "storage_options": [
+          "512GB SSD",
+          "1TB SSD",
+          "2TB SSD"
+        ],
+        "camera": "1080p FaceTime HD",
+        "battery": "88 Wh, up to 22 hours",
+        "operating_system": "macOS Sonoma",
+        "weight": "2.14 kg",
+        "dimensions": "355.7 x 248.1 x 16.8 mm",
+        "connectivity": "Wi-Fi 6E, Bluetooth 5.3, 3x Thunderbolt 4, HDMI 2.1, SD Card, MagSafe 3",
+        "available_colors": [
+          "Space Black",
+          "Silver"
+        ]
+      },
+      "variants": [
+        {
+          "variant_id": "VAR-015-1",
+          "storage": "512GB SSD",
+          "color": "Space Black",
+          "condition_score": 9,
+          "battery_health": 94,
+          "cosmetic_condition": "Excellent condition.",
+          "lunex_price": 80000,
+          "market_price": 133000,
+          "stock_quantity": 1,
+          "is_available": true
+        },
+        {
+          "variant_id": "VAR-015-2",
+          "storage": "1TB SSD",
+          "color": "Silver",
+          "condition_score": 10,
+          "battery_health": 99,
+          "cosmetic_condition": "Like new.",
+          "lunex_price": 92000,
+          "market_price": 154000,
+          "stock_quantity": 1,
+          "is_available": true
+        }
+      ],
+      "product_photos": [
+        {
+          "photo_id": "PRD-015-PH-1",
+          "url": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=800",
+          "caption": "Open view",
+          "sort_order": 0
+        },
+        {
+          "photo_id": "PRD-015-PH-2",
+          "url": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=800",
+          "caption": "Keyboard",
+          "sort_order": 1
+        },
+        {
+          "photo_id": "PRD-015-PH-3",
+          "url": "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=800",
+          "caption": "Ports detail",
+          "sort_order": 2
+        }
+      ],
+      "reviews": [
+        {
+          "review_id": "REV-015-1",
+          "user_name": "علي الحافي",
+          "rating": 5,
+          "title": "أقوى لابتوب في العالم",
+          "body": "M3 Pro مع 18 GPU cores بيشغل Final Cut Pro مع 8K footage من غير أي لاق. ده شيء مش طبيعي.",
+          "is_verified_purchase": true,
+          "review_date": "2025-11-18"
+        },
+        {
+          "review_id": "REV-015-2",
+          "user_name": "لوسي عازر",
+          "rating": 5,
+          "title": "22 ساعة بطارية!!!",
+          "body": "22 ساعة بطارية في لابتوب بالأداء ده؟ Apple Silicon تحفة هندسية.",
+          "is_verified_purchase": true,
+          "review_date": "2025-10-22"
+        },
+        {
+          "review_id": "REV-015-3",
+          "user_name": "وفيق التل",
+          "rating": 4,
+          "title": "استثمار ثقيل بس يستاهل",
+          "body": "80 ألف جنيه مش هين. بس لما تشوف الأداء هتفهم ليه. وفرت 53 ألف مقارنة بالجديد.",
+          "is_verified_purchase": true,
+          "review_date": "2025-12-01"
+        }
+      ]
+    },
+    {
+      "product_id": "PRD-016",
+      "name": "iPad Pro 11-inch M2",
+      "slug": "ipad-pro-11-m2",
+      "category": "ipad",
+      "device_type": "refurbished",
+      "release_year": 2022,
+      "description": "The iPad Pro 11-inch with M2 chip and ProMotion 120Hz technology. Perfect for artists and designers with Apple Pencil 2nd generation support. Comes in excellent condition with Lunex warranty.",
+      "image_url": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=800",
+      "specs": {
+        "display": "11-inch Liquid Retina, ProMotion 120Hz, 2388x1668px, 264 ppi",
+        "chip": "Apple M2",
+        "ram": "8GB",
+        "storage_options": [
+          "128GB",
+          "256GB",
+          "512GB",
+          "1TB",
+          "2TB"
+        ],
+        "rear_camera": "12MP main + 10MP Ultra Wide",
+        "front_camera": "12MP TrueDepth Landscape",
+        "battery": "28.65 Wh, up to 10 hours",
+        "operating_system": "iPadOS 16 (upgradable to iPadOS 18)",
+        "weight": "466g (Wi-Fi)",
+        "dimensions": "247.6 x 178.5 x 5.9 mm",
+        "connectivity": "Wi-Fi 6E, Bluetooth 5.3, USB-C / Thunderbolt 4",
+        "pencil_support": "Apple Pencil 2nd Generation",
+        "available_colors": [
+          "Space Gray",
+          "Silver"
+        ]
+      },
+      "variants": [
+        {
+          "variant_id": "VAR-016-1",
+          "storage": "128GB",
+          "color": "Space Gray",
+          "condition_score": 9,
+          "battery_health": 91,
+          "cosmetic_condition": "Excellent condition with a small scratch on one corner.",
+          "lunex_price": 29000,
+          "market_price": 48000,
+          "stock_quantity": 3,
+          "is_available": true
+        },
+        {
+          "variant_id": "VAR-016-2",
+          "storage": "256GB",
+          "color": "Silver",
+          "condition_score": 10,
+          "battery_health": 100,
+          "cosmetic_condition": "Perfect.",
+          "lunex_price": 33500,
+          "market_price": 55000,
+          "stock_quantity": 2,
+          "is_available": true
+        },
+        {
+          "variant_id": "VAR-016-3",
+          "storage": "512GB",
+          "color": "Space Gray",
+          "condition_score": 9,
+          "battery_health": 94,
+          "cosmetic_condition": "9/10 excellent condition.",
+          "lunex_price": 40000,
+          "market_price": 67000,
+          "stock_quantity": 2,
+          "is_available": true
+        }
+      ],
+      "product_photos": [
+        {
+          "photo_id": "PRD-016-PH-1",
+          "url": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=800",
+          "caption": "Display",
+          "sort_order": 0
+        },
+        {
+          "photo_id": "PRD-016-PH-2",
+          "url": "https://images.unsplash.com/photo-1561154464-82e9adf32764?w=800",
+          "caption": "Back view",
+          "sort_order": 1
+        },
+        {
+          "photo_id": "PRD-016-PH-3",
+          "url": "https://images.unsplash.com/photo-1620826773867-a1a0d4dca7a9?w=800",
+          "caption": "Edge profile",
+          "sort_order": 2
+        }
+      ],
+      "reviews": [
+        {
+          "review_id": "REV-016-1",
+          "user_name": "منى الأحمدي",
+          "rating": 5,
+          "title": "للرسم والتصميم مثالي",
+          "body": "بستخدمه مع Apple Pencil للرسم الرقمي وما شاء الله. M2 بيشغل Procreate من غير أي تقطيع.",
+          "is_verified_purchase": true,
+          "review_date": "2025-11-16"
+        },
+        {
+          "review_id": "REV-016-2",
+          "user_name": "سعيد الباز",
+          "rating": 5,
+          "title": "أداء ممتاز",
+          "body": "الآيباد يعمل كالجديد. M2 قوي جداً لكل المهام سواء تصميم أو فيديو أو ألعاب.",
+          "is_verified_purchase": true,
+          "review_date": "2025-10-19"
+        },
+        {
+          "review_id": "REV-016-3",
+          "user_name": "هيام توفيق",
+          "rating": 4,
+          "title": "كويس جداً",
+          "body": "الآيباد في حالة ممتازة والـ ProMotion ملحوظ في التنقل. بس كنت أتمنى تجيلي حافظة معاه.",
+          "is_verified_purchase": true,
+          "review_date": "2025-09-12"
+        },
+        {
+          "review_id": "REV-016-4",
+          "user_name": "رامي عيد",
+          "rating": 5,
+          "title": "للطلاب والمحترفين",
+          "body": "بستخدمه في الدراسة والمحاضرات وكمان في الشغل الفريلانس. الآيباد برو ده متعدد الاستخدامات.",
+          "is_verified_purchase": true,
+          "review_date": "2025-12-02"
+        },
+        {
+          "review_id": "REV-016-5",
+          "user_name": "حازم البدوي",
+          "rating": 5,
+          "title": "ProMotion مذهل",
+          "body": "الـ 120Hz على شاشة الآيباد البروعة. التمرير سلس جداً والرسم مع Apple Pencil دقيق.",
+          "is_verified_purchase": true,
+          "review_date": "2025-10-28"
+        },
+        {
+          "review_id": "REV-016-6",
+          "user_name": "لمى خضر",
+          "rating": 3,
+          "title": "الجهاز كويس بس الخدمة بطيئة",
+          "body": "الآيباد نفسه ممتاز وM2 شغال تمام. بس استغرق التوصيل 5 أيام وكنت محتاجه أسرع.",
+          "is_verified_purchase": true,
+          "review_date": "2025-11-08"
+        }
+      ]
+    },
+    {
+      "product_id": "PRD-017",
+      "name": "iPad Pro 12.9-inch M2",
+      "slug": "ipad-pro-12-9-m2",
+      "category": "ipad",
+      "device_type": "refurbished",
+      "release_year": 2022,
+      "description": "The iPad Pro 12.9-inch with M2 chip and incredible Liquid Retina XDR mini-LED display. A 1600-nit display with ProMotion 120Hz built for professionals.",
+      "image_url": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=800",
+      "specs": {
+        "display": "12.9-inch Liquid Retina XDR mini-LED, ProMotion 120Hz, 2732x2048px, 1600 nits peak",
+        "chip": "Apple M2",
+        "ram": "8GB",
+        "storage_options": [
+          "128GB",
+          "256GB",
+          "512GB",
+          "1TB",
+          "2TB"
+        ],
+        "rear_camera": "12MP main + 10MP Ultra Wide + LiDAR",
+        "front_camera": "12MP TrueDepth Landscape",
+        "battery": "40.88 Wh, up to 10 hours",
+        "operating_system": "iPadOS 16",
+        "weight": "682g",
+        "dimensions": "280.6 x 214.9 x 6.4 mm",
+        "connectivity": "Wi-Fi 6E, Bluetooth 5.3, USB-C / Thunderbolt 4",
+        "available_colors": [
+          "Space Gray",
+          "Silver"
+        ]
+      },
+      "variants": [
+        {
+          "variant_id": "VAR-017-1",
+          "storage": "256GB",
+          "color": "Space Gray",
+          "condition_score": 9,
+          "battery_health": 92,
+          "cosmetic_condition": "Excellent condition.",
+          "lunex_price": 45000,
+          "market_price": 75000,
+          "stock_quantity": 2,
+          "is_available": true
+        },
+        {
+          "variant_id": "VAR-017-2",
+          "storage": "512GB",
+          "color": "Silver",
+          "condition_score": 10,
+          "battery_health": 98,
+          "cosmetic_condition": "Like new.",
+          "lunex_price": 54000,
+          "market_price": 90000,
+          "stock_quantity": 1,
+          "is_available": true
+        }
+      ],
+      "product_photos": [
+        {
+          "photo_id": "PRD-017-PH-1",
+          "url": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=800",
+          "caption": "Display",
+          "sort_order": 0
+        },
+        {
+          "photo_id": "PRD-017-PH-2",
+          "url": "https://images.unsplash.com/photo-1561154464-82e9adf32764?w=800",
+          "caption": "Back view",
+          "sort_order": 1
+        },
+        {
+          "photo_id": "PRD-017-PH-3",
+          "url": "https://images.unsplash.com/photo-1620826773867-a1a0d4dca7a9?w=800",
+          "caption": "Edge profile",
+          "sort_order": 2
+        }
+      ],
+      "reviews": [
+        {
+          "review_id": "REV-017-1",
+          "user_name": "ليلى الخضر",
+          "rating": 5,
+          "title": "شاشة XDR رهيبة",
+          "body": "شاشة mini-LED الـ XDR بـ 1600 نيت مذهلة في الشمس والتصميم. الألوان دقيقة جداً.",
+          "is_verified_purchase": true,
+          "review_date": "2025-11-12"
+        },
+        {
+          "review_id": "REV-017-2",
+          "user_name": "مصباح الشمري",
+          "rating": 5,
+          "title": "للتصميم الاحترافي",
+          "body": "بستخدمه مع Magic Keyboard للتصميم والرسم. الشاشة الكبيرة والدقيقة بتفرق كتير.",
+          "is_verified_purchase": true,
+          "review_date": "2025-10-22"
+        },
+        {
+          "review_id": "REV-017-3",
+          "user_name": "أحلام محمد",
+          "rating": 4,
+          "title": "ممتاز بس ثقيل شوية",
+          "body": "682 جرام محسوس بعد شوية ساعات. بس الأداء والشاشة بتعوض كل حاجة.",
+          "is_verified_purchase": true,
+          "review_date": "2025-09-15"
+        },
+        {
+          "review_id": "REV-017-4",
+          "user_name": "تيسير العمار",
+          "rating": 5,
+          "title": "أفضل آيباد على الإطلاق",
+          "body": "ما في مقارنة. آيباد برو 12.9 هو الأفضل للمحترفين بدون نقاش. وسعر Lunex ممتاز.",
+          "is_verified_purchase": true,
+          "review_date": "2025-12-03"
+        }
+      ]
+    },
+    {
+      "product_id": "PRD-018",
+      "name": "iPad Pro 11-inch M4",
+      "slug": "ipad-pro-11-m4",
+      "category": "ipad",
+      "device_type": "refurbished",
+      "release_year": 2024,
+      "description": "The thinnest and lightest iPad Pro ever. The M4 chip brings next-level performance and the Ultra Retina XDR tandem OLED display delivers true blacks and stunning colors like never before.",
+      "image_url": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=800",
+      "specs": {
+        "display": "11-inch Ultra Retina XDR tandem OLED, ProMotion 120Hz, 2420x1668px, 264 ppi, 1000 nits SDR",
+        "chip": "Apple M4, 3nm",
+        "ram": "8GB / 16GB Unified Memory",
+        "storage_options": [
+          "256GB",
+          "512GB",
+          "1TB",
+          "2TB"
+        ],
+        "rear_camera": "12MP main + LiDAR",
+        "front_camera": "12MP TrueDepth",
+        "battery": "up to 10 hours",
+        "operating_system": "iPadOS 17",
+        "weight": "444g — lightest iPad Pro ever",
+        "thickness": "5.3mm — thinnest Apple product ever",
+        "connectivity": "Wi-Fi 6E, Bluetooth 5.3, USB-C Thunderbolt 4",
+        "available_colors": [
+          "Space Black",
+          "Silver"
+        ]
+      },
+      "variants": [
+        {
+          "variant_id": "VAR-018-1",
+          "storage": "256GB",
+          "color": "Space Black",
+          "condition_score": 9,
+          "battery_health": 95,
+          "cosmetic_condition": "Excellent condition.",
+          "lunex_price": 44000,
+          "market_price": 73000,
+          "stock_quantity": 2,
+          "is_available": true
+        },
+        {
+          "variant_id": "VAR-018-2",
+          "storage": "512GB",
+          "color": "Silver",
+          "condition_score": 10,
+          "battery_health": 100,
+          "cosmetic_condition": "Like new.",
+          "lunex_price": 52000,
+          "market_price": 86000,
+          "stock_quantity": 1,
+          "is_available": true
+        }
+      ],
+      "product_photos": [
+        {
+          "photo_id": "PRD-018-PH-1",
+          "url": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=800",
+          "caption": "Display",
+          "sort_order": 0
+        },
+        {
+          "photo_id": "PRD-018-PH-2",
+          "url": "https://images.unsplash.com/photo-1561154464-82e9adf32764?w=800",
+          "caption": "Back view",
+          "sort_order": 1
+        },
+        {
+          "photo_id": "PRD-018-PH-3",
+          "url": "https://images.unsplash.com/photo-1620826773867-a1a0d4dca7a9?w=800",
+          "caption": "Edge profile",
+          "sort_order": 2
+        }
+      ],
+      "reviews": [
+        {
+          "review_id": "REV-018-1",
+          "user_name": "زينب النواوي",
+          "rating": 5,
+          "title": "5.3mm من الجمال",
+          "body": "لما حملت الآيباد برو M4 مصدقتش إنه آيباد. 5.3mm وهيكله متين وخفيف. ده فن هندسي.",
+          "is_verified_purchase": true,
+          "review_date": "2025-11-15"
+        },
+        {
+          "review_id": "REV-018-2",
+          "user_name": "طارق قنديل",
+          "rating": 5,
+          "title": "شاشة OLED مذهلة",
+          "body": "الـ tandem OLED بيديك سواد حقيقي وألوان نابضة مش موجودة في أي LCD. التجربة البصرية مختلفة.",
+          "is_verified_purchase": true,
+          "review_date": "2025-10-28"
+        },
+        {
+          "review_id": "REV-018-3",
+          "user_name": "هالة عبدالكريم",
+          "rating": 5,
+          "title": "M4 للمستقبل",
+          "body": "M4 بيجهزك للسنوات الخمس القادمة من تحديثات iPadOS. ده استثمار طويل المدى.",
+          "is_verified_purchase": true,
+          "review_date": "2025-12-02"
+        },
+        {
+          "review_id": "REV-018-4",
+          "user_name": "أمير الطيب",
+          "rating": 4,
+          "title": "ممتاز بس سعره مرتفع",
+          "body": "الجهاز رائع بكل المقاييس. 44 ألف مرتفع بس مقارنة بـ 73 للجديد، الوفر كبير.",
+          "is_verified_purchase": true,
+          "review_date": "2025-11-22"
+        },
+        {
+          "review_id": "REV-018-5",
+          "user_name": "ندى القيسي",
+          "rating": 5,
+          "title": "الأرق والأخف",
+          "body": "444 جرام و5.3mm. مش هتحس إنك شايل حاجة. مثالي جداً للرسم والتصميم.",
+          "is_verified_purchase": true,
+          "review_date": "2025-10-15"
+        }
+      ]
+    },
+    {
+      "product_id": "PRD-019",
+      "name": "iPad Air 5 M1",
+      "slug": "ipad-air-5-m1",
+      "category": "ipad",
+      "device_type": "refurbished",
+      "release_year": 2022,
+      "description": "The iPad Air 5th Generation with M1 chip. Combines professional performance with a reasonable price point. Perfect for students and creatives. Supports Apple Pencil 2nd Generation.",
+      "image_url": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=800",
+      "specs": {
+        "display": "10.9-inch Liquid Retina, 2360x1640px, 264 ppi, True Tone",
+        "chip": "Apple M1",
+        "ram": "8GB",
+        "storage_options": [
+          "64GB",
+          "256GB"
+        ],
+        "rear_camera": "12MP main",
+        "front_camera": "12MP Ultra Wide Center Stage",
+        "battery": "28.65 Wh, up to 10 hours",
+        "operating_system": "iPadOS 15 (upgradable to iPadOS 18)",
+        "weight": "461g",
+        "dimensions": "247.6 x 178.5 x 6.1 mm",
+        "connectivity": "Wi-Fi 6, Bluetooth 5.0, USB-C",
+        "available_colors": [
+          "Blue",
+          "Purple",
+          "Pink",
+          "Starlight",
+          "Space Gray"
+        ]
+      },
+      "variants": [
+        {
+          "variant_id": "VAR-019-1",
+          "storage": "64GB",
+          "color": "Blue",
+          "condition_score": 9,
+          "battery_health": 90,
+          "cosmetic_condition": "Excellent condition.",
+          "lunex_price": 18000,
+          "market_price": 29990,
+          "stock_quantity": 5,
+          "is_available": true
+        },
+        {
+          "variant_id": "VAR-019-2",
+          "storage": "256GB",
+          "color": "Purple",
+          "condition_score": 10,
+          "battery_health": 97,
+          "cosmetic_condition": "Like new.",
+          "lunex_price": 22500,
+          "market_price": 37500,
+          "stock_quantity": 3,
+          "is_available": true
+        },
+        {
+          "variant_id": "VAR-019-3",
+          "storage": "64GB",
+          "color": "Space Gray",
+          "condition_score": 8,
+          "battery_health": 84,
+          "cosmetic_condition": "Light scratches.",
+          "lunex_price": 16000,
+          "market_price": 29990,
+          "stock_quantity": 4,
+          "is_available": true
+        }
+      ],
+      "product_photos": [
+        {
+          "photo_id": "PRD-019-PH-1",
+          "url": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=800",
+          "caption": "Display",
+          "sort_order": 0
+        },
+        {
+          "photo_id": "PRD-019-PH-2",
+          "url": "https://images.unsplash.com/photo-1561154464-82e9adf32764?w=800",
+          "caption": "Back view",
+          "sort_order": 1
+        },
+        {
+          "photo_id": "PRD-019-PH-3",
+          "url": "https://images.unsplash.com/photo-1620826773867-a1a0d4dca7a9?w=800",
+          "caption": "Edge profile",
+          "sort_order": 2
+        }
+      ],
+      "reviews": [
+        {
+          "review_id": "REV-019-1",
+          "user_name": "مريم الغالي",
+          "rating": 5,
+          "title": "مثالي للجامعة",
+          "body": "بستخدمه كل يوم في الجامعة للملاحظات والقراءة. M1 سريع جداً والبطارية تعيش اليوم.",
+          "is_verified_purchase": true,
+          "review_date": "2025-10-15"
+        },
+        {
+          "review_id": "REV-019-2",
+          "user_name": "أيمن الغنيمي",
+          "rating": 4,
+          "title": "كويس جداً للسعر ده",
+          "body": "M1 في آيباد آير بالسعر ده صفقة ممتازة. كل حاجة شغالة تمام. بس الـ 64GB بتتملى بسرعة.",
+          "is_verified_purchase": true,
+          "review_date": "2025-11-03"
+        },
+        {
+          "review_id": "REV-019-3",
+          "user_name": "داليا فهمي",
+          "rating": 5,
+          "title": "Center Stage رائع",
+          "body": "في مكالمات الفيديو Center Stage بتتبعني تلقائياً. تقنية جميلة جداً.",
+          "is_verified_purchase": true,
+          "review_date": "2025-09-20"
+        },
+        {
+          "review_id": "REV-019-4",
+          "user_name": "بدر العمري",
+          "rating": 5,
+          "title": "للأطفال ممتاز",
+          "body": "اشتريته لبنتي عشان المدرسة والتعلم الإلكتروني وهي مبسوطة جداً بيه.",
+          "is_verified_purchase": true,
+          "review_date": "2025-12-05"
+        },
+        {
+          "review_id": "REV-019-5",
+          "user_name": "سوسن التركي",
+          "rating": 3,
+          "title": "كويس بس البطارية اتعبت بسرعة",
+          "body": "البطارية 84% بتنزل بسرعة مع الاستخدام المكثف. على أي حال السعر مناسب للحالة دي.",
+          "is_verified_purchase": true,
+          "review_date": "2025-10-24"
+        }
+      ]
+    },
+    {
+      "product_id": "PRD-020",
+      "name": "iPad mini 6th Generation",
+      "slug": "ipad-mini-6",
+      "category": "ipad",
+      "device_type": "refurbished",
+      "release_year": 2021,
+      "description": "The iPad mini 6th Generation — the smallest and most powerful iPad ever. A15 Bionic in an ultra-compact body, perfect for travel and one-handed use.",
+      "image_url": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=800",
+      "specs": {
+        "display": "8.3-inch Liquid Retina, 2266x1488px, 326 ppi, True Tone",
+        "chip": "Apple A15 Bionic",
+        "ram": "4GB",
+        "storage_options": [
+          "64GB",
+          "256GB"
+        ],
+        "rear_camera": "12MP main",
+        "front_camera": "12MP Ultra Wide Center Stage",
+        "battery": "19.32 Wh, up to 10 hours",
+        "operating_system": "iPadOS 15 (upgradable to iPadOS 18)",
+        "weight": "293g",
+        "dimensions": "195.4 x 134.8 x 6.3 mm",
+        "connectivity": "Wi-Fi 6, Bluetooth 5.0, USB-C",
+        "pencil_support": "Apple Pencil 2nd Generation",
+        "available_colors": [
+          "Space Gray",
+          "Starlight",
+          "Purple",
+          "Pink"
+        ]
+      },
+      "variants": [
+        {
+          "variant_id": "VAR-020-1",
+          "storage": "64GB",
+          "color": "Purple",
+          "condition_score": 9,
+          "battery_health": 89,
+          "cosmetic_condition": "Excellent condition.",
+          "lunex_price": 15500,
+          "market_price": 26000,
+          "stock_quantity": 4,
+          "is_available": true
+        },
+        {
+          "variant_id": "VAR-020-2",
+          "storage": "256GB",
+          "color": "Starlight",
+          "condition_score": 10,
+          "battery_health": 96,
+          "cosmetic_condition": "Like new.",
+          "lunex_price": 20000,
+          "market_price": 33000,
+          "stock_quantity": 3,
+          "is_available": true
+        }
+      ],
+      "product_photos": [
+        {
+          "photo_id": "PRD-020-PH-1",
+          "url": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=800",
+          "caption": "Display",
+          "sort_order": 0
+        },
+        {
+          "photo_id": "PRD-020-PH-2",
+          "url": "https://images.unsplash.com/photo-1561154464-82e9adf32764?w=800",
+          "caption": "Back view",
+          "sort_order": 1
+        },
+        {
+          "photo_id": "PRD-020-PH-3",
+          "url": "https://images.unsplash.com/photo-1620826773867-a1a0d4dca7a9?w=800",
+          "caption": "Edge profile",
+          "sort_order": 2
+        }
+      ],
+      "reviews": [
+        {
+          "review_id": "REV-020-1",
+          "user_name": "نور الرحمن",
+          "rating": 5,
+          "title": "مثالي للسفر",
+          "body": "293 جرام وبيدخل في أي شنطة. A15 Bionic في الحجم ده مذهل. بستخدمه في كل السفريات.",
+          "is_verified_purchase": true,
+          "review_date": "2025-11-12"
+        },
+        {
+          "review_id": "REV-020-2",
+          "user_name": "تركية الشامسي",
+          "rating": 5,
+          "title": "للقراءة الأمثل",
+          "body": "الحجم 8.3 بوصة مثالي للقراءة. أثقل من الكتاب بس أوسع وأجمل بكتير.",
+          "is_verified_purchase": true,
+          "review_date": "2025-10-18"
+        },
+        {
+          "review_id": "REV-020-3",
+          "user_name": "أيمن فريد",
+          "rating": 4,
+          "title": "كويس بس الشاشة صغيرة للجيمز",
+          "body": "للقراءة والفيديو ممتاز. بس للجيمز الشاشة صغيرة شوية. على أي حال جهاز ممتاز بالسعر ده.",
+          "is_verified_purchase": true,
+          "review_date": "2025-09-25"
+        },
+        {
+          "review_id": "REV-020-4",
+          "user_name": "عبير محمود",
+          "rating": 5,
+          "title": "Center Stage في المكالمات",
+          "body": "في مكالمات الفيديو Center Stage بتبقي دايماً في المنتصف تلقائياً. ميزة مش موجودة في أي هاتف.",
+          "is_verified_purchase": true,
+          "review_date": "2025-12-03"
+        }
+      ]
+    },
+    {
+      "product_id": "PRD-021",
+      "name": "iPad 10th Generation",
+      "slug": "ipad-10th-gen",
+      "category": "ipad",
+      "device_type": "refurbished",
+      "release_year": 2022,
+      "description": "The iPad 10th Generation with a completely new design in vibrant colors and a larger display. A14 Bionic chip and a landscape front camera for video calls. The perfect iPad for students and families.",
+      "image_url": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=800",
+      "specs": {
+        "display": "10.9-inch Liquid Retina, 2360x1640px, 264 ppi, True Tone",
+        "chip": "Apple A14 Bionic",
+        "ram": "4GB",
+        "storage_options": [
+          "64GB",
+          "256GB"
+        ],
+        "rear_camera": "12MP main",
+        "front_camera": "12MP Ultra Wide Center Stage — landscape orientation",
+        "battery": "28.65 Wh, up to 10 hours",
+        "operating_system": "iPadOS 16",
+        "weight": "477g",
+        "dimensions": "248.6 x 179.5 x 7.0 mm",
+        "connectivity": "Wi-Fi 6, Bluetooth 5.2, USB-C",
+        "available_colors": [
+          "Blue",
+          "Pink",
+          "Yellow",
+          "Silver"
+        ]
+      },
+      "variants": [
+        {
+          "variant_id": "VAR-021-1",
+          "storage": "64GB",
+          "color": "Blue",
+          "condition_score": 9,
+          "battery_health": 91,
+          "cosmetic_condition": "Excellent condition.",
+          "lunex_price": 12000,
+          "market_price": 19999,
+          "stock_quantity": 6,
+          "is_available": true
+        },
+        {
+          "variant_id": "VAR-021-2",
+          "storage": "256GB",
+          "color": "Yellow",
+          "condition_score": 10,
+          "battery_health": 99,
+          "cosmetic_condition": "Like new.",
+          "lunex_price": 16500,
+          "market_price": 27000,
+          "stock_quantity": 3,
+          "is_available": true
+        }
+      ],
+      "product_photos": [
+        {
+          "photo_id": "PRD-021-PH-1",
+          "url": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=800",
+          "caption": "Display",
+          "sort_order": 0
+        },
+        {
+          "photo_id": "PRD-021-PH-2",
+          "url": "https://images.unsplash.com/photo-1561154464-82e9adf32764?w=800",
+          "caption": "Back view",
+          "sort_order": 1
+        },
+        {
+          "photo_id": "PRD-021-PH-3",
+          "url": "https://images.unsplash.com/photo-1620826773867-a1a0d4dca7a9?w=800",
+          "caption": "Edge profile",
+          "sort_order": 2
+        }
+      ],
+      "reviews": [
+        {
+          "review_id": "REV-021-1",
+          "user_name": "ابتسام المرسي",
+          "rating": 5,
+          "title": "للأطفال خيار ممتاز",
+          "body": "اشتريت 3 آيبادات لأولادي من Lunex. كل واحد في حالة ممتازة وسعر مناسب للعائلة.",
+          "is_verified_purchase": true,
+          "review_date": "2025-10-20"
+        },
+        {
+          "review_id": "REV-021-2",
+          "user_name": "عدنان صادق",
+          "rating": 5,
+          "title": "ألوان رائعة",
+          "body": "الأصفر والأزرق والوردي ألوان حيوية جداً. الآيباد ده بيجيب فرحة للبيت.",
+          "is_verified_purchase": true,
+          "review_date": "2025-11-08"
+        },
+        {
+          "review_id": "REV-021-3",
+          "user_name": "وفاء الحايك",
+          "rating": 4,
+          "title": "USB-C بدل Lightning ممتاز",
+          "body": "USB-C في الآيباد الستاندرد ده تحسين كبير. بس الكاميرا الخلفية عادية مش برو.",
+          "is_verified_purchase": true,
+          "review_date": "2025-09-28"
+        },
+        {
+          "review_id": "REV-021-4",
+          "user_name": "بيلال طرقجي",
+          "rating": 5,
+          "title": "للتعليم الإلكتروني مثالي",
+          "body": "أولادي بيستخدموه في التعليم الإلكتروني وكل حاجة تمام. A14 يشغل كل التطبيقات التعليمية.",
+          "is_verified_purchase": true,
+          "review_date": "2025-12-01"
+        },
+        {
+          "review_id": "REV-021-5",
+          "user_name": "منال سعيد",
+          "rating": 3,
+          "title": "كويس بس A14 بدأ يتعب",
+          "body": "الجهاز شغال كويس في الاستخدام العادي. بس الألعاب الثقيلة بتحس فيها شوية. مناسب للاستخدام الخفيف.",
+          "is_verified_purchase": true,
+          "review_date": "2025-10-15"
+        }
+      ]
+    },
+    {
+      "product_id": "PRD-022",
+      "name": "Apple Watch Series 9",
+      "slug": "apple-watch-series-9",
+      "category": "watch",
+      "device_type": "refurbished",
+      "release_year": 2023,
+      "description": "The Apple Watch Series 9 — the fastest Apple Watch ever with the S9 chip. Features a brighter Always-On display and the revolutionary Double Tap gesture control. Fully inspected and tested.",
+      "image_url": "https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?w=800",
+      "specs": {
+        "display": "Always-On Retina LTPO OLED, 2000 nits peak",
+        "chip": "Apple S9 SiP",
+        "storage": "64GB",
+        "sensors": "Blood oxygen, ECG, SpO2, temperature, Crash Detection",
+        "gps": "L1 and L5 dual-frequency GPS",
+        "battery": "up to 18 hours (36 hours Low Power Mode)",
+        "operating_system": "watchOS 10",
+        "water_resistance": "WR50M — 50 meters",
+        "connectivity": "Wi-Fi 802.11b/g/n 2.4GHz, Bluetooth 5.3, NFC",
+        "new_feature": "Double Tap — control Apple Watch with a finger pinch gesture",
+        "available_sizes": [
+          "41mm",
+          "45mm"
+        ],
+        "available_colors": [
+          "Midnight",
+          "Starlight",
+          "Silver",
+          "Pink",
+          "Red"
+        ]
+      },
+      "variants": [
+        {
+          "variant_id": "VAR-022-1",
+          "storage": null,
+          "color": "Midnight 41mm",
+          "condition_score": 9,
+          "battery_health": 91,
+          "cosmetic_condition": "Clean screen. Light scratches on frame only.",
+          "lunex_price": 11500,
+          "market_price": 18800,
+          "stock_quantity": 5,
+          "is_available": true
+        },
+        {
+          "variant_id": "VAR-022-2",
+          "storage": null,
+          "color": "Starlight 45mm",
+          "condition_score": 10,
+          "battery_health": 99,
+          "cosmetic_condition": "Like new.",
+          "lunex_price": 13000,
+          "market_price": 22000,
+          "stock_quantity": 3,
+          "is_available": true
+        },
+        {
+          "variant_id": "VAR-022-3",
+          "storage": null,
+          "color": "Pink 41mm",
+          "condition_score": 8,
+          "battery_health": 86,
+          "cosmetic_condition": "Light scratches from regular use.",
+          "lunex_price": 10500,
+          "market_price": 18800,
+          "stock_quantity": 4,
+          "is_available": true
+        }
+      ],
+      "product_photos": [
+        {
+          "photo_id": "PRD-022-PH-1",
+          "url": "https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?w=800",
+          "caption": "Watch face",
+          "sort_order": 0
+        },
+        {
+          "photo_id": "PRD-022-PH-2",
+          "url": "https://images.unsplash.com/photo-1551816230-ef5deaed4a26?w=800",
+          "caption": "Side profile",
+          "sort_order": 1
+        },
+        {
+          "photo_id": "PRD-022-PH-3",
+          "url": "https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=800",
+          "caption": "Band detail",
+          "sort_order": 2
+        }
+      ],
+      "reviews": [
+        {
+          "review_id": "REV-022-1",
+          "user_name": "أحمد نوار",
+          "rating": 5,
+          "title": "Double Tap ميزة خرافية",
+          "body": "Double Tap غيرت حياتي حرفياً. بقدر أرد على المكالمات وأوقف المنبه من غير ما ألمس الشاشة.",
+          "is_verified_purchase": true,
+          "review_date": "2025-11-15"
+        },
+        {
+          "review_id": "REV-022-2",
+          "user_name": "فاطمة الزهراء",
+          "rating": 5,
+          "title": "للرياضة ممتاز",
+          "body": "بستخدمها في الجيم والسباحة. WR50M يعني مش لازم أخلعها أبداً. مريحة جداً.",
+          "is_verified_purchase": true,
+          "review_date": "2025-10-08"
+        },
+        {
+          "review_id": "REV-022-3",
+          "user_name": "كريم النجار",
+          "rating": 4,
+          "title": "ممتاز بسعر كويس",
+          "body": "الساعة في حالة 9/10 زي ما مكتوب. البطارية 91% وبتوصلني ليوم ونص. سعيد بالشراء.",
+          "is_verified_purchase": true,
+          "review_date": "2025-09-22"
+        },
+        {
+          "review_id": "REV-022-4",
+          "user_name": "صفاء قطب",
+          "rating": 5,
+          "title": "مراقبة الصحة ممتازة",
+          "body": "ECG وSpO2 وقياس درجة الحرارة كلها شغالة تمام. ساعدتني أتابع صحتي يومياً.",
+          "is_verified_purchase": true,
+          "review_date": "2025-12-03"
+        },
+        {
+          "review_id": "REV-022-5",
+          "user_name": "نادين حجازي",
+          "rating": 5,
+          "title": "2000 نيت واضح في الشمس",
+          "body": "في الشمس الشاشة واضحة جداً وبشوفها بسهولة. ده فرق كبير عن الساعات الأرخص.",
+          "is_verified_purchase": true,
+          "review_date": "2025-11-28"
+        },
+        {
+          "review_id": "REV-022-6",
+          "user_name": "زكريا منصور",
+          "rating": 3,
+          "title": "كويس بس البطارية مش كافية لليومين",
+          "body": "الساعة شغالة ممتاز والشاشة رائعة. بس 86% بطارية في الحالة 8/10 بتخلص قبل آخر اليوم بشكل واضح.",
+          "is_verified_purchase": true,
+          "review_date": "2025-09-14"
+        },
+        {
+          "review_id": "REV-022-7",
+          "user_name": "إيمان الوكيل",
+          "rating": 5,
+          "title": "أفضل ساعة ذكية",
+          "body": "جربت سامسونج وشاومي وغيرهم. Apple Watch Series 9 من ناحية التكامل مع الآيفون مفيش أحسن منها.",
+          "is_verified_purchase": true,
+          "review_date": "2025-11-22"
+        }
+      ]
+    },
+    {
+      "product_id": "PRD-023",
+      "name": "Apple Watch Series 8",
+      "slug": "apple-watch-series-8",
+      "category": "watch",
+      "device_type": "refurbished",
+      "release_year": 2022,
+      "description": "The Apple Watch Series 8 — the first Apple Watch with a body temperature sensor for tracking health and Crash Detection. Ideal for daily fitness and health monitoring.",
+      "image_url": "https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?w=800",
+      "specs": {
+        "display": "Always-On Retina LTPO OLED",
+        "chip": "Apple S8 SiP",
+        "sensors": "Temperature, ECG, SpO2, heart rate, Crash Detection, Fall Detection",
+        "gps": "L1 GPS",
+        "battery": "up to 18 hours",
+        "operating_system": "watchOS 9 (upgradable to watchOS 11)",
+        "water_resistance": "WR50M",
+        "available_sizes": [
+          "41mm",
+          "45mm"
+        ],
+        "available_colors": [
+          "Midnight",
+          "Starlight",
+          "Silver",
+          "Product Red"
+        ]
+      },
+      "variants": [
+        {
+          "variant_id": "VAR-023-1",
+          "storage": null,
+          "color": "Midnight 41mm",
+          "condition_score": 9,
+          "battery_health": 87,
+          "cosmetic_condition": "Excellent condition.",
+          "lunex_price": 9500,
+          "market_price": 16000,
+          "stock_quantity": 4,
+          "is_available": true
+        },
+        {
+          "variant_id": "VAR-023-2",
+          "storage": null,
+          "color": "Silver 45mm",
+          "condition_score": 10,
+          "battery_health": 96,
+          "cosmetic_condition": "Like new.",
+          "lunex_price": 11000,
+          "market_price": 18000,
+          "stock_quantity": 3,
+          "is_available": true
+        }
+      ],
+      "product_photos": [
+        {
+          "photo_id": "PRD-023-PH-1",
+          "url": "https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?w=800",
+          "caption": "Watch face",
+          "sort_order": 0
+        },
+        {
+          "photo_id": "PRD-023-PH-2",
+          "url": "https://images.unsplash.com/photo-1551816230-ef5deaed4a26?w=800",
+          "caption": "Side profile",
+          "sort_order": 1
+        },
+        {
+          "photo_id": "PRD-023-PH-3",
+          "url": "https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=800",
+          "caption": "Band detail",
+          "sort_order": 2
+        }
+      ],
+      "reviews": [
+        {
+          "review_id": "REV-023-1",
+          "user_name": "لبنى سعد",
+          "rating": 5,
+          "title": "متابعة الصحة دقيقة جداً",
+          "body": "الساعة بتتابع درجة الحرارة ومعدل القلب والأكسجين. كل البيانات دقيقة ومفيدة جداً.",
+          "is_verified_purchase": true,
+          "review_date": "2025-10-25"
+        },
+        {
+          "review_id": "REV-023-2",
+          "user_name": "حسني طه",
+          "rating": 5,
+          "title": "سعر ممتاز من Lunex",
+          "body": "9500 لساعة Apple Series 8؟ السعر ده مش موجود في أي مكان تاني. Lunex تسلم.",
+          "is_verified_purchase": true,
+          "review_date": "2025-11-14"
+        },
+        {
+          "review_id": "REV-023-3",
+          "user_name": "مي السيد",
+          "rating": 4,
+          "title": "كويس جداً",
+          "body": "الساعة شغالة ممتاز. البطارية 87% وأحياناً بتنزل بعد نص اليوم. بس السعر يستاهل.",
+          "is_verified_purchase": true,
+          "review_date": "2025-09-18"
+        },
+        {
+          "review_id": "REV-023-4",
+          "user_name": "أحمد عدلي",
+          "rating": 5,
+          "title": "Always-On مريح جداً",
+          "body": "Always-On Display بتخليني أشوف الوقت والتنبيهات من غير ما أرفع إيدي. تفصيلة مهمة.",
+          "is_verified_purchase": true,
+          "review_date": "2025-12-02"
+        },
+        {
+          "review_id": "REV-023-5",
+          "user_name": "نجاة البحراني",
+          "rating": 3,
+          "title": "كويس بس متوقع أحسن",
+          "body": "الساعة شغالة كويس والتصميم حلو. بس كنت متوقع الحالة 9/10 تبقى أفضل شوية في الإطار.",
+          "is_verified_purchase": true,
+          "review_date": "2025-10-10"
+        }
+      ]
+    },
+    {
+      "product_id": "PRD-024",
+      "name": "Apple Watch SE 2nd Generation",
+      "slug": "apple-watch-se-2",
+      "category": "watch",
+      "device_type": "refurbished",
+      "release_year": 2022,
+      "description": "The Apple Watch SE 2nd Generation — the smartest choice for those who want an Apple Watch on a budget. S8 chip with all essential health and safety features.",
+      "image_url": "https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?w=800",
+      "specs": {
+        "display": "Retina LTPO OLED (no Always-On)",
+        "chip": "Apple S8 SiP",
+        "sensors": "Crash Detection, Fall Detection, heart rate, SpO2",
+        "gps": "L1 GPS",
+        "battery": "up to 18 hours",
+        "operating_system": "watchOS 9 (upgradable to watchOS 11)",
+        "water_resistance": "WR50M",
+        "available_sizes": [
+          "40mm",
+          "44mm"
+        ],
+        "available_colors": [
+          "Midnight",
+          "Starlight",
+          "Silver"
+        ]
+      },
+      "variants": [
+        {
+          "variant_id": "VAR-024-1",
+          "storage": null,
+          "color": "Midnight 40mm",
+          "condition_score": 9,
+          "battery_health": 88,
+          "cosmetic_condition": "Very light scratches.",
+          "lunex_price": 6500,
+          "market_price": 11000,
+          "stock_quantity": 6,
+          "is_available": true
+        },
+        {
+          "variant_id": "VAR-024-2",
+          "storage": null,
+          "color": "Starlight 44mm",
+          "condition_score": 10,
+          "battery_health": 95,
+          "cosmetic_condition": "Like new.",
+          "lunex_price": 7500,
+          "market_price": 12500,
+          "stock_quantity": 4,
+          "is_available": true
+        }
+      ],
+      "product_photos": [
+        {
+          "photo_id": "PRD-024-PH-1",
+          "url": "https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?w=800",
+          "caption": "Watch face",
+          "sort_order": 0
+        },
+        {
+          "photo_id": "PRD-024-PH-2",
+          "url": "https://images.unsplash.com/photo-1551816230-ef5deaed4a26?w=800",
+          "caption": "Side profile",
+          "sort_order": 1
+        },
+        {
+          "photo_id": "PRD-024-PH-3",
+          "url": "https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=800",
+          "caption": "Band detail",
+          "sort_order": 2
+        }
+      ],
+      "reviews": [
+        {
+          "review_id": "REV-024-1",
+          "user_name": "أميرة خليل",
+          "rating": 5,
+          "title": "للميزانية المحدودة الاختيار الأمثل",
+          "body": "مش محتاج كل ميزات Series 9. SE بيعمل كل اللي محتاجاه بسعر أقل بكتير.",
+          "is_verified_purchase": true,
+          "review_date": "2025-10-20"
+        },
+        {
+          "review_id": "REV-024-2",
+          "user_name": "عصام حمزة",
+          "rating": 5,
+          "title": "هدية ممتازة",
+          "body": "اشتريته هدية لأختي وهي مبسوطة جداً بيه. الساعة في حالة 10/10 زي المكتوب.",
+          "is_verified_purchase": true,
+          "review_date": "2025-11-14"
+        },
+        {
+          "review_id": "REV-024-3",
+          "user_name": "تركي المطيري",
+          "rating": 5,
+          "title": "6500 جنيه لساعة Apple",
+          "body": "6500 جنيه لساعة Apple؟ ده شيء كنت أحلم فيه. شكراً Lunex.",
+          "is_verified_purchase": true,
+          "review_date": "2025-12-06"
+        },
+        {
+          "review_id": "REV-024-4",
+          "user_name": "حنين عبيد",
+          "rating": 4,
+          "title": "كويسة للاستخدام اليومي",
+          "body": "الساعة بتقيس معدل القلب وبتبلغني عن الحركة. كل اللي محتاجاه موجود. بس مفيش Always-On.",
+          "is_verified_purchase": true,
+          "review_date": "2025-09-28"
+        },
+        {
+          "review_id": "REV-024-5",
+          "user_name": "وفاء عبدالله",
+          "rating": 3,
+          "title": "كويسة بس عايزها بـ Always-On",
+          "body": "الساعة شغالة كويس وSE بيعمل كل الأساسيات. بس غياب الـ Always-On محسوس بشكل واضح.",
+          "is_verified_purchase": true,
+          "review_date": "2025-10-12"
+        }
+      ]
+    },
+    {
+      "product_id": "PRD-025",
+      "name": "Apple Watch Ultra 2",
+      "slug": "apple-watch-ultra-2",
+      "category": "watch",
+      "device_type": "refurbished",
+      "release_year": 2023,
+      "description": "The Apple Watch Ultra 2 — the most rugged and capable Apple Watch ever made. Built for athletes, adventurers, and professionals. Titanium frame, 2000-nit display, and dual-frequency GPS for pinpoint accuracy.",
+      "image_url": "https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?w=800",
+      "specs": {
+        "display": "49mm Alpine Glass, 2000 nits, LTPO OLED",
+        "chip": "Apple S9 SiP",
+        "battery": "up to 60 hours (Low Power Mode)",
+        "gps": "L1/L5 Dual-frequency GPS for maximum accuracy",
+        "sensors": "ECG, SpO2, temperature, Depth Gauge, Water Temperature",
+        "water_resistance": "100m — EN13319 dive certified",
+        "frame": "Grade 2 Titanium",
+        "connectivity": "Wi-Fi 6, Bluetooth 5.3, LTE",
+        "siren": "86dB emergency siren",
+        "available_colors": [
+          "Natural Titanium",
+          "Black Titanium"
+        ]
+      },
+      "variants": [
+        {
+          "variant_id": "VAR-025-1",
+          "storage": null,
+          "color": "Natural Titanium",
+          "condition_score": 9,
+          "battery_health": 93,
+          "cosmetic_condition": "Excellent condition with very light micro-scratches.",
+          "lunex_price": 27000,
+          "market_price": 45000,
+          "stock_quantity": 2,
+          "is_available": true
+        },
+        {
+          "variant_id": "VAR-025-2",
+          "storage": null,
+          "color": "Black Titanium",
+          "condition_score": 10,
+          "battery_health": 99,
+          "cosmetic_condition": "Like new.",
+          "lunex_price": 30000,
+          "market_price": 50000,
+          "stock_quantity": 1,
+          "is_available": true
+        }
+      ],
+      "product_photos": [
+        {
+          "photo_id": "PRD-025-PH-1",
+          "url": "https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?w=800",
+          "caption": "Watch face",
+          "sort_order": 0
+        },
+        {
+          "photo_id": "PRD-025-PH-2",
+          "url": "https://images.unsplash.com/photo-1551816230-ef5deaed4a26?w=800",
+          "caption": "Side profile",
+          "sort_order": 1
+        },
+        {
+          "photo_id": "PRD-025-PH-3",
+          "url": "https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=800",
+          "caption": "Band detail",
+          "sort_order": 2
+        }
+      ],
+      "reviews": [
+        {
+          "review_id": "REV-025-1",
+          "user_name": "ياسر الحميدان",
+          "rating": 5,
+          "title": "للمغامرين الحقيقيين",
+          "body": "بستخدمها في رحلات الجبل والغوص. الـ 100م مقاومة للماء والـ GPS المزدوج بيديني دقة مطلقة.",
+          "is_verified_purchase": true,
+          "review_date": "2025-11-10"
+        },
+        {
+          "review_id": "REV-025-2",
+          "user_name": "حسن بهاء",
+          "rating": 5,
+          "title": "60 ساعة بطارية مش طبيعية",
+          "body": "في رحلة 3 أيام شحنتها مرة واحدة بس. ده بيفرق كتير جداً في الخارج.",
+          "is_verified_purchase": true,
+          "review_date": "2025-10-15"
+        },
+        {
+          "review_id": "REV-025-3",
+          "user_name": "مرام الزهراني",
+          "rating": 4,
+          "title": "ممتازة بس كبيرة شوية",
+          "body": "49mm كبير على رسغي شوية. بس التجربة رائعة والبطارية والأداء ممتازين.",
+          "is_verified_purchase": true,
+          "review_date": "2025-09-22"
+        },
+        {
+          "review_id": "REV-025-4",
+          "user_name": "أسامة البشير",
+          "rating": 5,
+          "title": "التيتانيوم متين جداً",
+          "body": "وقعت الساعة على الصخر وما اتخدشتش. الإطار التيتانيوم قوي جداً ومش بيتأثر.",
+          "is_verified_purchase": true,
+          "review_date": "2025-12-01"
+        }
+      ]
+    },
+    {
+      "product_id": "PRD-026",
+      "name": "AirPods Pro 2nd Generation",
+      "slug": "airpods-pro-2",
+      "category": "airpods",
+      "device_type": "refurbished",
+      "release_year": 2022,
+      "description": "AirPods Pro 2nd Generation with the H2 chip and twice as powerful active noise cancellation. Features Adaptive Transparency and Personalized Spatial Audio for an unmatched listening experience.",
+      "image_url": "https://images.unsplash.com/photo-1600294037681-c80b4cb5b434?w=800",
+      "specs": {
+        "chip": "Apple H2",
+        "anc": "Active Noise Cancellation — 2x stronger than Gen 1",
+        "transparency": "Adaptive Transparency — adapts to surrounding noise",
+        "spatial_audio": "Personalized Spatial Audio with Head Tracking",
+        "battery": "6 hours playback (30 hours with case)",
+        "charging": "MagSafe / Lightning / Qi",
+        "water_resistance": "IPX4 earbuds and case",
+        "connectivity": "Bluetooth 5.3",
+        "find_my": "Find My supported",
+        "available_colors": [
+          "White"
+        ]
+      },
+      "variants": [
+        {
+          "variant_id": "VAR-026-1",
+          "storage": null,
+          "color": "White",
+          "condition_score": 9,
+          "battery_health": 90,
+          "cosmetic_condition": "Excellent condition. Clean case.",
+          "lunex_price": 6000,
+          "market_price": 9850,
+          "stock_quantity": 8,
+          "is_available": true
+        },
+        {
+          "variant_id": "VAR-026-2",
+          "storage": null,
+          "color": "White",
+          "condition_score": 10,
+          "battery_health": 99,
+          "cosmetic_condition": "Like new.",
+          "lunex_price": 7000,
+          "market_price": 9850,
+          "stock_quantity": 5,
+          "is_available": true
+        }
+      ],
+      "product_photos": [
+        {
+          "photo_id": "PRD-026-PH-1",
+          "url": "https://images.unsplash.com/photo-1600294037681-c80b4cb5b434?w=800",
+          "caption": "Case open",
+          "sort_order": 0
+        },
+        {
+          "photo_id": "PRD-026-PH-2",
+          "url": "https://images.unsplash.com/photo-1606841837239-c5a1a4a07af7?w=800",
+          "caption": "Earbuds",
+          "sort_order": 1
+        },
+        {
+          "photo_id": "PRD-026-PH-3",
+          "url": "https://images.unsplash.com/photo-1598550476439-6847785fcea6?w=800",
+          "caption": "Close up",
+          "sort_order": 2
+        }
+      ],
+      "reviews": [
+        {
+          "review_id": "REV-026-1",
+          "user_name": "يحيى رشاد",
+          "rating": 5,
+          "title": "إلغاء الضوضاء خرافي",
+          "body": "بشتغل في مكتب صاخب وANC في AirPods Pro 2 بيعزلني تماماً. شريحة H2 فرق ملحوظ جداً.",
+          "is_verified_purchase": true,
+          "review_date": "2025-11-10"
+        },
+        {
+          "review_id": "REV-026-2",
+          "user_name": "أسيل منصور",
+          "rating": 5,
+          "title": "Spatial Audio مذهل",
+          "body": "بشوف الأفلام بالـ Spatial Audio وحاسة إن الصوت حواليكي من كل ناحية. تجربة مختلفة تماماً.",
+          "is_verified_purchase": true,
+          "review_date": "2025-10-25"
+        },
+        {
+          "review_id": "REV-026-3",
+          "user_name": "نورس الحسن",
+          "rating": 4,
+          "title": "ممتازة للميزانية دي",
+          "body": "بدل ما تدفع تقريباً 10 آلاف، تدفع 6 آلاف على نفس الجودة. Lunex فكرة ذكية.",
+          "is_verified_purchase": true,
+          "review_date": "2025-09-17"
+        },
+        {
+          "review_id": "REV-026-4",
+          "user_name": "إسراء عادل",
+          "rating": 5,
+          "title": "الأفضل في السوق",
+          "body": "جربت Sony وBose وSamsung. AirPods Pro 2 تكسبهم جميعاً في الراحة والتكامل مع الآيفون.",
+          "is_verified_purchase": true,
+          "review_date": "2025-12-01"
+        },
+        {
+          "review_id": "REV-026-5",
+          "user_name": "وسيم الغنيمي",
+          "rating": 3,
+          "title": "كويسة بس البطارية اتعبت",
+          "body": "الصوت ممتاز والـ ANC رهيب. بس البطارية 90% بتحس فيها بعد 5 ساعات. مناسب للسعر ده.",
+          "is_verified_purchase": true,
+          "review_date": "2025-09-05"
+        },
+        {
+          "review_id": "REV-026-6",
+          "user_name": "ناصر الخالدي",
+          "rating": 5,
+          "title": "للسفر لازم",
+          "body": "في الطيارة ANC بيحذف صوت المحرك تماماً. مش هسافر بدونها بعد كده أبداً.",
+          "is_verified_purchase": true,
+          "review_date": "2025-11-20"
+        },
+        {
+          "review_id": "REV-026-7",
+          "user_name": "سلمى رضا",
+          "rating": 5,
+          "title": "تثبيت ممتاز في الأذن",
+          "body": "مش بتتحرك أثناء الجري والرياضة. وIPX4 يعني ما خافتش من العرق.",
+          "is_verified_purchase": true,
+          "review_date": "2025-10-12"
+        }
+      ]
+    },
+    {
+      "product_id": "PRD-027",
+      "name": "AirPods 4th Generation",
+      "slug": "airpods-4th-gen",
+      "category": "airpods",
+      "device_type": "refurbished",
+      "release_year": 2024,
+      "description": "AirPods 4th Generation — a complete redesign of the classic AirPods with better fit, richer sound, and USB-C charging. Available in standard and ANC versions.",
+      "image_url": "https://images.unsplash.com/photo-1600294037681-c80b4cb5b434?w=800",
+      "specs": {
+        "chip": "Apple H2",
+        "anc": "Active Noise Cancellation (ANC version only)",
+        "spatial_audio": "Spatial Audio with Head Tracking",
+        "battery": "6 hours (30 hours with case)",
+        "charging": "USB-C / MagSafe",
+        "connectivity": "Bluetooth 5.3",
+        "available_colors": [
+          "White"
+        ]
+      },
+      "variants": [
+        {
+          "variant_id": "VAR-027-1",
+          "storage": null,
+          "color": "White — Standard",
+          "condition_score": 10,
+          "battery_health": 99,
+          "cosmetic_condition": "Perfect condition.",
+          "lunex_price": 5000,
+          "market_price": 8500,
+          "stock_quantity": 8,
+          "is_available": true
+        },
+        {
+          "variant_id": "VAR-027-2",
+          "storage": null,
+          "color": "White — ANC",
+          "condition_score": 9,
+          "battery_health": 94,
+          "cosmetic_condition": "Excellent condition.",
+          "lunex_price": 6500,
+          "market_price": 11000,
+          "stock_quantity": 5,
+          "is_available": true
+        }
+      ],
+      "product_photos": [
+        {
+          "photo_id": "PRD-027-PH-1",
+          "url": "https://images.unsplash.com/photo-1600294037681-c80b4cb5b434?w=800",
+          "caption": "Case open",
+          "sort_order": 0
+        },
+        {
+          "photo_id": "PRD-027-PH-2",
+          "url": "https://images.unsplash.com/photo-1606841837239-c5a1a4a07af7?w=800",
+          "caption": "Earbuds",
+          "sort_order": 1
+        },
+        {
+          "photo_id": "PRD-027-PH-3",
+          "url": "https://images.unsplash.com/photo-1598550476439-6847785fcea6?w=800",
+          "caption": "Close up",
+          "sort_order": 2
+        }
+      ],
+      "reviews": [
+        {
+          "review_id": "REV-027-1",
+          "user_name": "مها القرشي",
+          "rating": 5,
+          "title": "التصميم الجديد أحسن بكتير",
+          "body": "الجيل الرابع أكثر ثباتاً في الأذن من القديم. مش بيقع أثناء الركض أبداً.",
+          "is_verified_purchase": true,
+          "review_date": "2025-11-22"
+        },
+        {
+          "review_id": "REV-027-2",
+          "user_name": "يونس القبلاوي",
+          "rating": 5,
+          "title": "USB-C أخيراً",
+          "body": "USB-C في الAirPods خلى حياتي أسهل. كابل واحد بس لكل أجهزتي.",
+          "is_verified_purchase": true,
+          "review_date": "2025-10-28"
+        },
+        {
+          "review_id": "REV-027-3",
+          "user_name": "أشرف الراعي",
+          "rating": 4,
+          "title": "تحسين ملحوظ على الجيل الثالث",
+          "body": "الجيل الرابع أحسن من الثالث في الصوت والثبات. بس مش كبير الفرق لو عندك Gen 3.",
+          "is_verified_purchase": true,
+          "review_date": "2025-12-05"
+        },
+        {
+          "review_id": "REV-027-4",
+          "user_name": "سحر الدين",
+          "rating": 3,
+          "title": "كويسة بس الـ ANC مش زي Pro",
+          "body": "الـ ANC في الجيل الرابع كويس بس مش بنفس قوة AirPods Pro 2. لو ANC مهمك دفع أكتر.",
+          "is_verified_purchase": true,
+          "review_date": "2025-11-05"
+        }
+      ]
+    },
+    {
+      "product_id": "PRD-028",
+      "name": "AirPods 3rd Generation",
+      "slug": "airpods-3rd-gen",
+      "category": "airpods",
+      "device_type": "refurbished",
+      "release_year": 2021,
+      "description": "AirPods 3rd Generation with a new design for better fit and a longer battery life. Supports Spatial Audio and MagSafe charging. The ideal choice for everyday listening without noise cancellation.",
+      "image_url": "https://images.unsplash.com/photo-1600294037681-c80b4cb5b434?w=800",
+      "specs": {
+        "chip": "Apple H1",
+        "spatial_audio": "Spatial Audio with Head Tracking",
+        "battery": "6 hours (30 hours with case)",
+        "charging": "MagSafe / Lightning / Qi",
+        "water_resistance": "IPX4",
+        "connectivity": "Bluetooth 5.0",
+        "available_colors": [
+          "White"
+        ]
+      },
+      "variants": [
+        {
+          "variant_id": "VAR-028-1",
+          "storage": null,
+          "color": "White",
+          "condition_score": 9,
+          "battery_health": 88,
+          "cosmetic_condition": "Excellent condition.",
+          "lunex_price": 3500,
+          "market_price": 5999,
+          "stock_quantity": 10,
+          "is_available": true
+        },
+        {
+          "variant_id": "VAR-028-2",
+          "storage": null,
+          "color": "White",
+          "condition_score": 10,
+          "battery_health": 97,
+          "cosmetic_condition": "Like new.",
+          "lunex_price": 4200,
+          "market_price": 5999,
+          "stock_quantity": 6,
+          "is_available": true
+        }
+      ],
+      "product_photos": [
+        {
+          "photo_id": "PRD-028-PH-1",
+          "url": "https://images.unsplash.com/photo-1600294037681-c80b4cb5b434?w=800",
+          "caption": "Case open",
+          "sort_order": 0
+        },
+        {
+          "photo_id": "PRD-028-PH-2",
+          "url": "https://images.unsplash.com/photo-1606841837239-c5a1a4a07af7?w=800",
+          "caption": "Earbuds",
+          "sort_order": 1
+        },
+        {
+          "photo_id": "PRD-028-PH-3",
+          "url": "https://images.unsplash.com/photo-1598550476439-6847785fcea6?w=800",
+          "caption": "Close up",
+          "sort_order": 2
+        }
+      ],
+      "reviews": [
+        {
+          "review_id": "REV-028-1",
+          "user_name": "أمل زهراني",
+          "rating": 5,
+          "title": "أفضل سماعات للميزانية المحدودة",
+          "body": "بدل ما تشتري Pro بالسعر الكبير، الجيل التالت ده بيديك 85% من التجربة بسعر أقل بكتير.",
+          "is_verified_purchase": true,
+          "review_date": "2025-10-18"
+        },
+        {
+          "review_id": "REV-028-2",
+          "user_name": "نزار الشمري",
+          "rating": 5,
+          "title": "MagSafe مريح جداً",
+          "body": "الشحن بالـ MagSafe أسهل من Lightning. التصميم حلو ومريح في الأذن.",
+          "is_verified_purchase": true,
+          "review_date": "2025-11-08"
+        },
+        {
+          "review_id": "REV-028-3",
+          "user_name": "رجاء حمادة",
+          "rating": 4,
+          "title": "كويس جداً",
+          "body": "الصوت ممتاز والـ Spatial Audio فرق ملحوظ. بس مفيش ANC وده محسوس في الأماكن الصاخبة.",
+          "is_verified_purchase": true,
+          "review_date": "2025-09-15"
+        },
+        {
+          "review_id": "REV-028-4",
+          "user_name": "عفاف الحميد",
+          "rating": 5,
+          "title": "هدية مثالية",
+          "body": "اشتريته هدية لجوزي وهو مبسوط جداً. السعر مناسب والجودة ممتازة.",
+          "is_verified_purchase": true,
+          "review_date": "2025-10-28"
+        },
+        {
+          "review_id": "REV-028-5",
+          "user_name": "محمد طه",
+          "rating": 3,
+          "title": "كويس بس البطارية اتعبت",
+          "body": "الصوت ممتاز والتصميم حلو. بس البطارية 88% بتخلص في 4-5 ساعات بدل الـ 6. مناسب للسعر.",
+          "is_verified_purchase": true,
+          "review_date": "2025-11-20"
+        }
+      ]
+    },
+    {
+      "product_id": "PRD-029",
+      "name": "AirPods Max",
+      "slug": "airpods-max",
+      "category": "airpods",
+      "device_type": "refurbished",
+      "release_year": 2020,
+      "description": "AirPods Max — Apple's premium over-ear headphones. Exceptional active noise cancellation, an aluminum and stainless steel frame, and sound quality that redefines what wireless headphones can be.",
+      "image_url": "https://images.unsplash.com/photo-1600294037681-c80b4cb5b434?w=800",
+      "specs": {
+        "chip": "Apple H1 in each ear cup (2x H1)",
+        "driver": "40mm custom Apple driver",
+        "anc": "Computational Audio Active Noise Cancellation",
+        "spatial_audio": "Spatial Audio with Head Tracking",
+        "transparency": "Transparency Mode",
+        "battery": "20 hours playback",
+        "charging": "Lightning",
+        "connectivity": "Bluetooth 5.0",
+        "frame": "Stainless steel and aluminum",
+        "cushions": "Magnetic ear cushions — swappable",
+        "available_colors": [
+          "Space Gray",
+          "Silver",
+          "Sky Blue",
+          "Green",
+          "Pink"
+        ]
+      },
+      "variants": [
+        {
+          "variant_id": "VAR-029-1",
+          "storage": null,
+          "color": "Space Gray",
+          "condition_score": 9,
+          "battery_health": 88,
+          "cosmetic_condition": "Excellent condition. Light scratches on headband.",
+          "lunex_price": 19000,
+          "market_price": 32000,
+          "stock_quantity": 3,
+          "is_available": true
+        },
+        {
+          "variant_id": "VAR-029-2",
+          "storage": null,
+          "color": "Sky Blue",
+          "condition_score": 10,
+          "battery_health": 97,
+          "cosmetic_condition": "Perfect. Like new.",
+          "lunex_price": 22000,
+          "market_price": 35000,
+          "stock_quantity": 2,
+          "is_available": true
+        }
+      ],
+      "product_photos": [
+        {
+          "photo_id": "PRD-029-PH-1",
+          "url": "https://images.unsplash.com/photo-1600294037681-c80b4cb5b434?w=800",
+          "caption": "Case open",
+          "sort_order": 0
+        },
+        {
+          "photo_id": "PRD-029-PH-2",
+          "url": "https://images.unsplash.com/photo-1606841837239-c5a1a4a07af7?w=800",
+          "caption": "Earbuds",
+          "sort_order": 1
+        },
+        {
+          "photo_id": "PRD-029-PH-3",
+          "url": "https://images.unsplash.com/photo-1598550476439-6847785fcea6?w=800",
+          "caption": "Close up",
+          "sort_order": 2
+        }
+      ],
+      "reviews": [
+        {
+          "review_id": "REV-029-1",
+          "user_name": "شريف الدالي",
+          "rating": 5,
+          "title": "أفضل سماعة في العالم",
+          "body": "جربت كل سماعات Over-Ear الكبيرة. AirPods Max مفيش أحسن منها في الصوت وإلغاء الضوضاء.",
+          "is_verified_purchase": true,
+          "review_date": "2025-11-08"
+        },
+        {
+          "review_id": "REV-029-2",
+          "user_name": "إيناس الحناوي",
+          "rating": 5,
+          "title": "الصوت من دنيا تانية",
+          "body": "الـ 40mm drivers بيديك تجربة صوت مش طبيعية. الأفلام والموسيقى بيوصلوا على مستوى تاني خالص.",
+          "is_verified_purchase": true,
+          "review_date": "2025-10-20"
+        },
+        {
+          "review_id": "REV-029-3",
+          "user_name": "رفعت الدسوقي",
+          "rating": 4,
+          "title": "ممتاز بس ثقيل شوية",
+          "body": "السماعة تقيلة شوية بعد ساعتين. بس الصوت والـ ANC بيخليك تنسى التقل ده.",
+          "is_verified_purchase": true,
+          "review_date": "2025-09-12"
+        },
+        {
+          "review_id": "REV-029-4",
+          "user_name": "سناء الزيادي",
+          "rating": 5,
+          "title": "هدية مميزة",
+          "body": "اشتريتها هدية وكانت من أحسن الهدايا اللي اشتريتها. التغليف محترم والسماعة رائعة.",
+          "is_verified_purchase": true,
+          "review_date": "2025-12-04"
+        },
+        {
+          "review_id": "REV-029-5",
+          "user_name": "وليد الصعيدي",
+          "rating": 3,
+          "title": "رائعة بس Lightning في 2026؟",
+          "body": "الصوت والـ ANC ممتازين بشكل مجنون. بس في 2026 لسه بيشحن بـ Lightning وده مزعج فعلاً.",
+          "is_verified_purchase": true,
+          "review_date": "2025-11-22"
+        }
+      ]
+    },
+    {
+      "product_id": "PRD-030",
+      "name": "iPhone 15 Pro Max — 1TB",
+      "slug": "iphone-15-pro-max-1tb",
+      "category": "iphone",
+      "device_type": "assembled",
+      "release_year": 2023,
+      "description": "iPhone 15 Pro Max 1TB — for professionals who never compromise. The largest storage available for unrestrained ProRAW and ProRes recording without limits.",
+      "image_url": "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?w=800",
+      "specs": {
+        "display": "6.7-inch Super Retina XDR OLED, ProMotion 120Hz",
+        "chip": "Apple A17 Pro, 3nm",
+        "ram": "8GB",
+        "storage_options": [
+          "1TB"
+        ],
+        "rear_camera": "48MP + 12MP ultrawide + 12MP 5x periscope telephoto",
+        "battery": "4422 mAh",
+        "operating_system": "iOS 17",
+        "connectivity": "5G, USB-C 3.0, Wi-Fi 6E",
+        "available_colors": [
+          "Natural Titanium",
+          "Black Titanium"
+        ]
+      },
+      "variants": [
+        {
+          "variant_id": "VAR-030-1",
+          "storage": "1TB",
+          "color": "Natural Titanium",
+          "condition_score": 9,
+          "battery_health": 95,
+          "cosmetic_condition": "Excellent 9/10 condition.",
+          "lunex_price": 63000,
+          "market_price": 104000,
+          "stock_quantity": 2,
+          "is_available": true
+        },
+        {
+          "variant_id": "VAR-030-2",
+          "storage": "1TB",
+          "color": "Black Titanium",
+          "condition_score": 10,
+          "battery_health": 100,
+          "cosmetic_condition": "Like new.",
+          "lunex_price": 65000,
+          "market_price": 104000,
+          "stock_quantity": 1,
+          "is_available": true
+        }
+      ],
+      "product_photos": [
+        {
+          "photo_id": "PRD-030-PH-1",
+          "url": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800",
+          "caption": "Front display",
+          "sort_order": 0
+        },
+        {
+          "photo_id": "PRD-030-PH-2",
+          "url": "https://images.unsplash.com/photo-1556656793-08538906a9f8?w=800",
+          "caption": "Back panel",
+          "sort_order": 1
+        },
+        {
+          "photo_id": "PRD-030-PH-3",
+          "url": "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=800",
+          "caption": "Camera detail",
+          "sort_order": 2
+        }
+      ],
+      "reviews": [
+        {
+          "review_id": "REV-030-1",
+          "user_name": "كريم يوسف",
+          "rating": 5,
+          "title": "1TB للمحترفين فقط",
+          "body": "بصور بـ ProRAW وبسجل ProRes وما كنتش بقدر أعيش بـ 256GB. الـ 1TB غير حياتي خالص.",
+          "is_verified_purchase": true,
+          "review_date": "2025-11-25"
+        },
+        {
+          "review_id": "REV-030-2",
+          "user_name": "نادر الزعبي",
+          "rating": 5,
+          "title": "كاميرا احترافية في جيبي",
+          "body": "مع الـ 1TB والـ ProRes، الآيفون ده بقى كاميرا احترافية كاملة. بصور أفلام قصيرة بيه.",
+          "is_verified_purchase": true,
+          "review_date": "2025-10-30"
+        },
+        {
+          "review_id": "REV-030-3",
+          "user_name": "رنا مدحت",
+          "rating": 4,
+          "title": "ممتاز بس ثمين",
+          "body": "الجهاز رائع من كل النواحي. بس السعر مش للجميع. لو تصوير واحتياجات تخزين كبيرة فهو يستاهل.",
+          "is_verified_purchase": true,
+          "review_date": "2025-12-04"
+        },
+        {
+          "review_id": "REV-030-4",
+          "user_name": "فيصل المعمري",
+          "rating": 5,
+          "title": "أقوى آيفون موجود",
+          "body": "A17 Pro مع 1TB مش بيخليك تفكر في حاجة. كل حاجة تصورها موجودة ومش محتاج تمسح.",
+          "is_verified_purchase": true,
+          "review_date": "2025-11-15"
+        }
+      ]
+    }
+  ]
+}

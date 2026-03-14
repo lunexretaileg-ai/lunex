@@ -1,14 +1,33 @@
-import { pgTable, text, serial, integer, boolean, timestamp, numeric } from "drizzle-orm/pg-core";
+import { pgTable, text, serial, integer, boolean, timestamp } from "drizzle-orm/pg-core";
 import { relations } from "drizzle-orm";
 import { createInsertSchema } from "drizzle-zod";
 import { z } from "zod";
+
+// Device type values: 'new' | 'open_box' | 'refurbished' | 'assembled' | 'used'
+export const DEVICE_TYPES = ['new', 'open_box', 'refurbished', 'assembled', 'used'] as const;
+export type DeviceType = typeof DEVICE_TYPES[number];
+
+// ==========================================
+// Categories table
+// ==========================================
+export const categories = pgTable("categories", {
+  id: serial("id").primaryKey(),
+  slug: text("slug").notNull().unique(),  // e.g. 'iphone', 'mac', 'ipad', 'watch', 'airpods'
+  name: text("name").notNull(),           // e.g. 'iPhone', 'Mac', 'iPad'
+  icon: text("icon"),                     // optional emoji or icon name
+  sortOrder: integer("sort_order").notNull().default(0),
+});
+
+export const insertCategorySchema = createInsertSchema(categories).omit({ id: true });
+export type Category = typeof categories.$inferSelect;
+export type InsertCategory = z.infer<typeof insertCategorySchema>;
 
 export const products = pgTable("products", {
   id: serial("id").primaryKey(),
   name: text("name").notNull(),
   slug: text("slug").notNull(),
   category: text("category").notNull(),
-  deviceType: text("device_type").notNull(), // 'refurbished' | 'assembled'
+  deviceType: text("device_type").notNull(), // 'new' | 'open_box' | 'refurbished' | 'assembled' | 'used'
   releaseYear: integer("release_year"),
   description: text("description").notNull(),
   imageUrl: text("image_url").notNull(),
@@ -22,14 +41,48 @@ export const productVariants = pgTable("product_variants", {
   color: text("color"),
   conditionScore: integer("condition_score").notNull(),
   batteryHealth: integer("battery_health").notNull(),
+  cosmeticCondition: text("cosmetic_condition"), // e.g. "Minor scratches on back panel"
   lunexPrice: integer("lunex_price").notNull(),
   marketPrice: integer("market_price").notNull(),
   stockQuantity: integer("stock_quantity").notNull().default(1),
   isAvailable: boolean("is_available").notNull().default(true),
 });
 
+// Product specifications table — can be per-product (shared) OR per-variant (storage-specific)
+export const productSpecs = pgTable("product_specs", {
+  id: serial("id").primaryKey(),
+  productId: integer("product_id").notNull().references(() => products.id),
+  // If variantId is set, this spec applies only to that variant (e.g. different storage options)
+  // If null, the spec applies to all variants (shared product-level specs)
+  variantId: integer("variant_id").references(() => productVariants.id),
+  specKey: text("spec_key").notNull(),    // e.g. "Chip", "Display", "Storage"
+  specValue: text("spec_value").notNull(), // e.g. "A17 Pro", "6.7-inch OLED", "256GB NVMe"
+  sortOrder: integer("sort_order").notNull().default(0),
+});
+
+// ==========================================
+// Real Product Photos table
+// ==========================================
+// Each row is one photo URL for a specific product.
+// These are real images of actual devices taken before shipping — not stock photos.
+export const productPhotos = pgTable("product_photos", {
+  id: serial("id").primaryKey(),
+  productId: integer("product_id").notNull().references(() => products.id),
+  // Optional: tie a specific photo to a specific variant (e.g. different color angle shots)
+  variantId: integer("variant_id").references(() => productVariants.id),
+  photoUrl: text("photo_url").notNull(),          // The full URL of the hosted image
+  caption: text("caption"),                        // Optional short caption (e.g. "Front view", "Screen condition", "Back panel")
+  sortOrder: integer("sort_order").notNull().default(0),  // Controls display order in the gallery
+});
+
+export const insertProductPhotoSchema = createInsertSchema(productPhotos).omit({ id: true });
+export type ProductPhoto = typeof productPhotos.$inferSelect;
+export type InsertProductPhoto = z.infer<typeof insertProductPhotoSchema>;
+
 export const productsRelations = relations(products, ({ many }) => ({
   variants: many(productVariants),
+  specs: many(productSpecs),
+  photos: many(productPhotos),
 }));
 
 export const productVariantsRelations = relations(productVariants, ({ one }) => ({
@@ -39,8 +92,23 @@ export const productVariantsRelations = relations(productVariants, ({ one }) => 
   }),
 }));
 
+export const productSpecsRelations = relations(productSpecs, ({ one }) => ({
+  product: one(products, {
+    fields: [productSpecs.productId],
+    references: [products.id],
+  }),
+}));
+
+export const productPhotosRelations = relations(productPhotos, ({ one }) => ({
+  product: one(products, {
+    fields: [productPhotos.productId],
+    references: [products.id],
+  }),
+}));
+
 export const insertProductSchema = createInsertSchema(products).omit({ id: true, createdAt: true });
 export const insertProductVariantSchema = createInsertSchema(productVariants).omit({ id: true });
+export const insertProductSpecSchema = createInsertSchema(productSpecs).omit({ id: true });
 
 export type Product = typeof products.$inferSelect;
 export type InsertProduct = z.infer<typeof insertProductSchema>;
@@ -48,7 +116,10 @@ export type InsertProduct = z.infer<typeof insertProductSchema>;
 export type ProductVariant = typeof productVariants.$inferSelect;
 export type InsertProductVariant = z.infer<typeof insertProductVariantSchema>;
 
-export type ProductWithVariants = Product & { variants: ProductVariant[] };
+export type ProductSpec = typeof productSpecs.$inferSelect;
+export type InsertProductSpec = z.infer<typeof insertProductSpecSchema>;
+
+export type ProductWithVariants = Product & { variants: ProductVariant[]; specs?: ProductSpec[] };
 
 export type CreateProductRequest = InsertProduct;
 export type CreateProductVariantRequest = InsertProductVariant;
@@ -58,6 +129,7 @@ export type ProductsListResponse = ProductWithVariants[];
 
 export interface ProductsQueryParams {
   category?: string;
+  /** One of: new | open_box | refurbished | assembled | used */
   deviceType?: string;
   minCondition?: number;
   minBattery?: number;
@@ -91,6 +163,7 @@ export const orders = pgTable("orders", {
   governorate: text("governorate").notNull(),
   city: text("city").notNull(),
   address: text("address").notNull(),
+  notes: text("notes"), // Optional delivery notes
   
   // Order financials
   subtotal: integer("subtotal").notNull(),
@@ -100,6 +173,7 @@ export const orders = pgTable("orders", {
   
   paymentMethod: text("payment_method").notNull(), 
   paymentWallet: text("payment_wallet"), // if applicable (Vodafone, Orange, etc)
+  cardLastFour: text("card_last_four"), // last 4 digits only — never store full card
   
   createdAt: timestamp("created_at").defaultNow(),
 });

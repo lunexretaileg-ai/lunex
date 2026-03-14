@@ -1,5 +1,5 @@
 import { db } from "./db";
-import { products, productVariants, type ProductsQueryParams, type ProductWithVariants } from "@shared/schema";
+import { products, productVariants, productSpecs, type ProductsQueryParams, type ProductWithVariants } from "@shared/schema";
 import { eq, ilike, and, gte, desc } from "drizzle-orm";
 
 export interface IStorage {
@@ -27,7 +27,8 @@ export class DatabaseStorage implements IStorage {
     const allProducts = await db.query.products.findMany({
       where: conditions.length > 0 ? and(...conditions) : undefined,
       with: {
-        variants: true
+        variants: true,
+        specs: { orderBy: (s: any, { asc }: any) => [asc(s.sortOrder)] }
       },
       orderBy: [desc(products.createdAt)]
     });
@@ -60,7 +61,8 @@ export class DatabaseStorage implements IStorage {
     const product = await db.query.products.findFirst({
       where: eq(products.slug, slug),
       with: {
-        variants: true
+        variants: true,
+        specs: { orderBy: (s: any, { asc }: any) => [asc(s.sortOrder)] }
       }
     });
     

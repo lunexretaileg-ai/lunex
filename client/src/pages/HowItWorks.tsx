@@ -1,6 +1,59 @@
 import { motion } from "framer-motion";
-import { Search, PenTool, ShieldCheck, BatteryCharging, ArrowRight } from "lucide-react";
+import { Search, PenTool, ShieldCheck, BatteryCharging, ArrowRight, Sparkles, Package, RefreshCcw, Wrench, Clock } from "lucide-react";
 import { Link } from "wouter";
+
+const deviceTypes = [
+  {
+    id: "new",
+    icon: <Sparkles className="w-6 h-6" />,
+    label: "New",
+    tagline: "Brand New / Factory Sealed",
+    description: "Factory sealed devices that have never been opened or used. Comes with original Apple packaging.",
+    features: ["Factory sealed", "Original packaging", "100% battery health", "Full warranty eligible"],
+    badgeClass: "bg-emerald-500/10 text-emerald-500 border-emerald-500/25",
+    accentClass: "bg-emerald-500",
+  },
+  {
+    id: "open_box",
+    icon: <Package className="w-6 h-6" />,
+    label: "Open Box",
+    tagline: "Opened but Barely Used",
+    description: "Devices that were opened but barely used — display units, customer returns, or devices opened but never actively used. Condition is almost identical to new.",
+    features: ["Opened but like-new", "Fully tested", "Near-perfect cosmetics", "Original parts intact"],
+    badgeClass: "bg-sky-500/10 text-sky-500 border-sky-500/25",
+    accentClass: "bg-sky-500",
+  },
+  {
+    id: "refurbished",
+    icon: <RefreshCcw className="w-6 h-6" />,
+    label: "Refurbished",
+    tagline: "Professionally Restored",
+    description: "Previously used devices that were professionally restored and tested. May include a new battery and replaced screen, but are fully functional.",
+    features: ["40-point inspection", "Battery ≥ 80%", "Deep cleaned", "Lunex certified"],
+    badgeClass: "bg-amber-500/10 text-amber-500 border-amber-500/25",
+    accentClass: "bg-amber-500",
+  },
+  {
+    id: "assembled",
+    icon: <Wrench className="w-6 h-6" />,
+    label: "Assembled",
+    tagline: "Built from Original Parts",
+    description: "Devices assembled using original or premium compatible Apple components. Fully tested to ensure 100% functionality — at a fraction of the cost.",
+    features: ["Original or compatible parts", "Full functionality tested", "Ideal for value buyers", "Significant savings"],
+    badgeClass: "bg-violet-500/10 text-violet-500 border-violet-500/25",
+    accentClass: "bg-violet-500",
+  },
+  {
+    id: "used",
+    icon: <Clock className="w-6 h-6" />,
+    label: "Used",
+    tagline: "Previously Owned & Tested",
+    description: "Devices that were previously owned and used. Fully tested by Lunex — may have visible cosmetic wear. The condition score tells you exactly what to expect.",
+    features: ["Thoroughly tested", "Cosmetic wear visible", "Lowest price tier", "All functions verified"],
+    badgeClass: "bg-zinc-400/10 text-zinc-400 border-zinc-400/25",
+    accentClass: "bg-zinc-400",
+  },
+];
 
 export default function HowItWorks() {
   const steps = [
@@ -123,6 +176,68 @@ export default function HowItWorks() {
                 )}
               </motion.div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================== */}
+      {/* DEVICE TYPES EXPLAINED                         */}
+      {/* ============================================== */}
+      <section className="py-28 bg-surface">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold tracking-tight mb-4">Understanding Device Types</h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Every Lunex product is classified so you know exactly what you're buying — no surprises.
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {deviceTypes.map((dt, idx) => (
+              <motion.div
+                key={dt.id}
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: idx * 0.08 }}
+                className="bg-background rounded-3xl border border-border/50 p-7 flex flex-col hover:border-border hover:shadow-lg transition-all"
+              >
+                {/* Badge + Icon */}
+                <div className="flex items-start justify-between mb-5">
+                  <span className={`inline-flex px-3 py-1 text-xs font-bold uppercase tracking-wider rounded-full border ${dt.badgeClass}`}>
+                    {dt.label}
+                  </span>
+                  <div className={`w-10 h-10 rounded-2xl ${dt.accentClass}/10 flex items-center justify-center`} style={{ color: "currentColor" }}>
+                    <span className={dt.id === 'new' ? 'text-emerald-500' : dt.id === 'open_box' ? 'text-sky-500' : dt.id === 'refurbished' ? 'text-amber-500' : dt.id === 'assembled' ? 'text-violet-500' : 'text-zinc-400'}>
+                      {dt.icon}
+                    </span>
+                  </div>
+                </div>
+
+                {/* Content */}
+                <h3 className="text-lg font-bold mb-1">{dt.label}</h3>
+                <p className="text-sm text-primary font-medium mb-3">{dt.tagline}</p>
+                <p className="text-sm text-muted-foreground leading-relaxed mb-5 flex-1">{dt.description}</p>
+
+                {/* Features */}
+                <ul className="space-y-1.5">
+                  {dt.features.map((f) => (
+                    <li key={f} className="flex items-center gap-2 text-sm text-muted-foreground">
+                      <div className={`w-1.5 h-1.5 rounded-full flex-shrink-0 ${dt.accentClass}`} />
+                      {f}
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
+          </div>
+
+          <div className="mt-12 text-center">
+            <Link href="/shop">
+              <button className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-foreground text-background font-semibold text-lg hover:scale-105 transition-transform">
+                Browse All Devices <ArrowRight className="w-5 h-5" />
+              </button>
+            </Link>
           </div>
         </div>
       </section>

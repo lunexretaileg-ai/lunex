@@ -7,6 +7,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { CartDrawer } from "@/components/cart/CartDrawer";
+import { WishlistDrawer } from "@/components/WishlistDrawer";
 
 import Home from "@/pages/Home";
 import Shop from "@/pages/Shop";
@@ -97,6 +98,7 @@ function Router() {
       </div>
       <Footer />
       <CartDrawer />
+      <WishlistDrawer />
     </main>
   );
 }
