@@ -1,8 +1,10 @@
 import { useState, useMemo } from "react";
 import { useProducts } from "@/hooks/use-products";
-import { ProductCard } from "@/components/ProductCard";
-import { ChevronRight, ArrowLeft, CheckCircle2, RotateCcw } from "lucide-react";
-import { ProductWithVariants } from "@shared/schema";
+import { useCart } from "@/store/use-cart";
+import { useLocation } from "wouter";
+import { getProductImages } from "@/lib/images";
+import { ChevronRight, ArrowLeft, CheckCircle2, RotateCcw, ShoppingBag, Battery } from "lucide-react";
+import { ProductWithVariants, ProductVariant } from "@shared/schema";
 
 type Step = 1 | 2 | 3 | 4 | 5 | 6 | 7;
 
@@ -18,6 +20,8 @@ type SelectionState = {
 
 export default function BuildDevicePage() {
   const { data: allProducts, isLoading } = useProducts();
+  const { addItem } = useCart();
+  const [, setLocation] = useLocation();
   
   const [step, setStep] = useState<Step>(1);
   const [selection, setSelection] = useState<SelectionState>({
@@ -76,26 +80,30 @@ export default function BuildDevicePage() {
   }, [selectedProduct, selection.storage]);
 
   // Final matches based on all criteria
-  const finalMatches = useMemo(() => {
+  const exactVariants = useMemo(() => {
     if (!allProducts || step !== 7) return [];
     
-    return allProducts.filter(p => {
+    let matches: Array<{ product: any, variant: any }> = [];
+
+    allProducts.forEach(p => {
       // Basic product filters
-      if (selection.category && p.category !== selection.category) return false;
-      if (selection.productId && p.id !== selection.productId) return false;
-      if (selection.deviceType && p.deviceType !== selection.deviceType) return false;
+      if (selection.category && p.category !== selection.category) return;
+      if (selection.productId && p.id !== selection.productId) return;
+      if (selection.deviceType && p.deviceType !== selection.deviceType) return;
       
-      // Check if it has any variants matching the deep criteria
-      const matchingVariants = p.variants.filter(v => {
-        if (selection.storage && v.storage !== selection.storage) return false;
-        if (selection.color && v.color !== selection.color) return false;
-        if (v.conditionScore < selection.minCondition) return false;
-        if (v.batteryHealth < selection.minBattery) return false;
-        return true;
+      // Deep variant filters
+      p.variants.forEach(v => {
+        if (!v.isAvailable || v.stockQuantity <= 0) return;
+        if (selection.storage && v.storage !== selection.storage) return;
+        if (selection.color && v.color !== selection.color) return;
+        if (v.conditionScore < selection.minCondition) return;
+        if (v.batteryHealth < selection.minBattery) return;
+        
+        matches.push({ product: p, variant: v });
       });
-      
-      return matchingVariants.length > 0;
     });
+
+    return matches;
   }, [allProducts, selection, step]);
 
 
@@ -363,15 +371,70 @@ export default function BuildDevicePage() {
                     Builder Complete
                   </span>
                   <p className="text-xl">
-                    We found <strong className="text-primary">{finalMatches.length}</strong> devices matching your exact configuration.
+                    We found <strong className="text-primary">{exactVariants.length}</strong> exact configurations matching your criteria.
                   </p>
                 </div>
 
-                {finalMatches.length > 0 ? (
+                {exactVariants.length > 0 ? (
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    {finalMatches.map(product => (
-                      <ProductCard key={product.id} product={product as any} />
-                    ))}
+                    {exactVariants.map(({ product, variant }, idx) => {
+                      const lunexPrice = Number(variant.lunexPrice);
+                      const images = getProductImages(product.slug, variant.color, product.imageUrl);
+                      const displayImg = variant.imageUrl || images[0];
+
+                      return (
+                        <div key={`${product.id}-${variant.id}-${idx}`} className="bg-card rounded-3xl border border-border p-6 flex flex-col h-full hover:border-primary/50 transition-colors shadow-sm">
+                          <div className="aspect-square bg-surface rounded-2xl p-6 mb-6 flex items-center justify-center">
+                            <img src={displayImg} alt={product.name} className="w-full h-full object-contain mix-blend-multiply drop-shadow-md" />
+                          </div>
+                          
+                          <div className="flex-1 flex flex-col">
+                            <h3 className="text-xl font-bold mb-3">{product.name}</h3>
+                            
+                            <div className="flex flex-wrap gap-2 mb-6 text-xs">
+                              {variant.storage && <span className="px-2.5 py-1 font-semibold bg-surface rounded text-foreground">{variant.storage}</span>}
+                              {variant.color && <span className="px-2.5 py-1 font-semibold bg-surface rounded text-foreground">{variant.color}</span>}
+                              <span className="px-2.5 py-1 font-semibold bg-surface rounded text-foreground capitalize">
+                                {variant.deviceType || product.deviceType}
+                              </span>
+                              <span className="px-2.5 py-1 font-semibold bg-surface rounded text-foreground">Cond {variant.conditionScore}/10</span>
+                              <span className="px-2.5 py-1 font-semibold bg-surface rounded text-foreground flex items-center gap-1">
+                                <Battery className="w-3 h-3 text-emerald-500" /> {variant.batteryHealth}%
+                              </span>
+                            </div>
+                            
+                            <div className="mt-auto pt-6 border-t border-border flex items-end justify-between">
+                              <div>
+                                <p className="text-xs text-muted-foreground uppercase tracking-wider mb-1">Final Price</p>
+                                <p className="text-2xl font-bold">EGP {lunexPrice.toLocaleString()}</p>
+                              </div>
+                              <button
+                                onClick={() => {
+                                  addItem({
+                                    id: `${product.id}-${variant.id}`,
+                                    productId: product.id,
+                                    variantId: variant.id,
+                                    name: product.name,
+                                    slug: product.slug,
+                                    price: Number(lunexPrice),
+                                    quantity: 1,
+                                    imageUrl: displayImg,
+                                    storage: variant.storage || null,
+                                    color: variant.color || null,
+                                    conditionScore: variant.conditionScore,
+                                    batteryHealth: variant.batteryHealth,
+                                  });
+                                  setLocation("/checkout");
+                                }}
+                                className="px-6 py-3 bg-foreground text-background font-bold rounded-full text-sm hover:opacity-90 transition-opacity flex items-center gap-2"
+                              >
+                                Checkout <ShoppingBag className="w-4 h-4" />
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      );
+                    })}
                   </div>
                 ) : (
                   <div className="text-center py-16 border-2 border-dashed border-border rounded-2xl bg-background">

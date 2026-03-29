@@ -1,82 +1,93 @@
-import { useQuery, useMutation } from "@tanstack/react-query";
-import { queryClient, apiRequest } from "@/lib/queryClient";
-import { useAuth } from "./use-auth";
+import { create } from "zustand";
+import { persist } from "zustand/middleware";
 import { useToast } from "./use-toast";
 
-type WishlistItem = {
-  id: number;
-  userId: number;
+export type WishlistItem = {
+  id: string; // generated client-side for local storage
+  productId: number;
   productVariantId: number;
-  createdAt: string | null;
+  createdAt: string;
+};
+
+interface WishlistStore {
+  wishlistItems: WishlistItem[];
+  addToWishlist: (item: Omit<WishlistItem, 'id' | 'createdAt'>) => void;
+  removeFromWishlist: (variantId: number) => void;
+  isInWishlist: (variantId: number) => boolean;
+  getWishlistItemId: (variantId: number) => string | undefined;
 }
 
+export const useWishlistStore = create<WishlistStore>()(
+  persist(
+    (set, get) => ({
+      wishlistItems: [],
+
+      addToWishlist: (item) => {
+        set((state) => {
+          // Check if already in wishlist
+          if (state.wishlistItems.some(i => i.productVariantId === item.productVariantId)) {
+            return state;
+          }
+          const newItem: WishlistItem = {
+            ...item,
+            id: crypto.randomUUID(),
+            createdAt: new Date().toISOString(),
+          };
+          return { wishlistItems: [...state.wishlistItems, newItem] };
+        });
+      },
+
+      removeFromWishlist: (variantId) => {
+        set((state) => ({
+          wishlistItems: state.wishlistItems.filter((i) => i.productVariantId !== variantId),
+        }));
+      },
+
+      isInWishlist: (variantId) => {
+        return get().wishlistItems.some((i) => i.productVariantId === variantId);
+      },
+
+      getWishlistItemId: (variantId) => {
+        return get().wishlistItems.find((i) => i.productVariantId === variantId)?.id;
+      },
+    }),
+    {
+      name: "lunex-wishlist",
+    }
+  )
+);
+
+// Wrapper hook to keep same API structure as before and supply toast notifications
 export function useWishlist() {
-  const { user } = useAuth();
+  const store = useWishlistStore();
   const { toast } = useToast();
 
-  const getHeaders = () => {
-    // Pass the user ID until we setup complete Supabase row-level security
-    return { "x-user-id": user?.id || "" };
+  const handleAdd = (productVariantId: number, productId: number) => {
+    store.addToWishlist({ productVariantId, productId });
+    toast({ title: "Added to wishlist" });
   };
 
-  const { data: wishlistItems = [], isLoading } = useQuery<WishlistItem[]>({
-    queryKey: ["/api/wishlist"],
-    queryFn: async () => {
-      if (!user) return [];
-      const res = await fetch("/api/wishlist", { headers: getHeaders() });
-      if (!res.ok) throw new Error("Failed to fetch wishlist");
-      return await res.json();
-    },
-    enabled: !!user,
-  });
-
-  const addToWishlist = useMutation({
-    mutationFn: async (productVariantId: number) => {
-      if (!user) throw new Error("Must be logged in");
-      const res = await fetch("/api/wishlist", {
-        method: "POST",
-        headers: {
-          ...getHeaders(),
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({ productVariantId }),
-      });
-      if (!res.ok) throw new Error("Failed to add to wishlist");
-      return await res.json();
-    },
-    onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: ["/api/wishlist"] });
-      toast({ title: "Added to wishlist" });
-    },
-    onError: () => {
-      toast({ title: "Failed to add to wishlist", variant: "destructive" });
-    }
-  });
-
-  const removeFromWishlist = useMutation({
-    mutationFn: async (id: number) => {
-      if (!user) throw new Error("Must be logged in");
-      const res = await fetch(`/api/wishlist/${id}`, { 
-        method: "DELETE",
-        headers: getHeaders() 
-      });
-      if (!res.ok) throw new Error("Failed to remove from wishlist");
-    },
-    onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: ["/api/wishlist"] });
-      toast({ title: "Removed from wishlist" });
-    },
-    onError: () => {
-      toast({ title: "Failed to remove from wishlist", variant: "destructive" });
-    }
-  });
+  const handleRemove = (variantId: number) => {
+    store.removeFromWishlist(variantId);
+    toast({ title: "Removed from wishlist" });
+  };
 
   return {
-    wishlistItems,
-    isLoading,
-    addToWishlist,
-    removeFromWishlist,
-    isInWishlist: (variantId: number) => wishlistItems.some(item => item.productVariantId === variantId),
-    getWishlistItemId: (variantId: number) => wishlistItems.find(item => item.productVariantId === variantId)?.id,
+    wishlistItems: store.wishlistItems,
+    isLoading: false,
+    addToWishlist: {
+      mutate: (productVariantId: number, options?: { onSuccess?: () => void }) => {
+        handleAdd(productVariantId, productVariantId); // We pass variantId as productId if productId isn't explicitly known from caller context, but ideally caller passes both
+        options?.onSuccess?.();
+      }
+    },
+    removeFromWishlist: {
+      mutate: (variantId: number, options?: { onSuccess?: () => void }) => {
+        handleRemove(variantId);
+        options?.onSuccess?.();
+      }
+    },
+    isInWishlist: store.isInWishlist,
+    getWishlistItemId: store.getWishlistItemId,
   };
 }

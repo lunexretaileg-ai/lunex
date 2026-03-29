@@ -1,0 +1,3976 @@
+[
+  {
+    "id": 60,
+    "name": "iPhone 15 Pro Max — 1TB",
+    "slug": "iphone-15-pro-max-1tb",
+    "category": "iphone",
+    "deviceType": "assembled",
+    "releaseYear": 2023,
+    "description": "iPhone 15 Pro Max 1TB — for professionals who never compromise. The largest storage available for unrestrained ProRAW and ProRes recording without limits.",
+    "imageUrl": "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?w=800",
+    "createdAt": "2026-03-27T15:59:46.274Z",
+    "variants": [
+      {
+        "id": 151,
+        "productId": 60,
+        "storage": "1TB",
+        "color": "Natural Titanium",
+        "deviceType": null,
+        "conditionScore": 9,
+        "batteryHealth": 95,
+        "cosmeticCondition": "Excellent 9/10 condition.",
+        "imageUrl": null,
+        "lunexPrice": 63000,
+        "marketPrice": 104000,
+        "stockQuantity": 2,
+        "isAvailable": true
+      },
+      {
+        "id": 152,
+        "productId": 60,
+        "storage": "1TB",
+        "color": "Black Titanium",
+        "deviceType": null,
+        "conditionScore": 10,
+        "batteryHealth": 100,
+        "cosmeticCondition": "Like new.",
+        "imageUrl": null,
+        "lunexPrice": 65000,
+        "marketPrice": 104000,
+        "stockQuantity": 1,
+        "isAvailable": true
+      }
+    ],
+    "specs": [
+      {
+        "id": 587,
+        "productId": 60,
+        "variantId": null,
+        "specKey": "Display",
+        "specValue": "6.7-inch Super Retina XDR OLED, ProMotion 120Hz",
+        "sortOrder": 0
+      },
+      {
+        "id": 588,
+        "productId": 60,
+        "variantId": null,
+        "specKey": "Chip",
+        "specValue": "Apple A17 Pro, 3nm",
+        "sortOrder": 1
+      },
+      {
+        "id": 589,
+        "productId": 60,
+        "variantId": null,
+        "specKey": "Ram",
+        "specValue": "8GB",
+        "sortOrder": 2
+      },
+      {
+        "id": 590,
+        "productId": 60,
+        "variantId": null,
+        "specKey": "Rear Camera",
+        "specValue": "48MP + 12MP ultrawide + 12MP 5x periscope telephoto",
+        "sortOrder": 3
+      },
+      {
+        "id": 591,
+        "productId": 60,
+        "variantId": null,
+        "specKey": "Battery",
+        "specValue": "4422 mAh",
+        "sortOrder": 4
+      },
+      {
+        "id": 592,
+        "productId": 60,
+        "variantId": null,
+        "specKey": "Operating System",
+        "specValue": "iOS 17",
+        "sortOrder": 5
+      },
+      {
+        "id": 593,
+        "productId": 60,
+        "variantId": null,
+        "specKey": "Connectivity",
+        "specValue": "5G, USB-C 3.0, Wi-Fi 6E",
+        "sortOrder": 6
+      }
+    ]
+  },
+  {
+    "id": 59,
+    "name": "AirPods Max",
+    "slug": "airpods-max",
+    "category": "airpods",
+    "deviceType": "refurbished",
+    "releaseYear": 2020,
+    "description": "AirPods Max — Apple's premium over-ear headphones. Exceptional active noise cancellation, an aluminum and stainless steel frame, and sound quality that redefines what wireless headphones can be.",
+    "imageUrl": "https://images.unsplash.com/photo-1600294037681-c80b4cb5b434?w=800",
+    "createdAt": "2026-03-27T15:59:44.791Z",
+    "variants": [
+      {
+        "id": 149,
+        "productId": 59,
+        "storage": null,
+        "color": "Space Gray",
+        "deviceType": null,
+        "conditionScore": 9,
+        "batteryHealth": 88,
+        "cosmeticCondition": "Excellent condition. Light scratches on headband.",
+        "imageUrl": null,
+        "lunexPrice": 19000,
+        "marketPrice": 32000,
+        "stockQuantity": 3,
+        "isAvailable": true
+      },
+      {
+        "id": 150,
+        "productId": 59,
+        "storage": null,
+        "color": "Sky Blue",
+        "deviceType": null,
+        "conditionScore": 10,
+        "batteryHealth": 97,
+        "cosmeticCondition": "Perfect. Like new.",
+        "imageUrl": null,
+        "lunexPrice": 22000,
+        "marketPrice": 35000,
+        "stockQuantity": 2,
+        "isAvailable": true
+      }
+    ],
+    "specs": [
+      {
+        "id": 577,
+        "productId": 59,
+        "variantId": null,
+        "specKey": "Chip",
+        "specValue": "Apple H1 in each ear cup (2x H1)",
+        "sortOrder": 0
+      },
+      {
+        "id": 578,
+        "productId": 59,
+        "variantId": null,
+        "specKey": "Driver",
+        "specValue": "40mm custom Apple driver",
+        "sortOrder": 1
+      },
+      {
+        "id": 579,
+        "productId": 59,
+        "variantId": null,
+        "specKey": "Anc",
+        "specValue": "Computational Audio Active Noise Cancellation",
+        "sortOrder": 2
+      },
+      {
+        "id": 580,
+        "productId": 59,
+        "variantId": null,
+        "specKey": "Spatial Audio",
+        "specValue": "Spatial Audio with Head Tracking",
+        "sortOrder": 3
+      },
+      {
+        "id": 581,
+        "productId": 59,
+        "variantId": null,
+        "specKey": "Transparency",
+        "specValue": "Transparency Mode",
+        "sortOrder": 4
+      },
+      {
+        "id": 582,
+        "productId": 59,
+        "variantId": null,
+        "specKey": "Battery",
+        "specValue": "20 hours playback",
+        "sortOrder": 5
+      },
+      {
+        "id": 583,
+        "productId": 59,
+        "variantId": null,
+        "specKey": "Charging",
+        "specValue": "Lightning",
+        "sortOrder": 6
+      },
+      {
+        "id": 584,
+        "productId": 59,
+        "variantId": null,
+        "specKey": "Connectivity",
+        "specValue": "Bluetooth 5.0",
+        "sortOrder": 7
+      },
+      {
+        "id": 585,
+        "productId": 59,
+        "variantId": null,
+        "specKey": "Frame",
+        "specValue": "Stainless steel and aluminum",
+        "sortOrder": 8
+      },
+      {
+        "id": 586,
+        "productId": 59,
+        "variantId": null,
+        "specKey": "Cushions",
+        "specValue": "Magnetic ear cushions — swappable",
+        "sortOrder": 9
+      }
+    ]
+  },
+  {
+    "id": 58,
+    "name": "AirPods 3rd Generation",
+    "slug": "airpods-3rd-gen",
+    "category": "airpods",
+    "deviceType": "refurbished",
+    "releaseYear": 2021,
+    "description": "AirPods 3rd Generation with a new design for better fit and a longer battery life. Supports Spatial Audio and MagSafe charging. The ideal choice for everyday listening without noise cancellation.",
+    "imageUrl": "https://images.unsplash.com/photo-1600294037681-c80b4cb5b434?w=800",
+    "createdAt": "2026-03-27T15:59:43.433Z",
+    "variants": [
+      {
+        "id": 147,
+        "productId": 58,
+        "storage": null,
+        "color": "White",
+        "deviceType": null,
+        "conditionScore": 9,
+        "batteryHealth": 88,
+        "cosmeticCondition": "Excellent condition.",
+        "imageUrl": null,
+        "lunexPrice": 3500,
+        "marketPrice": 5999,
+        "stockQuantity": 10,
+        "isAvailable": true
+      },
+      {
+        "id": 148,
+        "productId": 58,
+        "storage": null,
+        "color": "White",
+        "deviceType": null,
+        "conditionScore": 10,
+        "batteryHealth": 97,
+        "cosmeticCondition": "Like new.",
+        "imageUrl": null,
+        "lunexPrice": 4200,
+        "marketPrice": 5999,
+        "stockQuantity": 6,
+        "isAvailable": true
+      }
+    ],
+    "specs": [
+      {
+        "id": 571,
+        "productId": 58,
+        "variantId": null,
+        "specKey": "Chip",
+        "specValue": "Apple H1",
+        "sortOrder": 0
+      },
+      {
+        "id": 572,
+        "productId": 58,
+        "variantId": null,
+        "specKey": "Spatial Audio",
+        "specValue": "Spatial Audio with Head Tracking",
+        "sortOrder": 1
+      },
+      {
+        "id": 573,
+        "productId": 58,
+        "variantId": null,
+        "specKey": "Battery",
+        "specValue": "6 hours (30 hours with case)",
+        "sortOrder": 2
+      },
+      {
+        "id": 574,
+        "productId": 58,
+        "variantId": null,
+        "specKey": "Charging",
+        "specValue": "MagSafe / Lightning / Qi",
+        "sortOrder": 3
+      },
+      {
+        "id": 575,
+        "productId": 58,
+        "variantId": null,
+        "specKey": "Water Resistance",
+        "specValue": "IPX4",
+        "sortOrder": 4
+      },
+      {
+        "id": 576,
+        "productId": 58,
+        "variantId": null,
+        "specKey": "Connectivity",
+        "specValue": "Bluetooth 5.0",
+        "sortOrder": 5
+      }
+    ]
+  },
+  {
+    "id": 57,
+    "name": "AirPods 4th Generation",
+    "slug": "airpods-4th-gen",
+    "category": "airpods",
+    "deviceType": "refurbished",
+    "releaseYear": 2024,
+    "description": "AirPods 4th Generation — a complete redesign of the classic AirPods with better fit, richer sound, and USB-C charging. Available in standard and ANC versions.",
+    "imageUrl": "https://images.unsplash.com/photo-1600294037681-c80b4cb5b434?w=800",
+    "createdAt": "2026-03-27T15:59:42.132Z",
+    "variants": [
+      {
+        "id": 145,
+        "productId": 57,
+        "storage": null,
+        "color": "White — Standard",
+        "deviceType": null,
+        "conditionScore": 10,
+        "batteryHealth": 99,
+        "cosmeticCondition": "Perfect condition.",
+        "imageUrl": null,
+        "lunexPrice": 5000,
+        "marketPrice": 8500,
+        "stockQuantity": 8,
+        "isAvailable": true
+      },
+      {
+        "id": 146,
+        "productId": 57,
+        "storage": null,
+        "color": "White — ANC",
+        "deviceType": null,
+        "conditionScore": 9,
+        "batteryHealth": 94,
+        "cosmeticCondition": "Excellent condition.",
+        "imageUrl": null,
+        "lunexPrice": 6500,
+        "marketPrice": 11000,
+        "stockQuantity": 5,
+        "isAvailable": true
+      }
+    ],
+    "specs": [
+      {
+        "id": 565,
+        "productId": 57,
+        "variantId": null,
+        "specKey": "Chip",
+        "specValue": "Apple H2",
+        "sortOrder": 0
+      },
+      {
+        "id": 566,
+        "productId": 57,
+        "variantId": null,
+        "specKey": "Anc",
+        "specValue": "Active Noise Cancellation (ANC version only)",
+        "sortOrder": 1
+      },
+      {
+        "id": 567,
+        "productId": 57,
+        "variantId": null,
+        "specKey": "Spatial Audio",
+        "specValue": "Spatial Audio with Head Tracking",
+        "sortOrder": 2
+      },
+      {
+        "id": 568,
+        "productId": 57,
+        "variantId": null,
+        "specKey": "Battery",
+        "specValue": "6 hours (30 hours with case)",
+        "sortOrder": 3
+      },
+      {
+        "id": 569,
+        "productId": 57,
+        "variantId": null,
+        "specKey": "Charging",
+        "specValue": "USB-C / MagSafe",
+        "sortOrder": 4
+      },
+      {
+        "id": 570,
+        "productId": 57,
+        "variantId": null,
+        "specKey": "Connectivity",
+        "specValue": "Bluetooth 5.3",
+        "sortOrder": 5
+      }
+    ]
+  },
+  {
+    "id": 56,
+    "name": "AirPods Pro 2nd Generation",
+    "slug": "airpods-pro-2",
+    "category": "airpods",
+    "deviceType": "refurbished",
+    "releaseYear": 2022,
+    "description": "AirPods Pro 2nd Generation with the H2 chip and twice as powerful active noise cancellation. Features Adaptive Transparency and Personalized Spatial Audio for an unmatched listening experience.",
+    "imageUrl": "https://images.unsplash.com/photo-1600294037681-c80b4cb5b434?w=800",
+    "createdAt": "2026-03-27T15:59:41.093Z",
+    "variants": [
+      {
+        "id": 144,
+        "productId": 56,
+        "storage": null,
+        "color": "White",
+        "deviceType": null,
+        "conditionScore": 10,
+        "batteryHealth": 99,
+        "cosmeticCondition": "Like new.",
+        "imageUrl": null,
+        "lunexPrice": 7000,
+        "marketPrice": 9850,
+        "stockQuantity": 5,
+        "isAvailable": true
+      },
+      {
+        "id": 143,
+        "productId": 56,
+        "storage": null,
+        "color": "White",
+        "deviceType": null,
+        "conditionScore": 9,
+        "batteryHealth": 90,
+        "cosmeticCondition": "Excellent condition. Clean case.",
+        "imageUrl": null,
+        "lunexPrice": 6000,
+        "marketPrice": 9850,
+        "stockQuantity": 7,
+        "isAvailable": true
+      }
+    ],
+    "specs": [
+      {
+        "id": 556,
+        "productId": 56,
+        "variantId": null,
+        "specKey": "Chip",
+        "specValue": "Apple H2",
+        "sortOrder": 0
+      },
+      {
+        "id": 557,
+        "productId": 56,
+        "variantId": null,
+        "specKey": "Anc",
+        "specValue": "Active Noise Cancellation — 2x stronger than Gen 1",
+        "sortOrder": 1
+      },
+      {
+        "id": 558,
+        "productId": 56,
+        "variantId": null,
+        "specKey": "Transparency",
+        "specValue": "Adaptive Transparency — adapts to surrounding noise",
+        "sortOrder": 2
+      },
+      {
+        "id": 559,
+        "productId": 56,
+        "variantId": null,
+        "specKey": "Spatial Audio",
+        "specValue": "Personalized Spatial Audio with Head Tracking",
+        "sortOrder": 3
+      },
+      {
+        "id": 560,
+        "productId": 56,
+        "variantId": null,
+        "specKey": "Battery",
+        "specValue": "6 hours playback (30 hours with case)",
+        "sortOrder": 4
+      },
+      {
+        "id": 561,
+        "productId": 56,
+        "variantId": null,
+        "specKey": "Charging",
+        "specValue": "MagSafe / Lightning / Qi",
+        "sortOrder": 5
+      },
+      {
+        "id": 562,
+        "productId": 56,
+        "variantId": null,
+        "specKey": "Water Resistance",
+        "specValue": "IPX4 earbuds and case",
+        "sortOrder": 6
+      },
+      {
+        "id": 563,
+        "productId": 56,
+        "variantId": null,
+        "specKey": "Connectivity",
+        "specValue": "Bluetooth 5.3",
+        "sortOrder": 7
+      },
+      {
+        "id": 564,
+        "productId": 56,
+        "variantId": null,
+        "specKey": "Find My",
+        "specValue": "Find My supported",
+        "sortOrder": 8
+      }
+    ]
+  },
+  {
+    "id": 55,
+    "name": "Apple Watch Ultra 2",
+    "slug": "apple-watch-ultra-2",
+    "category": "watch",
+    "deviceType": "refurbished",
+    "releaseYear": 2023,
+    "description": "The Apple Watch Ultra 2 — the most rugged and capable Apple Watch ever made. Built for athletes, adventurers, and professionals. Titanium frame, 2000-nit display, and dual-frequency GPS for pinpoint accuracy.",
+    "imageUrl": "https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?w=800",
+    "createdAt": "2026-03-27T15:59:39.63Z",
+    "variants": [
+      {
+        "id": 142,
+        "productId": 55,
+        "storage": null,
+        "color": "Black Titanium",
+        "deviceType": null,
+        "conditionScore": 10,
+        "batteryHealth": 99,
+        "cosmeticCondition": "Like new.",
+        "imageUrl": null,
+        "lunexPrice": 30000,
+        "marketPrice": 50000,
+        "stockQuantity": 1,
+        "isAvailable": true
+      },
+      {
+        "id": 141,
+        "productId": 55,
+        "storage": null,
+        "color": "Natural Titanium",
+        "deviceType": null,
+        "conditionScore": 9,
+        "batteryHealth": 93,
+        "cosmeticCondition": "Excellent condition with very light micro-scratches.",
+        "imageUrl": null,
+        "lunexPrice": 27000,
+        "marketPrice": 45000,
+        "stockQuantity": 1,
+        "isAvailable": true
+      }
+    ],
+    "specs": [
+      {
+        "id": 547,
+        "productId": 55,
+        "variantId": null,
+        "specKey": "Display",
+        "specValue": "49mm Alpine Glass, 2000 nits, LTPO OLED",
+        "sortOrder": 0
+      },
+      {
+        "id": 548,
+        "productId": 55,
+        "variantId": null,
+        "specKey": "Chip",
+        "specValue": "Apple S9 SiP",
+        "sortOrder": 1
+      },
+      {
+        "id": 549,
+        "productId": 55,
+        "variantId": null,
+        "specKey": "Battery",
+        "specValue": "up to 60 hours (Low Power Mode)",
+        "sortOrder": 2
+      },
+      {
+        "id": 550,
+        "productId": 55,
+        "variantId": null,
+        "specKey": "Gps",
+        "specValue": "L1/L5 Dual-frequency GPS for maximum accuracy",
+        "sortOrder": 3
+      },
+      {
+        "id": 551,
+        "productId": 55,
+        "variantId": null,
+        "specKey": "Sensors",
+        "specValue": "ECG, SpO2, temperature, Depth Gauge, Water Temperature",
+        "sortOrder": 4
+      },
+      {
+        "id": 552,
+        "productId": 55,
+        "variantId": null,
+        "specKey": "Water Resistance",
+        "specValue": "100m — EN13319 dive certified",
+        "sortOrder": 5
+      },
+      {
+        "id": 553,
+        "productId": 55,
+        "variantId": null,
+        "specKey": "Frame",
+        "specValue": "Grade 2 Titanium",
+        "sortOrder": 6
+      },
+      {
+        "id": 554,
+        "productId": 55,
+        "variantId": null,
+        "specKey": "Connectivity",
+        "specValue": "Wi-Fi 6, Bluetooth 5.3, LTE",
+        "sortOrder": 7
+      },
+      {
+        "id": 555,
+        "productId": 55,
+        "variantId": null,
+        "specKey": "Siren",
+        "specValue": "86dB emergency siren",
+        "sortOrder": 8
+      }
+    ]
+  },
+  {
+    "id": 54,
+    "name": "Apple Watch SE 2nd Generation",
+    "slug": "apple-watch-se-2",
+    "category": "watch",
+    "deviceType": "refurbished",
+    "releaseYear": 2022,
+    "description": "The Apple Watch SE 2nd Generation — the smartest choice for those who want an Apple Watch on a budget. S8 chip with all essential health and safety features.",
+    "imageUrl": "https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?w=800",
+    "createdAt": "2026-03-27T15:59:38.492Z",
+    "variants": [
+      {
+        "id": 139,
+        "productId": 54,
+        "storage": null,
+        "color": "Midnight 40mm",
+        "deviceType": null,
+        "conditionScore": 9,
+        "batteryHealth": 88,
+        "cosmeticCondition": "Very light scratches.",
+        "imageUrl": null,
+        "lunexPrice": 6500,
+        "marketPrice": 11000,
+        "stockQuantity": 6,
+        "isAvailable": true
+      },
+      {
+        "id": 140,
+        "productId": 54,
+        "storage": null,
+        "color": "Starlight 44mm",
+        "deviceType": null,
+        "conditionScore": 10,
+        "batteryHealth": 95,
+        "cosmeticCondition": "Like new.",
+        "imageUrl": null,
+        "lunexPrice": 7500,
+        "marketPrice": 12500,
+        "stockQuantity": 4,
+        "isAvailable": true
+      }
+    ],
+    "specs": [
+      {
+        "id": 539,
+        "productId": 54,
+        "variantId": null,
+        "specKey": "Display",
+        "specValue": "Retina LTPO OLED (no Always-On)",
+        "sortOrder": 0
+      },
+      {
+        "id": 540,
+        "productId": 54,
+        "variantId": null,
+        "specKey": "Chip",
+        "specValue": "Apple S8 SiP",
+        "sortOrder": 1
+      },
+      {
+        "id": 541,
+        "productId": 54,
+        "variantId": null,
+        "specKey": "Sensors",
+        "specValue": "Crash Detection, Fall Detection, heart rate, SpO2",
+        "sortOrder": 2
+      },
+      {
+        "id": 542,
+        "productId": 54,
+        "variantId": null,
+        "specKey": "Gps",
+        "specValue": "L1 GPS",
+        "sortOrder": 3
+      },
+      {
+        "id": 543,
+        "productId": 54,
+        "variantId": null,
+        "specKey": "Battery",
+        "specValue": "up to 18 hours",
+        "sortOrder": 4
+      },
+      {
+        "id": 544,
+        "productId": 54,
+        "variantId": null,
+        "specKey": "Operating System",
+        "specValue": "watchOS 9 (upgradable to watchOS 11)",
+        "sortOrder": 5
+      },
+      {
+        "id": 545,
+        "productId": 54,
+        "variantId": null,
+        "specKey": "Water Resistance",
+        "specValue": "WR50M",
+        "sortOrder": 6
+      },
+      {
+        "id": 546,
+        "productId": 54,
+        "variantId": null,
+        "specKey": "Available Sizes",
+        "specValue": "40mm,44mm",
+        "sortOrder": 7
+      }
+    ]
+  },
+  {
+    "id": 53,
+    "name": "Apple Watch Series 8",
+    "slug": "apple-watch-series-8",
+    "category": "watch",
+    "deviceType": "refurbished",
+    "releaseYear": 2022,
+    "description": "The Apple Watch Series 8 — the first Apple Watch with a body temperature sensor for tracking health and Crash Detection. Ideal for daily fitness and health monitoring.",
+    "imageUrl": "https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?w=800",
+    "createdAt": "2026-03-27T15:59:36.816Z",
+    "variants": [
+      {
+        "id": 137,
+        "productId": 53,
+        "storage": null,
+        "color": "Midnight 41mm",
+        "deviceType": null,
+        "conditionScore": 9,
+        "batteryHealth": 87,
+        "cosmeticCondition": "Excellent condition.",
+        "imageUrl": null,
+        "lunexPrice": 9500,
+        "marketPrice": 16000,
+        "stockQuantity": 4,
+        "isAvailable": true
+      },
+      {
+        "id": 138,
+        "productId": 53,
+        "storage": null,
+        "color": "Silver 45mm",
+        "deviceType": null,
+        "conditionScore": 10,
+        "batteryHealth": 96,
+        "cosmeticCondition": "Like new.",
+        "imageUrl": null,
+        "lunexPrice": 11000,
+        "marketPrice": 18000,
+        "stockQuantity": 3,
+        "isAvailable": true
+      }
+    ],
+    "specs": [
+      {
+        "id": 531,
+        "productId": 53,
+        "variantId": null,
+        "specKey": "Display",
+        "specValue": "Always-On Retina LTPO OLED",
+        "sortOrder": 0
+      },
+      {
+        "id": 532,
+        "productId": 53,
+        "variantId": null,
+        "specKey": "Chip",
+        "specValue": "Apple S8 SiP",
+        "sortOrder": 1
+      },
+      {
+        "id": 533,
+        "productId": 53,
+        "variantId": null,
+        "specKey": "Sensors",
+        "specValue": "Temperature, ECG, SpO2, heart rate, Crash Detection, Fall Detection",
+        "sortOrder": 2
+      },
+      {
+        "id": 534,
+        "productId": 53,
+        "variantId": null,
+        "specKey": "Gps",
+        "specValue": "L1 GPS",
+        "sortOrder": 3
+      },
+      {
+        "id": 535,
+        "productId": 53,
+        "variantId": null,
+        "specKey": "Battery",
+        "specValue": "up to 18 hours",
+        "sortOrder": 4
+      },
+      {
+        "id": 536,
+        "productId": 53,
+        "variantId": null,
+        "specKey": "Operating System",
+        "specValue": "watchOS 9 (upgradable to watchOS 11)",
+        "sortOrder": 5
+      },
+      {
+        "id": 537,
+        "productId": 53,
+        "variantId": null,
+        "specKey": "Water Resistance",
+        "specValue": "WR50M",
+        "sortOrder": 6
+      },
+      {
+        "id": 538,
+        "productId": 53,
+        "variantId": null,
+        "specKey": "Available Sizes",
+        "specValue": "41mm,45mm",
+        "sortOrder": 7
+      }
+    ]
+  },
+  {
+    "id": 52,
+    "name": "Apple Watch Series 9",
+    "slug": "apple-watch-series-9",
+    "category": "watch",
+    "deviceType": "refurbished",
+    "releaseYear": 2023,
+    "description": "The Apple Watch Series 9 — the fastest Apple Watch ever with the S9 chip. Features a brighter Always-On display and the revolutionary Double Tap gesture control. Fully inspected and tested.",
+    "imageUrl": "https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?w=800",
+    "createdAt": "2026-03-27T15:59:34.865Z",
+    "variants": [
+      {
+        "id": 134,
+        "productId": 52,
+        "storage": null,
+        "color": "Midnight 41mm",
+        "deviceType": null,
+        "conditionScore": 9,
+        "batteryHealth": 91,
+        "cosmeticCondition": "Clean screen. Light scratches on frame only.",
+        "imageUrl": null,
+        "lunexPrice": 11500,
+        "marketPrice": 18800,
+        "stockQuantity": 5,
+        "isAvailable": true
+      },
+      {
+        "id": 135,
+        "productId": 52,
+        "storage": null,
+        "color": "Starlight 45mm",
+        "deviceType": null,
+        "conditionScore": 10,
+        "batteryHealth": 99,
+        "cosmeticCondition": "Like new.",
+        "imageUrl": null,
+        "lunexPrice": 13000,
+        "marketPrice": 22000,
+        "stockQuantity": 3,
+        "isAvailable": true
+      },
+      {
+        "id": 136,
+        "productId": 52,
+        "storage": null,
+        "color": "Pink 41mm",
+        "deviceType": null,
+        "conditionScore": 8,
+        "batteryHealth": 86,
+        "cosmeticCondition": "Light scratches from regular use.",
+        "imageUrl": null,
+        "lunexPrice": 10500,
+        "marketPrice": 18800,
+        "stockQuantity": 4,
+        "isAvailable": true
+      }
+    ],
+    "specs": [
+      {
+        "id": 520,
+        "productId": 52,
+        "variantId": null,
+        "specKey": "Display",
+        "specValue": "Always-On Retina LTPO OLED, 2000 nits peak",
+        "sortOrder": 0
+      },
+      {
+        "id": 521,
+        "productId": 52,
+        "variantId": null,
+        "specKey": "Chip",
+        "specValue": "Apple S9 SiP",
+        "sortOrder": 1
+      },
+      {
+        "id": 522,
+        "productId": 52,
+        "variantId": null,
+        "specKey": "Storage",
+        "specValue": "64GB",
+        "sortOrder": 2
+      },
+      {
+        "id": 523,
+        "productId": 52,
+        "variantId": null,
+        "specKey": "Sensors",
+        "specValue": "Blood oxygen, ECG, SpO2, temperature, Crash Detection",
+        "sortOrder": 3
+      },
+      {
+        "id": 524,
+        "productId": 52,
+        "variantId": null,
+        "specKey": "Gps",
+        "specValue": "L1 and L5 dual-frequency GPS",
+        "sortOrder": 4
+      },
+      {
+        "id": 525,
+        "productId": 52,
+        "variantId": null,
+        "specKey": "Battery",
+        "specValue": "up to 18 hours (36 hours Low Power Mode)",
+        "sortOrder": 5
+      },
+      {
+        "id": 526,
+        "productId": 52,
+        "variantId": null,
+        "specKey": "Operating System",
+        "specValue": "watchOS 10",
+        "sortOrder": 6
+      },
+      {
+        "id": 527,
+        "productId": 52,
+        "variantId": null,
+        "specKey": "Water Resistance",
+        "specValue": "WR50M — 50 meters",
+        "sortOrder": 7
+      },
+      {
+        "id": 528,
+        "productId": 52,
+        "variantId": null,
+        "specKey": "Connectivity",
+        "specValue": "Wi-Fi 802.11b/g/n 2.4GHz, Bluetooth 5.3, NFC",
+        "sortOrder": 8
+      },
+      {
+        "id": 529,
+        "productId": 52,
+        "variantId": null,
+        "specKey": "New Feature",
+        "specValue": "Double Tap — control Apple Watch with a finger pinch gesture",
+        "sortOrder": 9
+      },
+      {
+        "id": 530,
+        "productId": 52,
+        "variantId": null,
+        "specKey": "Available Sizes",
+        "specValue": "41mm,45mm",
+        "sortOrder": 10
+      }
+    ]
+  },
+  {
+    "id": 51,
+    "name": "iPad 10th Generation",
+    "slug": "ipad-10th-gen",
+    "category": "ipad",
+    "deviceType": "refurbished",
+    "releaseYear": 2022,
+    "description": "The iPad 10th Generation with a completely new design in vibrant colors and a larger display. A14 Bionic chip and a landscape front camera for video calls. The perfect iPad for students and families.",
+    "imageUrl": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=800",
+    "createdAt": "2026-03-27T15:59:33.465Z",
+    "variants": [
+      {
+        "id": 132,
+        "productId": 51,
+        "storage": "64GB",
+        "color": "Blue",
+        "deviceType": null,
+        "conditionScore": 9,
+        "batteryHealth": 91,
+        "cosmeticCondition": "Excellent condition.",
+        "imageUrl": null,
+        "lunexPrice": 12000,
+        "marketPrice": 19999,
+        "stockQuantity": 6,
+        "isAvailable": true
+      },
+      {
+        "id": 133,
+        "productId": 51,
+        "storage": "256GB",
+        "color": "Yellow",
+        "deviceType": null,
+        "conditionScore": 10,
+        "batteryHealth": 99,
+        "cosmeticCondition": "Like new.",
+        "imageUrl": null,
+        "lunexPrice": 16500,
+        "marketPrice": 27000,
+        "stockQuantity": 3,
+        "isAvailable": true
+      }
+    ],
+    "specs": [
+      {
+        "id": 510,
+        "productId": 51,
+        "variantId": null,
+        "specKey": "Display",
+        "specValue": "10.9-inch Liquid Retina, 2360x1640px, 264 ppi, True Tone",
+        "sortOrder": 0
+      },
+      {
+        "id": 511,
+        "productId": 51,
+        "variantId": null,
+        "specKey": "Chip",
+        "specValue": "Apple A14 Bionic",
+        "sortOrder": 1
+      },
+      {
+        "id": 512,
+        "productId": 51,
+        "variantId": null,
+        "specKey": "Ram",
+        "specValue": "4GB",
+        "sortOrder": 2
+      },
+      {
+        "id": 513,
+        "productId": 51,
+        "variantId": null,
+        "specKey": "Rear Camera",
+        "specValue": "12MP main",
+        "sortOrder": 3
+      },
+      {
+        "id": 514,
+        "productId": 51,
+        "variantId": null,
+        "specKey": "Front Camera",
+        "specValue": "12MP Ultra Wide Center Stage — landscape orientation",
+        "sortOrder": 4
+      },
+      {
+        "id": 515,
+        "productId": 51,
+        "variantId": null,
+        "specKey": "Battery",
+        "specValue": "28.65 Wh, up to 10 hours",
+        "sortOrder": 5
+      },
+      {
+        "id": 516,
+        "productId": 51,
+        "variantId": null,
+        "specKey": "Operating System",
+        "specValue": "iPadOS 16",
+        "sortOrder": 6
+      },
+      {
+        "id": 517,
+        "productId": 51,
+        "variantId": null,
+        "specKey": "Weight",
+        "specValue": "477g",
+        "sortOrder": 7
+      },
+      {
+        "id": 518,
+        "productId": 51,
+        "variantId": null,
+        "specKey": "Dimensions",
+        "specValue": "248.6 x 179.5 x 7.0 mm",
+        "sortOrder": 8
+      },
+      {
+        "id": 519,
+        "productId": 51,
+        "variantId": null,
+        "specKey": "Connectivity",
+        "specValue": "Wi-Fi 6, Bluetooth 5.2, USB-C",
+        "sortOrder": 9
+      }
+    ]
+  },
+  {
+    "id": 50,
+    "name": "iPad mini 6th Generation",
+    "slug": "ipad-mini-6",
+    "category": "ipad",
+    "deviceType": "refurbished",
+    "releaseYear": 2021,
+    "description": "The iPad mini 6th Generation — the smallest and most powerful iPad ever. A15 Bionic in an ultra-compact body, perfect for travel and one-handed use.",
+    "imageUrl": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=800",
+    "createdAt": "2026-03-27T15:59:32.145Z",
+    "variants": [
+      {
+        "id": 130,
+        "productId": 50,
+        "storage": "64GB",
+        "color": "Purple",
+        "deviceType": null,
+        "conditionScore": 9,
+        "batteryHealth": 89,
+        "cosmeticCondition": "Excellent condition.",
+        "imageUrl": null,
+        "lunexPrice": 15500,
+        "marketPrice": 26000,
+        "stockQuantity": 4,
+        "isAvailable": true
+      },
+      {
+        "id": 131,
+        "productId": 50,
+        "storage": "256GB",
+        "color": "Starlight",
+        "deviceType": null,
+        "conditionScore": 10,
+        "batteryHealth": 96,
+        "cosmeticCondition": "Like new.",
+        "imageUrl": null,
+        "lunexPrice": 20000,
+        "marketPrice": 33000,
+        "stockQuantity": 3,
+        "isAvailable": true
+      }
+    ],
+    "specs": [
+      {
+        "id": 499,
+        "productId": 50,
+        "variantId": null,
+        "specKey": "Display",
+        "specValue": "8.3-inch Liquid Retina, 2266x1488px, 326 ppi, True Tone",
+        "sortOrder": 0
+      },
+      {
+        "id": 500,
+        "productId": 50,
+        "variantId": null,
+        "specKey": "Chip",
+        "specValue": "Apple A15 Bionic",
+        "sortOrder": 1
+      },
+      {
+        "id": 501,
+        "productId": 50,
+        "variantId": null,
+        "specKey": "Ram",
+        "specValue": "4GB",
+        "sortOrder": 2
+      },
+      {
+        "id": 502,
+        "productId": 50,
+        "variantId": null,
+        "specKey": "Rear Camera",
+        "specValue": "12MP main",
+        "sortOrder": 3
+      },
+      {
+        "id": 503,
+        "productId": 50,
+        "variantId": null,
+        "specKey": "Front Camera",
+        "specValue": "12MP Ultra Wide Center Stage",
+        "sortOrder": 4
+      },
+      {
+        "id": 504,
+        "productId": 50,
+        "variantId": null,
+        "specKey": "Battery",
+        "specValue": "19.32 Wh, up to 10 hours",
+        "sortOrder": 5
+      },
+      {
+        "id": 505,
+        "productId": 50,
+        "variantId": null,
+        "specKey": "Operating System",
+        "specValue": "iPadOS 15 (upgradable to iPadOS 18)",
+        "sortOrder": 6
+      },
+      {
+        "id": 506,
+        "productId": 50,
+        "variantId": null,
+        "specKey": "Weight",
+        "specValue": "293g",
+        "sortOrder": 7
+      },
+      {
+        "id": 507,
+        "productId": 50,
+        "variantId": null,
+        "specKey": "Dimensions",
+        "specValue": "195.4 x 134.8 x 6.3 mm",
+        "sortOrder": 8
+      },
+      {
+        "id": 508,
+        "productId": 50,
+        "variantId": null,
+        "specKey": "Connectivity",
+        "specValue": "Wi-Fi 6, Bluetooth 5.0, USB-C",
+        "sortOrder": 9
+      },
+      {
+        "id": 509,
+        "productId": 50,
+        "variantId": null,
+        "specKey": "Pencil Support",
+        "specValue": "Apple Pencil 2nd Generation",
+        "sortOrder": 10
+      }
+    ]
+  },
+  {
+    "id": 49,
+    "name": "iPad Air 5 M1",
+    "slug": "ipad-air-5-m1",
+    "category": "ipad",
+    "deviceType": "refurbished",
+    "releaseYear": 2022,
+    "description": "The iPad Air 5th Generation with M1 chip. Combines professional performance with a reasonable price point. Perfect for students and creatives. Supports Apple Pencil 2nd Generation.",
+    "imageUrl": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=800",
+    "createdAt": "2026-03-27T15:59:30.827Z",
+    "variants": [
+      {
+        "id": 127,
+        "productId": 49,
+        "storage": "64GB",
+        "color": "Blue",
+        "deviceType": null,
+        "conditionScore": 9,
+        "batteryHealth": 90,
+        "cosmeticCondition": "Excellent condition.",
+        "imageUrl": null,
+        "lunexPrice": 18000,
+        "marketPrice": 29990,
+        "stockQuantity": 5,
+        "isAvailable": true
+      },
+      {
+        "id": 128,
+        "productId": 49,
+        "storage": "256GB",
+        "color": "Purple",
+        "deviceType": null,
+        "conditionScore": 10,
+        "batteryHealth": 97,
+        "cosmeticCondition": "Like new.",
+        "imageUrl": null,
+        "lunexPrice": 22500,
+        "marketPrice": 37500,
+        "stockQuantity": 3,
+        "isAvailable": true
+      },
+      {
+        "id": 129,
+        "productId": 49,
+        "storage": "64GB",
+        "color": "Space Gray",
+        "deviceType": null,
+        "conditionScore": 8,
+        "batteryHealth": 84,
+        "cosmeticCondition": "Light scratches.",
+        "imageUrl": null,
+        "lunexPrice": 16000,
+        "marketPrice": 29990,
+        "stockQuantity": 4,
+        "isAvailable": true
+      }
+    ],
+    "specs": [
+      {
+        "id": 489,
+        "productId": 49,
+        "variantId": null,
+        "specKey": "Display",
+        "specValue": "10.9-inch Liquid Retina, 2360x1640px, 264 ppi, True Tone",
+        "sortOrder": 0
+      },
+      {
+        "id": 490,
+        "productId": 49,
+        "variantId": null,
+        "specKey": "Chip",
+        "specValue": "Apple M1",
+        "sortOrder": 1
+      },
+      {
+        "id": 491,
+        "productId": 49,
+        "variantId": null,
+        "specKey": "Ram",
+        "specValue": "8GB",
+        "sortOrder": 2
+      },
+      {
+        "id": 492,
+        "productId": 49,
+        "variantId": null,
+        "specKey": "Rear Camera",
+        "specValue": "12MP main",
+        "sortOrder": 3
+      },
+      {
+        "id": 493,
+        "productId": 49,
+        "variantId": null,
+        "specKey": "Front Camera",
+        "specValue": "12MP Ultra Wide Center Stage",
+        "sortOrder": 4
+      },
+      {
+        "id": 494,
+        "productId": 49,
+        "variantId": null,
+        "specKey": "Battery",
+        "specValue": "28.65 Wh, up to 10 hours",
+        "sortOrder": 5
+      },
+      {
+        "id": 495,
+        "productId": 49,
+        "variantId": null,
+        "specKey": "Operating System",
+        "specValue": "iPadOS 15 (upgradable to iPadOS 18)",
+        "sortOrder": 6
+      },
+      {
+        "id": 496,
+        "productId": 49,
+        "variantId": null,
+        "specKey": "Weight",
+        "specValue": "461g",
+        "sortOrder": 7
+      },
+      {
+        "id": 497,
+        "productId": 49,
+        "variantId": null,
+        "specKey": "Dimensions",
+        "specValue": "247.6 x 178.5 x 6.1 mm",
+        "sortOrder": 8
+      },
+      {
+        "id": 498,
+        "productId": 49,
+        "variantId": null,
+        "specKey": "Connectivity",
+        "specValue": "Wi-Fi 6, Bluetooth 5.0, USB-C",
+        "sortOrder": 9
+      }
+    ]
+  },
+  {
+    "id": 48,
+    "name": "iPad Pro 11-inch M4",
+    "slug": "ipad-pro-11-m4",
+    "category": "ipad",
+    "deviceType": "refurbished",
+    "releaseYear": 2024,
+    "description": "The thinnest and lightest iPad Pro ever. The M4 chip brings next-level performance and the Ultra Retina XDR tandem OLED display delivers true blacks and stunning colors like never before.",
+    "imageUrl": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=800",
+    "createdAt": "2026-03-27T15:59:29.653Z",
+    "variants": [
+      {
+        "id": 125,
+        "productId": 48,
+        "storage": "256GB",
+        "color": "Space Black",
+        "deviceType": null,
+        "conditionScore": 9,
+        "batteryHealth": 95,
+        "cosmeticCondition": "Excellent condition.",
+        "imageUrl": null,
+        "lunexPrice": 44000,
+        "marketPrice": 73000,
+        "stockQuantity": 2,
+        "isAvailable": true
+      },
+      {
+        "id": 126,
+        "productId": 48,
+        "storage": "512GB",
+        "color": "Silver",
+        "deviceType": null,
+        "conditionScore": 10,
+        "batteryHealth": 100,
+        "cosmeticCondition": "Like new.",
+        "imageUrl": null,
+        "lunexPrice": 52000,
+        "marketPrice": 86000,
+        "stockQuantity": 1,
+        "isAvailable": true
+      }
+    ],
+    "specs": [
+      {
+        "id": 479,
+        "productId": 48,
+        "variantId": null,
+        "specKey": "Display",
+        "specValue": "11-inch Ultra Retina XDR tandem OLED, ProMotion 120Hz, 2420x1668px, 264 ppi, 1000 nits SDR",
+        "sortOrder": 0
+      },
+      {
+        "id": 480,
+        "productId": 48,
+        "variantId": null,
+        "specKey": "Chip",
+        "specValue": "Apple M4, 3nm",
+        "sortOrder": 1
+      },
+      {
+        "id": 481,
+        "productId": 48,
+        "variantId": null,
+        "specKey": "Ram",
+        "specValue": "8GB / 16GB Unified Memory",
+        "sortOrder": 2
+      },
+      {
+        "id": 482,
+        "productId": 48,
+        "variantId": null,
+        "specKey": "Rear Camera",
+        "specValue": "12MP main + LiDAR",
+        "sortOrder": 3
+      },
+      {
+        "id": 483,
+        "productId": 48,
+        "variantId": null,
+        "specKey": "Front Camera",
+        "specValue": "12MP TrueDepth",
+        "sortOrder": 4
+      },
+      {
+        "id": 484,
+        "productId": 48,
+        "variantId": null,
+        "specKey": "Battery",
+        "specValue": "up to 10 hours",
+        "sortOrder": 5
+      },
+      {
+        "id": 485,
+        "productId": 48,
+        "variantId": null,
+        "specKey": "Operating System",
+        "specValue": "iPadOS 17",
+        "sortOrder": 6
+      },
+      {
+        "id": 486,
+        "productId": 48,
+        "variantId": null,
+        "specKey": "Weight",
+        "specValue": "444g — lightest iPad Pro ever",
+        "sortOrder": 7
+      },
+      {
+        "id": 487,
+        "productId": 48,
+        "variantId": null,
+        "specKey": "Thickness",
+        "specValue": "5.3mm — thinnest Apple product ever",
+        "sortOrder": 8
+      },
+      {
+        "id": 488,
+        "productId": 48,
+        "variantId": null,
+        "specKey": "Connectivity",
+        "specValue": "Wi-Fi 6E, Bluetooth 5.3, USB-C Thunderbolt 4",
+        "sortOrder": 9
+      }
+    ]
+  },
+  {
+    "id": 47,
+    "name": "iPad Pro 12.9-inch M2",
+    "slug": "ipad-pro-12-9-m2",
+    "category": "ipad",
+    "deviceType": "refurbished",
+    "releaseYear": 2022,
+    "description": "The iPad Pro 12.9-inch with M2 chip and incredible Liquid Retina XDR mini-LED display. A 1600-nit display with ProMotion 120Hz built for professionals.",
+    "imageUrl": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=800",
+    "createdAt": "2026-03-27T15:59:27.341Z",
+    "variants": [
+      {
+        "id": 123,
+        "productId": 47,
+        "storage": "256GB",
+        "color": "Space Gray",
+        "deviceType": null,
+        "conditionScore": 9,
+        "batteryHealth": 92,
+        "cosmeticCondition": "Excellent condition.",
+        "imageUrl": null,
+        "lunexPrice": 45000,
+        "marketPrice": 75000,
+        "stockQuantity": 2,
+        "isAvailable": true
+      },
+      {
+        "id": 124,
+        "productId": 47,
+        "storage": "512GB",
+        "color": "Silver",
+        "deviceType": null,
+        "conditionScore": 10,
+        "batteryHealth": 98,
+        "cosmeticCondition": "Like new.",
+        "imageUrl": null,
+        "lunexPrice": 54000,
+        "marketPrice": 90000,
+        "stockQuantity": 1,
+        "isAvailable": true
+      }
+    ],
+    "specs": [
+      {
+        "id": 469,
+        "productId": 47,
+        "variantId": null,
+        "specKey": "Display",
+        "specValue": "12.9-inch Liquid Retina XDR mini-LED, ProMotion 120Hz, 2732x2048px, 1600 nits peak",
+        "sortOrder": 0
+      },
+      {
+        "id": 470,
+        "productId": 47,
+        "variantId": null,
+        "specKey": "Chip",
+        "specValue": "Apple M2",
+        "sortOrder": 1
+      },
+      {
+        "id": 471,
+        "productId": 47,
+        "variantId": null,
+        "specKey": "Ram",
+        "specValue": "8GB",
+        "sortOrder": 2
+      },
+      {
+        "id": 472,
+        "productId": 47,
+        "variantId": null,
+        "specKey": "Rear Camera",
+        "specValue": "12MP main + 10MP Ultra Wide + LiDAR",
+        "sortOrder": 3
+      },
+      {
+        "id": 473,
+        "productId": 47,
+        "variantId": null,
+        "specKey": "Front Camera",
+        "specValue": "12MP TrueDepth Landscape",
+        "sortOrder": 4
+      },
+      {
+        "id": 474,
+        "productId": 47,
+        "variantId": null,
+        "specKey": "Battery",
+        "specValue": "40.88 Wh, up to 10 hours",
+        "sortOrder": 5
+      },
+      {
+        "id": 475,
+        "productId": 47,
+        "variantId": null,
+        "specKey": "Operating System",
+        "specValue": "iPadOS 16",
+        "sortOrder": 6
+      },
+      {
+        "id": 476,
+        "productId": 47,
+        "variantId": null,
+        "specKey": "Weight",
+        "specValue": "682g",
+        "sortOrder": 7
+      },
+      {
+        "id": 477,
+        "productId": 47,
+        "variantId": null,
+        "specKey": "Dimensions",
+        "specValue": "280.6 x 214.9 x 6.4 mm",
+        "sortOrder": 8
+      },
+      {
+        "id": 478,
+        "productId": 47,
+        "variantId": null,
+        "specKey": "Connectivity",
+        "specValue": "Wi-Fi 6E, Bluetooth 5.3, USB-C / Thunderbolt 4",
+        "sortOrder": 9
+      }
+    ]
+  },
+  {
+    "id": 46,
+    "name": "iPad Pro 11-inch M2",
+    "slug": "ipad-pro-11-m2",
+    "category": "ipad",
+    "deviceType": "refurbished",
+    "releaseYear": 2022,
+    "description": "The iPad Pro 11-inch with M2 chip and ProMotion 120Hz technology. Perfect for artists and designers with Apple Pencil 2nd generation support. Comes in excellent condition with Lunex warranty.",
+    "imageUrl": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=800",
+    "createdAt": "2026-03-27T15:59:25.83Z",
+    "variants": [
+      {
+        "id": 120,
+        "productId": 46,
+        "storage": "128GB",
+        "color": "Space Gray",
+        "deviceType": null,
+        "conditionScore": 9,
+        "batteryHealth": 91,
+        "cosmeticCondition": "Excellent condition with a small scratch on one corner.",
+        "imageUrl": null,
+        "lunexPrice": 29000,
+        "marketPrice": 48000,
+        "stockQuantity": 3,
+        "isAvailable": true
+      },
+      {
+        "id": 121,
+        "productId": 46,
+        "storage": "256GB",
+        "color": "Silver",
+        "deviceType": null,
+        "conditionScore": 10,
+        "batteryHealth": 100,
+        "cosmeticCondition": "Perfect.",
+        "imageUrl": null,
+        "lunexPrice": 33500,
+        "marketPrice": 55000,
+        "stockQuantity": 2,
+        "isAvailable": true
+      },
+      {
+        "id": 122,
+        "productId": 46,
+        "storage": "512GB",
+        "color": "Space Gray",
+        "deviceType": null,
+        "conditionScore": 9,
+        "batteryHealth": 94,
+        "cosmeticCondition": "9/10 excellent condition.",
+        "imageUrl": null,
+        "lunexPrice": 40000,
+        "marketPrice": 67000,
+        "stockQuantity": 2,
+        "isAvailable": true
+      }
+    ],
+    "specs": [
+      {
+        "id": 458,
+        "productId": 46,
+        "variantId": null,
+        "specKey": "Display",
+        "specValue": "11-inch Liquid Retina, ProMotion 120Hz, 2388x1668px, 264 ppi",
+        "sortOrder": 0
+      },
+      {
+        "id": 459,
+        "productId": 46,
+        "variantId": null,
+        "specKey": "Chip",
+        "specValue": "Apple M2",
+        "sortOrder": 1
+      },
+      {
+        "id": 460,
+        "productId": 46,
+        "variantId": null,
+        "specKey": "Ram",
+        "specValue": "8GB",
+        "sortOrder": 2
+      },
+      {
+        "id": 461,
+        "productId": 46,
+        "variantId": null,
+        "specKey": "Rear Camera",
+        "specValue": "12MP main + 10MP Ultra Wide",
+        "sortOrder": 3
+      },
+      {
+        "id": 462,
+        "productId": 46,
+        "variantId": null,
+        "specKey": "Front Camera",
+        "specValue": "12MP TrueDepth Landscape",
+        "sortOrder": 4
+      },
+      {
+        "id": 463,
+        "productId": 46,
+        "variantId": null,
+        "specKey": "Battery",
+        "specValue": "28.65 Wh, up to 10 hours",
+        "sortOrder": 5
+      },
+      {
+        "id": 464,
+        "productId": 46,
+        "variantId": null,
+        "specKey": "Operating System",
+        "specValue": "iPadOS 16 (upgradable to iPadOS 18)",
+        "sortOrder": 6
+      },
+      {
+        "id": 465,
+        "productId": 46,
+        "variantId": null,
+        "specKey": "Weight",
+        "specValue": "466g (Wi-Fi)",
+        "sortOrder": 7
+      },
+      {
+        "id": 466,
+        "productId": 46,
+        "variantId": null,
+        "specKey": "Dimensions",
+        "specValue": "247.6 x 178.5 x 5.9 mm",
+        "sortOrder": 8
+      },
+      {
+        "id": 467,
+        "productId": 46,
+        "variantId": null,
+        "specKey": "Connectivity",
+        "specValue": "Wi-Fi 6E, Bluetooth 5.3, USB-C / Thunderbolt 4",
+        "sortOrder": 9
+      },
+      {
+        "id": 468,
+        "productId": 46,
+        "variantId": null,
+        "specKey": "Pencil Support",
+        "specValue": "Apple Pencil 2nd Generation",
+        "sortOrder": 10
+      }
+    ]
+  },
+  {
+    "id": 45,
+    "name": "MacBook Pro 16-inch M3 Pro",
+    "slug": "macbook-pro-16-m3-pro",
+    "category": "mac",
+    "deviceType": "refurbished",
+    "releaseYear": 2023,
+    "description": "The MacBook Pro 16-inch with M3 Pro — the ultimate solution for professionals editing 8K video, graphic designers, and software developers. Features an exceptional 16-inch XDR display.",
+    "imageUrl": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=800",
+    "createdAt": "2026-03-27T15:59:24.833Z",
+    "variants": [
+      {
+        "id": 118,
+        "productId": 45,
+        "storage": "512GB SSD",
+        "color": "Space Black",
+        "deviceType": null,
+        "conditionScore": 9,
+        "batteryHealth": 94,
+        "cosmeticCondition": "Excellent condition.",
+        "imageUrl": null,
+        "lunexPrice": 80000,
+        "marketPrice": 133000,
+        "stockQuantity": 1,
+        "isAvailable": true
+      },
+      {
+        "id": 119,
+        "productId": 45,
+        "storage": "1TB SSD",
+        "color": "Silver",
+        "deviceType": null,
+        "conditionScore": 10,
+        "batteryHealth": 99,
+        "cosmeticCondition": "Like new.",
+        "imageUrl": null,
+        "lunexPrice": 92000,
+        "marketPrice": 154000,
+        "stockQuantity": 1,
+        "isAvailable": true
+      }
+    ],
+    "specs": [
+      {
+        "id": 449,
+        "productId": 45,
+        "variantId": null,
+        "specKey": "Display",
+        "specValue": "16.2-inch Liquid Retina XDR, ProMotion 120Hz, 3456x2234px, 254 ppi",
+        "sortOrder": 0
+      },
+      {
+        "id": 450,
+        "productId": 45,
+        "variantId": null,
+        "specKey": "Chip",
+        "specValue": "Apple M3 Pro — 12-core CPU, 18-core GPU",
+        "sortOrder": 1
+      },
+      {
+        "id": 451,
+        "productId": 45,
+        "variantId": null,
+        "specKey": "Ram",
+        "specValue": "18GB / 36GB Unified Memory",
+        "sortOrder": 2
+      },
+      {
+        "id": 452,
+        "productId": 45,
+        "variantId": null,
+        "specKey": "Camera",
+        "specValue": "1080p FaceTime HD",
+        "sortOrder": 3
+      },
+      {
+        "id": 453,
+        "productId": 45,
+        "variantId": null,
+        "specKey": "Battery",
+        "specValue": "88 Wh, up to 22 hours",
+        "sortOrder": 4
+      },
+      {
+        "id": 454,
+        "productId": 45,
+        "variantId": null,
+        "specKey": "Operating System",
+        "specValue": "macOS Sonoma",
+        "sortOrder": 5
+      },
+      {
+        "id": 455,
+        "productId": 45,
+        "variantId": null,
+        "specKey": "Weight",
+        "specValue": "2.14 kg",
+        "sortOrder": 6
+      },
+      {
+        "id": 456,
+        "productId": 45,
+        "variantId": null,
+        "specKey": "Dimensions",
+        "specValue": "355.7 x 248.1 x 16.8 mm",
+        "sortOrder": 7
+      },
+      {
+        "id": 457,
+        "productId": 45,
+        "variantId": null,
+        "specKey": "Connectivity",
+        "specValue": "Wi-Fi 6E, Bluetooth 5.3, 3x Thunderbolt 4, HDMI 2.1, SD Card, MagSafe 3",
+        "sortOrder": 8
+      }
+    ]
+  },
+  {
+    "id": 44,
+    "name": "MacBook Pro 14-inch M3",
+    "slug": "macbook-pro-14-m3",
+    "category": "mac",
+    "deviceType": "refurbished",
+    "releaseYear": 2023,
+    "description": "The MacBook Pro 14-inch with M3 Pro. The ultimate choice for professionals in video editing, 3D design, and development. Features a Liquid Retina XDR display with ProMotion and industry-leading performance.",
+    "imageUrl": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=800",
+    "createdAt": "2026-03-27T15:59:22.953Z",
+    "variants": [
+      {
+        "id": 116,
+        "productId": 44,
+        "storage": "512GB SSD",
+        "color": "Space Black",
+        "deviceType": null,
+        "conditionScore": 9,
+        "batteryHealth": 93,
+        "cosmeticCondition": "Excellent condition.",
+        "imageUrl": null,
+        "lunexPrice": 60000,
+        "marketPrice": 100000,
+        "stockQuantity": 2,
+        "isAvailable": true
+      },
+      {
+        "id": 117,
+        "productId": 44,
+        "storage": "1TB SSD",
+        "color": "Silver",
+        "deviceType": null,
+        "conditionScore": 10,
+        "batteryHealth": 98,
+        "cosmeticCondition": "Like new.",
+        "imageUrl": null,
+        "lunexPrice": 70000,
+        "marketPrice": 116000,
+        "stockQuantity": 1,
+        "isAvailable": true
+      }
+    ],
+    "specs": [
+      {
+        "id": 440,
+        "productId": 44,
+        "variantId": null,
+        "specKey": "Display",
+        "specValue": "14.2-inch Liquid Retina XDR, ProMotion 120Hz, 3024x1964px, 254 ppi, 1000 nits",
+        "sortOrder": 0
+      },
+      {
+        "id": 441,
+        "productId": 44,
+        "variantId": null,
+        "specKey": "Chip",
+        "specValue": "Apple M3 Pro — 11-core CPU, 14-core GPU, 3nm",
+        "sortOrder": 1
+      },
+      {
+        "id": 442,
+        "productId": 44,
+        "variantId": null,
+        "specKey": "Ram",
+        "specValue": "18GB / 36GB Unified Memory",
+        "sortOrder": 2
+      },
+      {
+        "id": 443,
+        "productId": 44,
+        "variantId": null,
+        "specKey": "Camera",
+        "specValue": "1080p FaceTime HD",
+        "sortOrder": 3
+      },
+      {
+        "id": 444,
+        "productId": 44,
+        "variantId": null,
+        "specKey": "Battery",
+        "specValue": "70 Wh, up to 18 hours",
+        "sortOrder": 4
+      },
+      {
+        "id": 445,
+        "productId": 44,
+        "variantId": null,
+        "specKey": "Operating System",
+        "specValue": "macOS Sonoma",
+        "sortOrder": 5
+      },
+      {
+        "id": 446,
+        "productId": 44,
+        "variantId": null,
+        "specKey": "Weight",
+        "specValue": "1.61 kg",
+        "sortOrder": 6
+      },
+      {
+        "id": 447,
+        "productId": 44,
+        "variantId": null,
+        "specKey": "Dimensions",
+        "specValue": "312.6 x 221.2 x 15.5 mm",
+        "sortOrder": 7
+      },
+      {
+        "id": 448,
+        "productId": 44,
+        "variantId": null,
+        "specKey": "Connectivity",
+        "specValue": "Wi-Fi 6E, Bluetooth 5.3, 3x Thunderbolt 4, HDMI 2.1, SD Card, MagSafe 3",
+        "sortOrder": 8
+      }
+    ]
+  },
+  {
+    "id": 43,
+    "name": "MacBook Air M1 13-inch",
+    "slug": "macbook-air-m1-13",
+    "category": "mac",
+    "deviceType": "refurbished",
+    "releaseYear": 2020,
+    "description": "The MacBook Air M1 — the laptop that changed everything. Apple's first Mac with its own silicon chip. Still incredibly powerful in 2026 and available at an unbeatable price.",
+    "imageUrl": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=800",
+    "createdAt": "2026-03-27T15:59:21.635Z",
+    "variants": [
+      {
+        "id": 113,
+        "productId": 43,
+        "storage": "256GB SSD",
+        "color": "Space Gray",
+        "deviceType": null,
+        "conditionScore": 8,
+        "batteryHealth": 83,
+        "cosmeticCondition": "Light scratches on lid.",
+        "imageUrl": null,
+        "lunexPrice": 17000,
+        "marketPrice": 28500,
+        "stockQuantity": 6,
+        "isAvailable": true
+      },
+      {
+        "id": 114,
+        "productId": 43,
+        "storage": "512GB SSD",
+        "color": "Gold",
+        "deviceType": null,
+        "conditionScore": 9,
+        "batteryHealth": 89,
+        "cosmeticCondition": "Excellent condition.",
+        "imageUrl": null,
+        "lunexPrice": 21000,
+        "marketPrice": 35000,
+        "stockQuantity": 4,
+        "isAvailable": true
+      },
+      {
+        "id": 115,
+        "productId": 43,
+        "storage": "256GB SSD",
+        "color": "Silver",
+        "deviceType": null,
+        "conditionScore": 10,
+        "batteryHealth": 96,
+        "cosmeticCondition": "Like new.",
+        "imageUrl": null,
+        "lunexPrice": 19500,
+        "marketPrice": 28500,
+        "stockQuantity": 3,
+        "isAvailable": true
+      }
+    ],
+    "specs": [
+      {
+        "id": 430,
+        "productId": 43,
+        "variantId": null,
+        "specKey": "Display",
+        "specValue": "13.3-inch Retina, 2560x1600px, 227 ppi, True Tone",
+        "sortOrder": 0
+      },
+      {
+        "id": 431,
+        "productId": 43,
+        "variantId": null,
+        "specKey": "Chip",
+        "specValue": "Apple M1, 8-core CPU, 7/8-core GPU",
+        "sortOrder": 1
+      },
+      {
+        "id": 432,
+        "productId": 43,
+        "variantId": null,
+        "specKey": "Ram",
+        "specValue": "8GB / 16GB Unified Memory",
+        "sortOrder": 2
+      },
+      {
+        "id": 433,
+        "productId": 43,
+        "variantId": null,
+        "specKey": "Camera",
+        "specValue": "720p FaceTime",
+        "sortOrder": 3
+      },
+      {
+        "id": 434,
+        "productId": 43,
+        "variantId": null,
+        "specKey": "Battery",
+        "specValue": "49.9 Wh, up to 18 hours",
+        "sortOrder": 4
+      },
+      {
+        "id": 435,
+        "productId": 43,
+        "variantId": null,
+        "specKey": "Operating System",
+        "specValue": "macOS Big Sur (upgradable to macOS Sequoia)",
+        "sortOrder": 5
+      },
+      {
+        "id": 436,
+        "productId": 43,
+        "variantId": null,
+        "specKey": "Weight",
+        "specValue": "1.29 kg",
+        "sortOrder": 6
+      },
+      {
+        "id": 437,
+        "productId": 43,
+        "variantId": null,
+        "specKey": "Dimensions",
+        "specValue": "304.1 x 212.4 x 16.1 mm",
+        "sortOrder": 7
+      },
+      {
+        "id": 438,
+        "productId": 43,
+        "variantId": null,
+        "specKey": "Connectivity",
+        "specValue": "Wi-Fi 6, Bluetooth 5.0, 2x Thunderbolt / USB 4, MagSafe",
+        "sortOrder": 8
+      },
+      {
+        "id": 439,
+        "productId": 43,
+        "variantId": null,
+        "specKey": "Design",
+        "specValue": "Fanless — completely silent",
+        "sortOrder": 9
+      }
+    ]
+  },
+  {
+    "id": 42,
+    "name": "MacBook Air M3 13-inch",
+    "slug": "macbook-air-m3-13",
+    "category": "mac",
+    "deviceType": "refurbished",
+    "releaseYear": 2024,
+    "description": "The MacBook Air M3 — the latest generation of the best-selling laptop ever. The M3 chip is 60% faster than M1, supports two external displays for the first time, and now features Wi-Fi 6E.",
+    "imageUrl": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=800",
+    "createdAt": "2026-03-27T15:59:20.142Z",
+    "variants": [
+      {
+        "id": 110,
+        "productId": 42,
+        "storage": "256GB SSD",
+        "color": "Midnight",
+        "deviceType": null,
+        "conditionScore": 9,
+        "batteryHealth": 96,
+        "cosmeticCondition": "Excellent condition. Very light use.",
+        "imageUrl": null,
+        "lunexPrice": 33000,
+        "marketPrice": 54000,
+        "stockQuantity": 3,
+        "isAvailable": true
+      },
+      {
+        "id": 111,
+        "productId": 42,
+        "storage": "512GB SSD",
+        "color": "Starlight",
+        "deviceType": null,
+        "conditionScore": 10,
+        "batteryHealth": 100,
+        "cosmeticCondition": "Perfect.",
+        "imageUrl": null,
+        "lunexPrice": 38500,
+        "marketPrice": 64000,
+        "stockQuantity": 2,
+        "isAvailable": true
+      },
+      {
+        "id": 112,
+        "productId": 42,
+        "storage": "1TB SSD",
+        "color": "Space Gray",
+        "deviceType": null,
+        "conditionScore": 9,
+        "batteryHealth": 94,
+        "cosmeticCondition": "9/10 excellent condition.",
+        "imageUrl": null,
+        "lunexPrice": 44000,
+        "marketPrice": 73000,
+        "stockQuantity": 2,
+        "isAvailable": true
+      }
+    ],
+    "specs": [
+      {
+        "id": 420,
+        "productId": 42,
+        "variantId": null,
+        "specKey": "Display",
+        "specValue": "13.6-inch Liquid Retina, 2560x1664px, 224 ppi, True Tone",
+        "sortOrder": 0
+      },
+      {
+        "id": 421,
+        "productId": 42,
+        "variantId": null,
+        "specKey": "Chip",
+        "specValue": "Apple M3, 8-core CPU, 10-core GPU, 3nm",
+        "sortOrder": 1
+      },
+      {
+        "id": 422,
+        "productId": 42,
+        "variantId": null,
+        "specKey": "Ram",
+        "specValue": "8GB / 16GB / 24GB Unified Memory",
+        "sortOrder": 2
+      },
+      {
+        "id": 423,
+        "productId": 42,
+        "variantId": null,
+        "specKey": "Camera",
+        "specValue": "1080p FaceTime HD",
+        "sortOrder": 3
+      },
+      {
+        "id": 424,
+        "productId": 42,
+        "variantId": null,
+        "specKey": "Battery",
+        "specValue": "52.6 Wh, up to 18 hours",
+        "sortOrder": 4
+      },
+      {
+        "id": 425,
+        "productId": 42,
+        "variantId": null,
+        "specKey": "Operating System",
+        "specValue": "macOS Sonoma (upgradable to Sequoia)",
+        "sortOrder": 5
+      },
+      {
+        "id": 426,
+        "productId": 42,
+        "variantId": null,
+        "specKey": "Weight",
+        "specValue": "1.24 kg",
+        "sortOrder": 6
+      },
+      {
+        "id": 427,
+        "productId": 42,
+        "variantId": null,
+        "specKey": "Dimensions",
+        "specValue": "304.1 x 215 x 11.3 mm",
+        "sortOrder": 7
+      },
+      {
+        "id": 428,
+        "productId": 42,
+        "variantId": null,
+        "specKey": "Connectivity",
+        "specValue": "Wi-Fi 6E, Bluetooth 5.3, 2x Thunderbolt 4 / USB 4, MagSafe 3",
+        "sortOrder": 8
+      },
+      {
+        "id": 429,
+        "productId": 42,
+        "variantId": null,
+        "specKey": "New Feature",
+        "specValue": "Supports two external displays with lid closed",
+        "sortOrder": 9
+      }
+    ]
+  },
+  {
+    "id": 41,
+    "name": "MacBook Air M2 13-inch",
+    "slug": "macbook-air-m2-13",
+    "category": "mac",
+    "deviceType": "refurbished",
+    "releaseYear": 2022,
+    "description": "The MacBook Air M2 is the thinnest and lightest MacBook Air ever made. Features a Liquid Retina 13.6-inch display, 18-hour battery life, and a completely fanless design for total silence. Professionally refurbished.",
+    "imageUrl": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=800",
+    "createdAt": "2026-03-27T15:59:17.999Z",
+    "variants": [
+      {
+        "id": 106,
+        "productId": 41,
+        "storage": "256GB SSD",
+        "color": "Midnight",
+        "deviceType": null,
+        "conditionScore": 9,
+        "batteryHealth": 92,
+        "cosmeticCondition": "Light scratches on lid. Screen perfectly clean.",
+        "imageUrl": null,
+        "lunexPrice": 27500,
+        "marketPrice": 45990,
+        "stockQuantity": 4,
+        "isAvailable": true
+      },
+      {
+        "id": 107,
+        "productId": 41,
+        "storage": "512GB SSD",
+        "color": "Starlight",
+        "deviceType": null,
+        "conditionScore": 10,
+        "batteryHealth": 99,
+        "cosmeticCondition": "Like new.",
+        "imageUrl": null,
+        "lunexPrice": 33000,
+        "marketPrice": 54000,
+        "stockQuantity": 2,
+        "isAvailable": true
+      },
+      {
+        "id": 108,
+        "productId": 41,
+        "storage": "512GB SSD",
+        "color": "Space Gray",
+        "deviceType": null,
+        "conditionScore": 8,
+        "batteryHealth": 86,
+        "cosmeticCondition": "Light wear on frame edges.",
+        "imageUrl": null,
+        "lunexPrice": 30000,
+        "marketPrice": 54000,
+        "stockQuantity": 3,
+        "isAvailable": true
+      },
+      {
+        "id": 109,
+        "productId": 41,
+        "storage": "1TB SSD",
+        "color": "Silver",
+        "deviceType": null,
+        "conditionScore": 9,
+        "batteryHealth": 94,
+        "cosmeticCondition": "One small scratch near MagSafe port.",
+        "imageUrl": null,
+        "lunexPrice": 38000,
+        "marketPrice": 63000,
+        "stockQuantity": 2,
+        "isAvailable": true
+      }
+    ],
+    "specs": [
+      {
+        "id": 410,
+        "productId": 41,
+        "variantId": null,
+        "specKey": "Display",
+        "specValue": "13.6-inch Liquid Retina, 2560x1664px, 224 ppi, True Tone",
+        "sortOrder": 0
+      },
+      {
+        "id": 411,
+        "productId": 41,
+        "variantId": null,
+        "specKey": "Chip",
+        "specValue": "Apple M2, 8-core CPU, 8/10-core GPU",
+        "sortOrder": 1
+      },
+      {
+        "id": 412,
+        "productId": 41,
+        "variantId": null,
+        "specKey": "Ram",
+        "specValue": "8GB / 16GB Unified Memory",
+        "sortOrder": 2
+      },
+      {
+        "id": 413,
+        "productId": 41,
+        "variantId": null,
+        "specKey": "Camera",
+        "specValue": "1080p FaceTime HD",
+        "sortOrder": 3
+      },
+      {
+        "id": 414,
+        "productId": 41,
+        "variantId": null,
+        "specKey": "Battery",
+        "specValue": "52.6 Wh, up to 18 hours",
+        "sortOrder": 4
+      },
+      {
+        "id": 415,
+        "productId": 41,
+        "variantId": null,
+        "specKey": "Operating System",
+        "specValue": "macOS Ventura (upgradable to macOS Sequoia)",
+        "sortOrder": 5
+      },
+      {
+        "id": 416,
+        "productId": 41,
+        "variantId": null,
+        "specKey": "Weight",
+        "specValue": "1.24 kg",
+        "sortOrder": 6
+      },
+      {
+        "id": 417,
+        "productId": 41,
+        "variantId": null,
+        "specKey": "Dimensions",
+        "specValue": "304.1 x 215 x 11.3 mm",
+        "sortOrder": 7
+      },
+      {
+        "id": 418,
+        "productId": 41,
+        "variantId": null,
+        "specKey": "Connectivity",
+        "specValue": "Wi-Fi 6, Bluetooth 5.0, 2x Thunderbolt 4 / USB 4, MagSafe 3",
+        "sortOrder": 8
+      },
+      {
+        "id": 419,
+        "productId": 41,
+        "variantId": null,
+        "specKey": "Design",
+        "specValue": "Fanless — completely silent",
+        "sortOrder": 9
+      }
+    ]
+  },
+  {
+    "id": 40,
+    "name": "iPhone 14 Plus",
+    "slug": "iphone-14-plus",
+    "category": "iphone",
+    "deviceType": "assembled",
+    "releaseYear": 2022,
+    "description": "The iPhone 14 Plus delivers a large 6.7-inch screen at a lower price than the Pro Max. Longest battery life ever in a standard iPhone lineup, powered by A15 Bionic.",
+    "imageUrl": "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?w=800",
+    "createdAt": "2026-03-27T15:59:15.67Z",
+    "variants": [
+      {
+        "id": 104,
+        "productId": 40,
+        "storage": "128GB",
+        "color": "Blue",
+        "deviceType": null,
+        "conditionScore": 9,
+        "batteryHealth": 91,
+        "cosmeticCondition": "Excellent condition.",
+        "imageUrl": null,
+        "lunexPrice": 23000,
+        "marketPrice": 38000,
+        "stockQuantity": 5,
+        "isAvailable": true
+      },
+      {
+        "id": 105,
+        "productId": 40,
+        "storage": "256GB",
+        "color": "Yellow",
+        "deviceType": null,
+        "conditionScore": 10,
+        "batteryHealth": 99,
+        "cosmeticCondition": "Like new.",
+        "imageUrl": null,
+        "lunexPrice": 27000,
+        "marketPrice": 44000,
+        "stockQuantity": 3,
+        "isAvailable": true
+      }
+    ],
+    "specs": [
+      {
+        "id": 399,
+        "productId": 40,
+        "variantId": null,
+        "specKey": "Display",
+        "specValue": "6.7-inch Super Retina XDR OLED, 2778x1284px, 458 ppi",
+        "sortOrder": 0
+      },
+      {
+        "id": 400,
+        "productId": 40,
+        "variantId": null,
+        "specKey": "Chip",
+        "specValue": "Apple A15 Bionic",
+        "sortOrder": 1
+      },
+      {
+        "id": 401,
+        "productId": 40,
+        "variantId": null,
+        "specKey": "Ram",
+        "specValue": "6GB",
+        "sortOrder": 2
+      },
+      {
+        "id": 402,
+        "productId": 40,
+        "variantId": null,
+        "specKey": "Rear Camera",
+        "specValue": "12MP main f/1.5 + 12MP ultrawide",
+        "sortOrder": 3
+      },
+      {
+        "id": 403,
+        "productId": 40,
+        "variantId": null,
+        "specKey": "Front Camera",
+        "specValue": "12MP TrueDepth with autofocus",
+        "sortOrder": 4
+      },
+      {
+        "id": 404,
+        "productId": 40,
+        "variantId": null,
+        "specKey": "Battery",
+        "specValue": "4323 mAh",
+        "sortOrder": 5
+      },
+      {
+        "id": 405,
+        "productId": 40,
+        "variantId": null,
+        "specKey": "Battery Video Playback",
+        "specValue": "26 hours — longest in standard lineup",
+        "sortOrder": 6
+      },
+      {
+        "id": 406,
+        "productId": 40,
+        "variantId": null,
+        "specKey": "Operating System",
+        "specValue": "iOS 16 (upgradable to iOS 18)",
+        "sortOrder": 7
+      },
+      {
+        "id": 407,
+        "productId": 40,
+        "variantId": null,
+        "specKey": "Weight",
+        "specValue": "203g",
+        "sortOrder": 8
+      },
+      {
+        "id": 408,
+        "productId": 40,
+        "variantId": null,
+        "specKey": "Dimensions",
+        "specValue": "160.8 x 78.1 x 7.8 mm",
+        "sortOrder": 9
+      },
+      {
+        "id": 409,
+        "productId": 40,
+        "variantId": null,
+        "specKey": "Connectivity",
+        "specValue": "5G, Wi-Fi 6, Lightning",
+        "sortOrder": 10
+      }
+    ]
+  },
+  {
+    "id": 39,
+    "name": "iPhone SE 3rd Generation",
+    "slug": "iphone-se-3",
+    "category": "iphone",
+    "deviceType": "refurbished",
+    "releaseYear": 2022,
+    "description": "The iPhone SE 3rd Generation — the most powerful iPhone with a classic Home button. A15 Bionic chip in a compact body with Touch ID. Perfect for those who love the classic design with modern performance.",
+    "imageUrl": "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?w=800",
+    "createdAt": "2026-03-27T15:59:14.089Z",
+    "variants": [
+      {
+        "id": 102,
+        "productId": 39,
+        "storage": "64GB",
+        "color": "Midnight",
+        "deviceType": null,
+        "conditionScore": 9,
+        "batteryHealth": 87,
+        "cosmeticCondition": "Excellent condition.",
+        "imageUrl": null,
+        "lunexPrice": 9500,
+        "marketPrice": 15500,
+        "stockQuantity": 7,
+        "isAvailable": true
+      },
+      {
+        "id": 103,
+        "productId": 39,
+        "storage": "128GB",
+        "color": "Product Red",
+        "deviceType": null,
+        "conditionScore": 10,
+        "batteryHealth": 97,
+        "cosmeticCondition": "Like new.",
+        "imageUrl": null,
+        "lunexPrice": 11500,
+        "marketPrice": 18500,
+        "stockQuantity": 4,
+        "isAvailable": true
+      }
+    ],
+    "specs": [
+      {
+        "id": 388,
+        "productId": 39,
+        "variantId": null,
+        "specKey": "Display",
+        "specValue": "4.7-inch Retina HD LCD, 1334x750px, 326 ppi",
+        "sortOrder": 0
+      },
+      {
+        "id": 389,
+        "productId": 39,
+        "variantId": null,
+        "specKey": "Chip",
+        "specValue": "Apple A15 Bionic",
+        "sortOrder": 1
+      },
+      {
+        "id": 390,
+        "productId": 39,
+        "variantId": null,
+        "specKey": "Ram",
+        "specValue": "4GB",
+        "sortOrder": 2
+      },
+      {
+        "id": 391,
+        "productId": 39,
+        "variantId": null,
+        "specKey": "Rear Camera",
+        "specValue": "12MP f/1.8, Portrait Mode",
+        "sortOrder": 3
+      },
+      {
+        "id": 392,
+        "productId": 39,
+        "variantId": null,
+        "specKey": "Front Camera",
+        "specValue": "7MP FaceTime HD, Touch ID",
+        "sortOrder": 4
+      },
+      {
+        "id": 393,
+        "productId": 39,
+        "variantId": null,
+        "specKey": "Battery",
+        "specValue": "2018 mAh",
+        "sortOrder": 5
+      },
+      {
+        "id": 394,
+        "productId": 39,
+        "variantId": null,
+        "specKey": "Battery Video Playback",
+        "specValue": "15 hours",
+        "sortOrder": 6
+      },
+      {
+        "id": 395,
+        "productId": 39,
+        "variantId": null,
+        "specKey": "Operating System",
+        "specValue": "iOS 15 (upgradable to iOS 18)",
+        "sortOrder": 7
+      },
+      {
+        "id": 396,
+        "productId": 39,
+        "variantId": null,
+        "specKey": "Weight",
+        "specValue": "144g",
+        "sortOrder": 8
+      },
+      {
+        "id": 397,
+        "productId": 39,
+        "variantId": null,
+        "specKey": "Dimensions",
+        "specValue": "138.4 x 67.3 x 7.3 mm",
+        "sortOrder": 9
+      },
+      {
+        "id": 398,
+        "productId": 39,
+        "variantId": null,
+        "specKey": "Connectivity",
+        "specValue": "5G, Wi-Fi 6, Bluetooth 5.0, Lightning",
+        "sortOrder": 10
+      }
+    ]
+  },
+  {
+    "id": 38,
+    "name": "iPhone 12 Pro Max",
+    "slug": "iphone-12-pro-max",
+    "category": "iphone",
+    "deviceType": "refurbished",
+    "releaseYear": 2020,
+    "description": "The iPhone 12 Pro Max — the first generation to support 5G with Dolby Vision video recording and a 2.5x telephoto camera with LiDAR Scanner. Great choice for a Pro experience at a more economical price.",
+    "imageUrl": "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?w=800",
+    "createdAt": "2026-03-27T15:59:12.539Z",
+    "variants": [
+      {
+        "id": 100,
+        "productId": 38,
+        "storage": "128GB",
+        "color": "Pacific Blue",
+        "deviceType": null,
+        "conditionScore": 8,
+        "batteryHealth": 84,
+        "cosmeticCondition": "Light scratches on frame. Screen clean.",
+        "imageUrl": null,
+        "lunexPrice": 16000,
+        "marketPrice": 27000,
+        "stockQuantity": 5,
+        "isAvailable": true
+      },
+      {
+        "id": 101,
+        "productId": 38,
+        "storage": "256GB",
+        "color": "Graphite",
+        "deviceType": null,
+        "conditionScore": 9,
+        "batteryHealth": 89,
+        "cosmeticCondition": "Excellent 9/10 condition.",
+        "imageUrl": null,
+        "lunexPrice": 18500,
+        "marketPrice": 31000,
+        "stockQuantity": 3,
+        "isAvailable": true
+      }
+    ],
+    "specs": [
+      {
+        "id": 377,
+        "productId": 38,
+        "variantId": null,
+        "specKey": "Display",
+        "specValue": "6.7-inch Super Retina XDR OLED, 2778x1284px, 458 ppi",
+        "sortOrder": 0
+      },
+      {
+        "id": 378,
+        "productId": 38,
+        "variantId": null,
+        "specKey": "Chip",
+        "specValue": "Apple A14 Bionic, 5nm",
+        "sortOrder": 1
+      },
+      {
+        "id": 379,
+        "productId": 38,
+        "variantId": null,
+        "specKey": "Ram",
+        "specValue": "6GB",
+        "sortOrder": 2
+      },
+      {
+        "id": 380,
+        "productId": 38,
+        "variantId": null,
+        "specKey": "Rear Camera",
+        "specValue": "12MP main f/1.6 + 12MP ultrawide + 12MP 2.5x telephoto, LiDAR Scanner",
+        "sortOrder": 3
+      },
+      {
+        "id": 381,
+        "productId": 38,
+        "variantId": null,
+        "specKey": "Front Camera",
+        "specValue": "12MP TrueDepth",
+        "sortOrder": 4
+      },
+      {
+        "id": 382,
+        "productId": 38,
+        "variantId": null,
+        "specKey": "Battery",
+        "specValue": "3687 mAh, MagSafe",
+        "sortOrder": 5
+      },
+      {
+        "id": 383,
+        "productId": 38,
+        "variantId": null,
+        "specKey": "Battery Video Playback",
+        "specValue": "20 hours",
+        "sortOrder": 6
+      },
+      {
+        "id": 384,
+        "productId": 38,
+        "variantId": null,
+        "specKey": "Operating System",
+        "specValue": "iOS 14 (upgradable to iOS 18)",
+        "sortOrder": 7
+      },
+      {
+        "id": 385,
+        "productId": 38,
+        "variantId": null,
+        "specKey": "Weight",
+        "specValue": "228g",
+        "sortOrder": 8
+      },
+      {
+        "id": 386,
+        "productId": 38,
+        "variantId": null,
+        "specKey": "Dimensions",
+        "specValue": "160.8 x 78.1 x 7.4 mm",
+        "sortOrder": 9
+      },
+      {
+        "id": 387,
+        "productId": 38,
+        "variantId": null,
+        "specKey": "Connectivity",
+        "specValue": "5G, Wi-Fi 6, Bluetooth 5.0, Lightning",
+        "sortOrder": 10
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "name": "iPhone 13",
+    "slug": "iphone-13",
+    "category": "iphone",
+    "deviceType": "assembled",
+    "releaseYear": 2021,
+    "description": "The iPhone 13 assembled with original-grade components. Features A15 Bionic, an improved dual camera with Cinematic Mode, and a larger battery than its predecessor. The perfect daily driver at an unbeatable price.",
+    "imageUrl": "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?w=800",
+    "createdAt": "2026-03-27T15:59:10.777Z",
+    "variants": [
+      {
+        "id": 97,
+        "productId": 37,
+        "storage": "128GB",
+        "color": "Midnight",
+        "deviceType": null,
+        "conditionScore": 9,
+        "batteryHealth": 88,
+        "cosmeticCondition": "Excellent condition.",
+        "imageUrl": null,
+        "lunexPrice": 14500,
+        "marketPrice": 24000,
+        "stockQuantity": 8,
+        "isAvailable": true
+      },
+      {
+        "id": 98,
+        "productId": 37,
+        "storage": "256GB",
+        "color": "Blue",
+        "deviceType": null,
+        "conditionScore": 10,
+        "batteryHealth": 98,
+        "cosmeticCondition": "Like new.",
+        "imageUrl": null,
+        "lunexPrice": 17000,
+        "marketPrice": 28000,
+        "stockQuantity": 5,
+        "isAvailable": true
+      },
+      {
+        "id": 99,
+        "productId": 37,
+        "storage": "128GB",
+        "color": "Pink",
+        "deviceType": null,
+        "conditionScore": 8,
+        "batteryHealth": 83,
+        "cosmeticCondition": "Light scratches on back. Frame in good shape.",
+        "imageUrl": null,
+        "lunexPrice": 13000,
+        "marketPrice": 24000,
+        "stockQuantity": 4,
+        "isAvailable": true
+      }
+    ],
+    "specs": [
+      {
+        "id": 366,
+        "productId": 37,
+        "variantId": null,
+        "specKey": "Display",
+        "specValue": "6.1-inch Super Retina XDR OLED, 2532x1170px, 460 ppi",
+        "sortOrder": 0
+      },
+      {
+        "id": 367,
+        "productId": 37,
+        "variantId": null,
+        "specKey": "Chip",
+        "specValue": "Apple A15 Bionic, 5nm",
+        "sortOrder": 1
+      },
+      {
+        "id": 368,
+        "productId": 37,
+        "variantId": null,
+        "specKey": "Ram",
+        "specValue": "4GB",
+        "sortOrder": 2
+      },
+      {
+        "id": 369,
+        "productId": 37,
+        "variantId": null,
+        "specKey": "Rear Camera",
+        "specValue": "12MP main f/1.6 + 12MP ultrawide, Cinematic Mode",
+        "sortOrder": 3
+      },
+      {
+        "id": 370,
+        "productId": 37,
+        "variantId": null,
+        "specKey": "Front Camera",
+        "specValue": "12MP TrueDepth",
+        "sortOrder": 4
+      },
+      {
+        "id": 371,
+        "productId": 37,
+        "variantId": null,
+        "specKey": "Battery",
+        "specValue": "3227 mAh",
+        "sortOrder": 5
+      },
+      {
+        "id": 372,
+        "productId": 37,
+        "variantId": null,
+        "specKey": "Battery Video Playback",
+        "specValue": "19 hours",
+        "sortOrder": 6
+      },
+      {
+        "id": 373,
+        "productId": 37,
+        "variantId": null,
+        "specKey": "Operating System",
+        "specValue": "iOS 15 (upgradable to iOS 18)",
+        "sortOrder": 7
+      },
+      {
+        "id": 374,
+        "productId": 37,
+        "variantId": null,
+        "specKey": "Weight",
+        "specValue": "174g",
+        "sortOrder": 8
+      },
+      {
+        "id": 375,
+        "productId": 37,
+        "variantId": null,
+        "specKey": "Dimensions",
+        "specValue": "146.7 x 71.5 x 7.65 mm",
+        "sortOrder": 9
+      },
+      {
+        "id": 376,
+        "productId": 37,
+        "variantId": null,
+        "specKey": "Connectivity",
+        "specValue": "5G, Wi-Fi 6, Bluetooth 5.0, Lightning",
+        "sortOrder": 10
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "name": "iPhone 13 Pro Max",
+    "slug": "iphone-13-pro-max",
+    "category": "iphone",
+    "deviceType": "refurbished",
+    "releaseYear": 2021,
+    "description": "The iPhone 13 Pro Max professionally refurbished. Features ProMotion 120Hz display, the longest battery life ever in a Pro iPhone, A15 Bionic chip, and Macro photography. Ideal for getting a Pro experience at a budget-friendly price.",
+    "imageUrl": "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?w=800",
+    "createdAt": "2026-03-27T15:59:09.463Z",
+    "variants": [
+      {
+        "id": 94,
+        "productId": 36,
+        "storage": "256GB",
+        "color": "Sierra Blue",
+        "deviceType": null,
+        "conditionScore": 9,
+        "batteryHealth": 88,
+        "cosmeticCondition": "Light scratches on frame. Screen is clean.",
+        "imageUrl": null,
+        "lunexPrice": 26000,
+        "marketPrice": 43500,
+        "stockQuantity": 4,
+        "isAvailable": true
+      },
+      {
+        "id": 95,
+        "productId": 36,
+        "storage": "512GB",
+        "color": "Graphite",
+        "deviceType": null,
+        "conditionScore": 8,
+        "batteryHealth": 84,
+        "cosmeticCondition": "Slightly more visible wear on back. Screen is intact.",
+        "imageUrl": null,
+        "lunexPrice": 30000,
+        "marketPrice": 50000,
+        "stockQuantity": 2,
+        "isAvailable": true
+      },
+      {
+        "id": 96,
+        "productId": 36,
+        "storage": "128GB",
+        "color": "Gold",
+        "deviceType": null,
+        "conditionScore": 10,
+        "batteryHealth": 97,
+        "cosmeticCondition": "Perfect. Like new.",
+        "imageUrl": null,
+        "lunexPrice": 23000,
+        "marketPrice": 38000,
+        "stockQuantity": 3,
+        "isAvailable": true
+      }
+    ],
+    "specs": [
+      {
+        "id": 355,
+        "productId": 36,
+        "variantId": null,
+        "specKey": "Display",
+        "specValue": "6.7-inch Super Retina XDR OLED, ProMotion 120Hz, 2778x1284px",
+        "sortOrder": 0
+      },
+      {
+        "id": 356,
+        "productId": 36,
+        "variantId": null,
+        "specKey": "Chip",
+        "specValue": "Apple A15 Bionic, 5nm",
+        "sortOrder": 1
+      },
+      {
+        "id": 357,
+        "productId": 36,
+        "variantId": null,
+        "specKey": "Ram",
+        "specValue": "6GB",
+        "sortOrder": 2
+      },
+      {
+        "id": 358,
+        "productId": 36,
+        "variantId": null,
+        "specKey": "Rear Camera",
+        "specValue": "12MP main f/1.5 + 12MP ultrawide + 12MP 3x telephoto, Macro Mode",
+        "sortOrder": 3
+      },
+      {
+        "id": 359,
+        "productId": 36,
+        "variantId": null,
+        "specKey": "Front Camera",
+        "specValue": "12MP TrueDepth",
+        "sortOrder": 4
+      },
+      {
+        "id": 360,
+        "productId": 36,
+        "variantId": null,
+        "specKey": "Battery",
+        "specValue": "4352 mAh",
+        "sortOrder": 5
+      },
+      {
+        "id": 361,
+        "productId": 36,
+        "variantId": null,
+        "specKey": "Battery Video Playback",
+        "specValue": "28 hours",
+        "sortOrder": 6
+      },
+      {
+        "id": 362,
+        "productId": 36,
+        "variantId": null,
+        "specKey": "Operating System",
+        "specValue": "iOS 15 (upgradable to iOS 17)",
+        "sortOrder": 7
+      },
+      {
+        "id": 363,
+        "productId": 36,
+        "variantId": null,
+        "specKey": "Weight",
+        "specValue": "238g",
+        "sortOrder": 8
+      },
+      {
+        "id": 364,
+        "productId": 36,
+        "variantId": null,
+        "specKey": "Dimensions",
+        "specValue": "160.8 x 78.1 x 7.65 mm",
+        "sortOrder": 9
+      },
+      {
+        "id": 365,
+        "productId": 36,
+        "variantId": null,
+        "specKey": "Connectivity",
+        "specValue": "5G, Wi-Fi 6, Bluetooth 5.0, Lightning",
+        "sortOrder": 10
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "name": "iPhone 14",
+    "slug": "iphone-14",
+    "category": "iphone",
+    "deviceType": "assembled",
+    "releaseYear": 2022,
+    "description": "The iPhone 14 assembled with original-grade components. Combines the A15 Bionic chip with an improved camera system and Crash Detection safety feature. The ideal choice for everyday users who want a reliable iPhone at an affordable price.",
+    "imageUrl": "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?w=800",
+    "createdAt": "2026-03-27T15:59:07.638Z",
+    "variants": [
+      {
+        "id": 91,
+        "productId": 35,
+        "storage": "128GB",
+        "color": "Midnight",
+        "deviceType": null,
+        "conditionScore": 9,
+        "batteryHealth": 90,
+        "cosmeticCondition": "Excellent condition. Near flawless.",
+        "imageUrl": null,
+        "lunexPrice": 21000,
+        "marketPrice": 35000,
+        "stockQuantity": 7,
+        "isAvailable": true
+      },
+      {
+        "id": 92,
+        "productId": 35,
+        "storage": "256GB",
+        "color": "Blue",
+        "deviceType": null,
+        "conditionScore": 10,
+        "batteryHealth": 100,
+        "cosmeticCondition": "Like new. Zero marks.",
+        "imageUrl": null,
+        "lunexPrice": 24500,
+        "marketPrice": 40500,
+        "stockQuantity": 4,
+        "isAvailable": true
+      },
+      {
+        "id": 93,
+        "productId": 35,
+        "storage": "128GB",
+        "color": "Product Red",
+        "deviceType": null,
+        "conditionScore": 8,
+        "batteryHealth": 85,
+        "cosmeticCondition": "Light scratches on back. Frame in good condition.",
+        "imageUrl": null,
+        "lunexPrice": 19500,
+        "marketPrice": 35000,
+        "stockQuantity": 3,
+        "isAvailable": true
+      }
+    ],
+    "specs": [
+      {
+        "id": 344,
+        "productId": 35,
+        "variantId": null,
+        "specKey": "Display",
+        "specValue": "6.1-inch Super Retina XDR OLED, 2532x1170px, 460 ppi",
+        "sortOrder": 0
+      },
+      {
+        "id": 345,
+        "productId": 35,
+        "variantId": null,
+        "specKey": "Chip",
+        "specValue": "Apple A15 Bionic, 5nm",
+        "sortOrder": 1
+      },
+      {
+        "id": 346,
+        "productId": 35,
+        "variantId": null,
+        "specKey": "Ram",
+        "specValue": "6GB",
+        "sortOrder": 2
+      },
+      {
+        "id": 347,
+        "productId": 35,
+        "variantId": null,
+        "specKey": "Rear Camera",
+        "specValue": "12MP main f/1.5 + 12MP ultrawide",
+        "sortOrder": 3
+      },
+      {
+        "id": 348,
+        "productId": 35,
+        "variantId": null,
+        "specKey": "Front Camera",
+        "specValue": "12MP TrueDepth with autofocus",
+        "sortOrder": 4
+      },
+      {
+        "id": 349,
+        "productId": 35,
+        "variantId": null,
+        "specKey": "Battery",
+        "specValue": "3279 mAh",
+        "sortOrder": 5
+      },
+      {
+        "id": 350,
+        "productId": 35,
+        "variantId": null,
+        "specKey": "Battery Video Playback",
+        "specValue": "20 hours",
+        "sortOrder": 6
+      },
+      {
+        "id": 351,
+        "productId": 35,
+        "variantId": null,
+        "specKey": "Operating System",
+        "specValue": "iOS 16 (upgradable to iOS 18)",
+        "sortOrder": 7
+      },
+      {
+        "id": 352,
+        "productId": 35,
+        "variantId": null,
+        "specKey": "Weight",
+        "specValue": "172g",
+        "sortOrder": 8
+      },
+      {
+        "id": 353,
+        "productId": 35,
+        "variantId": null,
+        "specKey": "Dimensions",
+        "specValue": "146.7 x 71.5 x 7.8 mm",
+        "sortOrder": 9
+      },
+      {
+        "id": 354,
+        "productId": 35,
+        "variantId": null,
+        "specKey": "Connectivity",
+        "specValue": "5G, Wi-Fi 6, Bluetooth 5.3, Lightning",
+        "sortOrder": 10
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "name": "iPhone 14 Pro Max",
+    "slug": "iphone-14-pro-max",
+    "category": "iphone",
+    "deviceType": "assembled",
+    "releaseYear": 2022,
+    "description": "The iPhone 14 Pro Max assembled with original-grade components. Features the first Dynamic Island cutout, a 48MP main camera, Always-On display, and A16 Bionic chip. Assembled and tested to professional standards by the Lunex team.",
+    "imageUrl": "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?w=800",
+    "createdAt": "2026-03-27T15:59:06.162Z",
+    "variants": [
+      {
+        "id": 88,
+        "productId": 34,
+        "storage": "128GB",
+        "color": "Deep Purple",
+        "deviceType": null,
+        "conditionScore": 9,
+        "batteryHealth": 91,
+        "cosmeticCondition": "Light scratches on frame. Screen is pristine.",
+        "imageUrl": null,
+        "lunexPrice": 30000,
+        "marketPrice": 50000,
+        "stockQuantity": 5,
+        "isAvailable": true
+      },
+      {
+        "id": 89,
+        "productId": 34,
+        "storage": "256GB",
+        "color": "Space Black",
+        "deviceType": null,
+        "conditionScore": 10,
+        "batteryHealth": 99,
+        "cosmeticCondition": "Perfect. Like new.",
+        "imageUrl": null,
+        "lunexPrice": 34000,
+        "marketPrice": 56000,
+        "stockQuantity": 3,
+        "isAvailable": true
+      },
+      {
+        "id": 90,
+        "productId": 34,
+        "storage": "512GB",
+        "color": "Gold",
+        "deviceType": null,
+        "conditionScore": 8,
+        "batteryHealth": 86,
+        "cosmeticCondition": "Minor wear on back. Screen is scratch-free.",
+        "imageUrl": null,
+        "lunexPrice": 39000,
+        "marketPrice": 65000,
+        "stockQuantity": 2,
+        "isAvailable": true
+      }
+    ],
+    "specs": [
+      {
+        "id": 333,
+        "productId": 34,
+        "variantId": null,
+        "specKey": "Display",
+        "specValue": "6.7-inch Super Retina XDR OLED, ProMotion 120Hz, Always-On, 2796x1290px",
+        "sortOrder": 0
+      },
+      {
+        "id": 334,
+        "productId": 34,
+        "variantId": null,
+        "specKey": "Chip",
+        "specValue": "Apple A16 Bionic, 4nm",
+        "sortOrder": 1
+      },
+      {
+        "id": 335,
+        "productId": 34,
+        "variantId": null,
+        "specKey": "Ram",
+        "specValue": "6GB",
+        "sortOrder": 2
+      },
+      {
+        "id": 336,
+        "productId": 34,
+        "variantId": null,
+        "specKey": "Rear Camera",
+        "specValue": "48MP main f/1.78 + 12MP ultrawide + 12MP 3x telephoto",
+        "sortOrder": 3
+      },
+      {
+        "id": 337,
+        "productId": 34,
+        "variantId": null,
+        "specKey": "Front Camera",
+        "specValue": "12MP TrueDepth, Face ID",
+        "sortOrder": 4
+      },
+      {
+        "id": 338,
+        "productId": 34,
+        "variantId": null,
+        "specKey": "Battery",
+        "specValue": "4323 mAh, Lightning",
+        "sortOrder": 5
+      },
+      {
+        "id": 339,
+        "productId": 34,
+        "variantId": null,
+        "specKey": "Battery Video Playback",
+        "specValue": "29 hours",
+        "sortOrder": 6
+      },
+      {
+        "id": 340,
+        "productId": 34,
+        "variantId": null,
+        "specKey": "Operating System",
+        "specValue": "iOS 16 (upgradable to iOS 18)",
+        "sortOrder": 7
+      },
+      {
+        "id": 341,
+        "productId": 34,
+        "variantId": null,
+        "specKey": "Weight",
+        "specValue": "240g",
+        "sortOrder": 8
+      },
+      {
+        "id": 342,
+        "productId": 34,
+        "variantId": null,
+        "specKey": "Dimensions",
+        "specValue": "160.7 x 77.6 x 7.85 mm",
+        "sortOrder": 9
+      },
+      {
+        "id": 343,
+        "productId": 34,
+        "variantId": null,
+        "specKey": "Connectivity",
+        "specValue": "5G, Wi-Fi 6, Bluetooth 5.3, NFC",
+        "sortOrder": 10
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "name": "iPhone 15",
+    "slug": "iphone-15",
+    "category": "iphone",
+    "deviceType": "refurbished",
+    "releaseYear": 2023,
+    "description": "The iPhone 15 brings a 48MP main camera, Dynamic Island, and USB-C charging for the first time in a standard iPhone. Powered by the A16 Bionic chip for excellent everyday performance.",
+    "imageUrl": "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?w=800",
+    "createdAt": "2026-03-27T15:59:04.318Z",
+    "variants": [
+      {
+        "id": 84,
+        "productId": 33,
+        "storage": "128GB",
+        "color": "Black",
+        "deviceType": null,
+        "conditionScore": 9,
+        "batteryHealth": 93,
+        "cosmeticCondition": "Excellent condition. Very light scratches on back only.",
+        "imageUrl": null,
+        "lunexPrice": 28500,
+        "marketPrice": 47700,
+        "stockQuantity": 6,
+        "isAvailable": true
+      },
+      {
+        "id": 85,
+        "productId": 33,
+        "storage": "128GB",
+        "color": "Blue",
+        "deviceType": null,
+        "conditionScore": 10,
+        "batteryHealth": 100,
+        "cosmeticCondition": "Absolutely like new. No marks at all.",
+        "imageUrl": null,
+        "lunexPrice": 28500,
+        "marketPrice": 47700,
+        "stockQuantity": 4,
+        "isAvailable": true
+      },
+      {
+        "id": 86,
+        "productId": 33,
+        "storage": "256GB",
+        "color": "Pink",
+        "deviceType": null,
+        "conditionScore": 9,
+        "batteryHealth": 95,
+        "cosmeticCondition": "9/10 excellent condition.",
+        "imageUrl": null,
+        "lunexPrice": 32000,
+        "marketPrice": 52500,
+        "stockQuantity": 3,
+        "isAvailable": true
+      },
+      {
+        "id": 87,
+        "productId": 33,
+        "storage": "512GB",
+        "color": "Yellow",
+        "deviceType": null,
+        "conditionScore": 8,
+        "batteryHealth": 89,
+        "cosmeticCondition": "Minor scratches on frame. Screen is perfect.",
+        "imageUrl": null,
+        "lunexPrice": 37000,
+        "marketPrice": 61000,
+        "stockQuantity": 2,
+        "isAvailable": true
+      }
+    ],
+    "specs": [
+      {
+        "id": 322,
+        "productId": 33,
+        "variantId": null,
+        "specKey": "Display",
+        "specValue": "6.1-inch Super Retina XDR OLED, 2556x1179px, 460 ppi",
+        "sortOrder": 0
+      },
+      {
+        "id": 323,
+        "productId": 33,
+        "variantId": null,
+        "specKey": "Chip",
+        "specValue": "Apple A16 Bionic, 4nm",
+        "sortOrder": 1
+      },
+      {
+        "id": 324,
+        "productId": 33,
+        "variantId": null,
+        "specKey": "Ram",
+        "specValue": "6GB",
+        "sortOrder": 2
+      },
+      {
+        "id": 325,
+        "productId": 33,
+        "variantId": null,
+        "specKey": "Rear Camera",
+        "specValue": "48MP main f/1.6 + 12MP ultrawide, 2x optical zoom",
+        "sortOrder": 3
+      },
+      {
+        "id": 326,
+        "productId": 33,
+        "variantId": null,
+        "specKey": "Front Camera",
+        "specValue": "12MP TrueDepth",
+        "sortOrder": 4
+      },
+      {
+        "id": 327,
+        "productId": 33,
+        "variantId": null,
+        "specKey": "Battery",
+        "specValue": "3877 mAh, USB-C",
+        "sortOrder": 5
+      },
+      {
+        "id": 328,
+        "productId": 33,
+        "variantId": null,
+        "specKey": "Battery Video Playback",
+        "specValue": "20 hours",
+        "sortOrder": 6
+      },
+      {
+        "id": 329,
+        "productId": 33,
+        "variantId": null,
+        "specKey": "Operating System",
+        "specValue": "iOS 17",
+        "sortOrder": 7
+      },
+      {
+        "id": 330,
+        "productId": 33,
+        "variantId": null,
+        "specKey": "Weight",
+        "specValue": "171g",
+        "sortOrder": 8
+      },
+      {
+        "id": 331,
+        "productId": 33,
+        "variantId": null,
+        "specKey": "Dimensions",
+        "specValue": "147.6 x 71.6 x 7.8 mm",
+        "sortOrder": 9
+      },
+      {
+        "id": 332,
+        "productId": 33,
+        "variantId": null,
+        "specKey": "Connectivity",
+        "specValue": "5G, Wi-Fi 6, Bluetooth 5.3, NFC, USB-C",
+        "sortOrder": 10
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "name": "iPhone 15 Pro",
+    "slug": "iphone-15-pro",
+    "category": "iphone",
+    "deviceType": "refurbished",
+    "releaseYear": 2023,
+    "description": "The iPhone 15 Pro features a lightweight titanium frame, the A17 Pro chip, and a 48MP professional camera system with 3x optical zoom. Every unit is fully tested and certified by the Lunex team.",
+    "imageUrl": "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?w=800",
+    "createdAt": "2026-03-27T15:59:02.708Z",
+    "variants": [
+      {
+        "id": 81,
+        "productId": 32,
+        "storage": "128GB",
+        "color": "Natural Titanium",
+        "deviceType": null,
+        "conditionScore": 9,
+        "batteryHealth": 92,
+        "cosmeticCondition": "No visible scratches. Excellent condition.",
+        "imageUrl": null,
+        "lunexPrice": 37500,
+        "marketPrice": 62000,
+        "stockQuantity": 5,
+        "isAvailable": true
+      },
+      {
+        "id": 82,
+        "productId": 32,
+        "storage": "256GB",
+        "color": "Black Titanium",
+        "deviceType": null,
+        "conditionScore": 10,
+        "batteryHealth": 98,
+        "cosmeticCondition": "Perfect condition. Like new.",
+        "imageUrl": null,
+        "lunexPrice": 42000,
+        "marketPrice": 69000,
+        "stockQuantity": 3,
+        "isAvailable": true
+      },
+      {
+        "id": 83,
+        "productId": 32,
+        "storage": "512GB",
+        "color": "Blue Titanium",
+        "deviceType": null,
+        "conditionScore": 8,
+        "batteryHealth": 87,
+        "cosmeticCondition": "Light scratches on back panel. Screen is completely clean.",
+        "imageUrl": null,
+        "lunexPrice": 47000,
+        "marketPrice": 78000,
+        "stockQuantity": 2,
+        "isAvailable": true
+      }
+    ],
+    "specs": [
+      {
+        "id": 310,
+        "productId": 32,
+        "variantId": null,
+        "specKey": "Display",
+        "specValue": "6.1-inch Super Retina XDR OLED, ProMotion 120Hz, 2556x1179px, 460 ppi",
+        "sortOrder": 0
+      },
+      {
+        "id": 311,
+        "productId": 32,
+        "variantId": null,
+        "specKey": "Chip",
+        "specValue": "Apple A17 Pro, 3nm",
+        "sortOrder": 1
+      },
+      {
+        "id": 312,
+        "productId": 32,
+        "variantId": null,
+        "specKey": "Ram",
+        "specValue": "8GB",
+        "sortOrder": 2
+      },
+      {
+        "id": 313,
+        "productId": 32,
+        "variantId": null,
+        "specKey": "Rear Camera",
+        "specValue": "48MP main f/1.78 + 12MP ultrawide + 12MP 3x telephoto",
+        "sortOrder": 3
+      },
+      {
+        "id": 314,
+        "productId": 32,
+        "variantId": null,
+        "specKey": "Front Camera",
+        "specValue": "12MP TrueDepth, Face ID",
+        "sortOrder": 4
+      },
+      {
+        "id": 315,
+        "productId": 32,
+        "variantId": null,
+        "specKey": "Battery",
+        "specValue": "3274 mAh, USB-C, MagSafe",
+        "sortOrder": 5
+      },
+      {
+        "id": 316,
+        "productId": 32,
+        "variantId": null,
+        "specKey": "Battery Video Playback",
+        "specValue": "23 hours",
+        "sortOrder": 6
+      },
+      {
+        "id": 317,
+        "productId": 32,
+        "variantId": null,
+        "specKey": "Operating System",
+        "specValue": "iOS 17",
+        "sortOrder": 7
+      },
+      {
+        "id": 318,
+        "productId": 32,
+        "variantId": null,
+        "specKey": "Weight",
+        "specValue": "187g",
+        "sortOrder": 8
+      },
+      {
+        "id": 319,
+        "productId": 32,
+        "variantId": null,
+        "specKey": "Dimensions",
+        "specValue": "146.6 x 70.6 x 8.25 mm",
+        "sortOrder": 9
+      },
+      {
+        "id": 320,
+        "productId": 32,
+        "variantId": null,
+        "specKey": "Connectivity",
+        "specValue": "5G, Wi-Fi 6E, Bluetooth 5.3, NFC, USB-C 3.0",
+        "sortOrder": 10
+      },
+      {
+        "id": 321,
+        "productId": 32,
+        "variantId": null,
+        "specKey": "Water Resistance",
+        "specValue": "IP68",
+        "sortOrder": 11
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "name": "iPhone 15 Pro Max",
+    "slug": "iphone-15-pro-max",
+    "category": "iphone",
+    "deviceType": "refurbished",
+    "releaseYear": 2023,
+    "description": "The iPhone 15 Pro Max is Apple's most powerful smartphone ever. Built with an aerospace-grade titanium frame, a Super Retina XDR ProMotion 120Hz display, and the A17 Pro chip built on 3nm technology. Features a professional 5x periscope telephoto camera system and ProRAW shooting. Every unit is fully inspected and certified by the Lunex team.",
+    "imageUrl": "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?w=800",
+    "createdAt": "2026-03-27T15:59:00.326Z",
+    "variants": [
+      {
+        "id": 77,
+        "productId": 31,
+        "storage": "256GB",
+        "color": "Black Titanium",
+        "deviceType": null,
+        "conditionScore": 9,
+        "batteryHealth": 94,
+        "cosmeticCondition": "Very light micro-scratches only visible under direct bright light. Screen and frame are pristine.",
+        "imageUrl": null,
+        "lunexPrice": 46500,
+        "marketPrice": 76500,
+        "stockQuantity": 4,
+        "isAvailable": true
+      },
+      {
+        "id": 78,
+        "productId": 31,
+        "storage": "256GB",
+        "color": "Natural Titanium",
+        "deviceType": null,
+        "conditionScore": 10,
+        "batteryHealth": 100,
+        "cosmeticCondition": "Like new. Used only a handful of times. No marks whatsoever.",
+        "imageUrl": null,
+        "lunexPrice": 49000,
+        "marketPrice": 76500,
+        "stockQuantity": 2,
+        "isAvailable": true
+      },
+      {
+        "id": 79,
+        "productId": 31,
+        "storage": "512GB",
+        "color": "Blue Titanium",
+        "deviceType": null,
+        "conditionScore": 9,
+        "batteryHealth": 91,
+        "cosmeticCondition": "Light scratches on the frame only. Screen is completely clean.",
+        "imageUrl": null,
+        "lunexPrice": 54000,
+        "marketPrice": 88000,
+        "stockQuantity": 3,
+        "isAvailable": true
+      },
+      {
+        "id": 80,
+        "productId": 31,
+        "storage": "1TB",
+        "color": "White Titanium",
+        "deviceType": null,
+        "conditionScore": 8,
+        "batteryHealth": 88,
+        "cosmeticCondition": "Minor wear on the back panel. Screen has no scratches.",
+        "imageUrl": null,
+        "lunexPrice": 61000,
+        "marketPrice": 102000,
+        "stockQuantity": 1,
+        "isAvailable": true
+      }
+    ],
+    "specs": [
+      {
+        "id": 296,
+        "productId": 31,
+        "variantId": null,
+        "specKey": "Display",
+        "specValue": "6.7-inch Super Retina XDR OLED, ProMotion 120Hz, Always-On, 2796x1290px, 460 ppi",
+        "sortOrder": 0
+      },
+      {
+        "id": 297,
+        "productId": 31,
+        "variantId": null,
+        "specKey": "Chip",
+        "specValue": "Apple A17 Pro, 6-core CPU, 6-core GPU, 3nm",
+        "sortOrder": 1
+      },
+      {
+        "id": 298,
+        "productId": 31,
+        "variantId": null,
+        "specKey": "Ram",
+        "specValue": "8GB",
+        "sortOrder": 2
+      },
+      {
+        "id": 299,
+        "productId": 31,
+        "variantId": null,
+        "specKey": "Rear Camera",
+        "specValue": "48MP main f/1.78 + 12MP ultrawide + 12MP 5x periscope telephoto",
+        "sortOrder": 3
+      },
+      {
+        "id": 300,
+        "productId": 31,
+        "variantId": null,
+        "specKey": "Front Camera",
+        "specValue": "12MP TrueDepth, Face ID",
+        "sortOrder": 4
+      },
+      {
+        "id": 301,
+        "productId": 31,
+        "variantId": null,
+        "specKey": "Video",
+        "specValue": "4K 60fps ProRes, Cinematic Mode 4K 30fps",
+        "sortOrder": 5
+      },
+      {
+        "id": 302,
+        "productId": 31,
+        "variantId": null,
+        "specKey": "Battery",
+        "specValue": "4422 mAh, MagSafe, USB-C",
+        "sortOrder": 6
+      },
+      {
+        "id": 303,
+        "productId": 31,
+        "variantId": null,
+        "specKey": "Battery Video Playback",
+        "specValue": "29 hours",
+        "sortOrder": 7
+      },
+      {
+        "id": 304,
+        "productId": 31,
+        "variantId": null,
+        "specKey": "Operating System",
+        "specValue": "iOS 17",
+        "sortOrder": 8
+      },
+      {
+        "id": 305,
+        "productId": 31,
+        "variantId": null,
+        "specKey": "Weight",
+        "specValue": "221g",
+        "sortOrder": 9
+      },
+      {
+        "id": 306,
+        "productId": 31,
+        "variantId": null,
+        "specKey": "Dimensions",
+        "specValue": "159.9 x 76.7 x 8.25 mm",
+        "sortOrder": 10
+      },
+      {
+        "id": 307,
+        "productId": 31,
+        "variantId": null,
+        "specKey": "Connectivity",
+        "specValue": "5G, Wi-Fi 6E, Bluetooth 5.3, NFC, USB-C 3.0",
+        "sortOrder": 11
+      },
+      {
+        "id": 308,
+        "productId": 31,
+        "variantId": null,
+        "specKey": "Water Resistance",
+        "specValue": "IP68 — 6m for 30 minutes",
+        "sortOrder": 12
+      },
+      {
+        "id": 309,
+        "productId": 31,
+        "variantId": null,
+        "specKey": "Frame",
+        "specValue": "Grade 5 Titanium",
+        "sortOrder": 13
+      }
+    ]
+  }
+]

@@ -5,6 +5,7 @@ import { useAuth } from "@/hooks/use-auth";
 import { useWishlist } from "@/hooks/use-wishlist";
 import { useWishlistDrawer } from "@/store/use-wishlist-drawer";
 import { cn } from "@/lib/utils";
+import { getProductImages } from "@/lib/images";
 
 // Using Omit and intersection to handle the serialized Date and decimals from the API
 import type { ProductVariant } from "@shared/schema";
@@ -65,10 +66,9 @@ export function ProductCard({ product }: ProductCardProps) {
       return;
     }
     if (isSaved) {
-      const id = getWishlistItemId(displayVariant.id);
-      if (id) removeFromWishlist.mutate(id);
+      removeFromWishlist.mutate(Number(displayVariant.id));
     } else {
-      addToWishlist.mutate(displayVariant.id);
+      addToWishlist.mutate(Number(displayVariant.id));
     }
   };
 
@@ -102,7 +102,6 @@ export function ProductCard({ product }: ProductCardProps) {
           {/* Always show heart button — for logged-out users it opens the login prompt drawer */}
           <button 
             onClick={handleWishlistToggle}
-            disabled={addToWishlist.isPending || removeFromWishlist.isPending}
             className={cn(
               "p-2.5 rounded-full bg-background/80 backdrop-blur border border-border/50 hover:bg-background transition-colors text-muted-foreground hover:text-red-500",
               isSaved && "text-red-500"
@@ -113,9 +112,9 @@ export function ProductCard({ product }: ProductCardProps) {
         </div>
 
         {/* Image */}
-        <div className="aspect-square flex items-center justify-center mb-8 mt-12 bg-surface rounded-2xl p-6 group-hover:bg-secondary/80 transition-colors">
+        <div className="aspect-square flex items-center justify-center mb-8 mt-12 bg-surface rounded-2xl p-6 group-hover:bg-secondary/40 transition-colors">
           <img 
-            src={product.imageUrl} 
+            src={(displayVariant as any).imageUrl || getProductImages(product.slug, displayVariant.color, product.imageUrl)[0]} 
             alt={product.name} 
             className="w-full h-full object-contain mix-blend-multiply drop-shadow-md group-hover:scale-105 transition-transform duration-500" 
           />

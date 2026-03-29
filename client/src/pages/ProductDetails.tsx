@@ -2,68 +2,89 @@ import { useState, useMemo } from "react";
 import { useRoute } from "wouter";
 import { useProduct } from "@/hooks/use-products";
 import { useCart } from "@/store/use-cart";
-import { Check, ShieldCheck, Battery, Truck, ChevronRight, Star, ImageIcon } from "lucide-react";
+import { useAuth } from "@/hooks/use-auth";
+import { useToast } from "@/hooks/use-toast";
+import { Check, ShieldCheck, Battery, Truck, ChevronRight, Star, ImageIcon, Heart, Plus, Minus, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { useQuery } from "@tanstack/react-query";
+import { useQuery, useMutation } from "@tanstack/react-query";
 import { useTranslation } from "react-i18next";
 import { getDeviceTypeBadge } from "@/components/ProductCard";
 import { cn } from "@/lib/utils";
+import { getProductImages } from "@/lib/images";
 
-// ── Real Photos gallery data per category ─────────────────────────────────────
-const REAL_PHOTOS: Record<string, string[]> = {
-  iphone: [
-    "https://images.unsplash.com/photo-1632661674596-df8be070a5c5?w=600&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1605236453806-6ff36851218e?w=600&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1574755393849-623942496936?w=600&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1484788984921-03950022c9ef?w=600&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1604671801908-6f0c6a092c05?w=600&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&auto=format&fit=crop",
-  ],
-  mac: [
-    "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=600&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=600&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=600&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1580894742597-87bc8789db3d?w=600&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=600&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?w=600&auto=format&fit=crop",
-  ],
-  ipad: [
-    "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=600&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1561154464-82e9adf32764?w=600&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1589739900266-43073e7bc3b0?w=600&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1587033411391-5d9e51cce126?w=600&auto=format&fit=crop",
-  ],
-  watch: [
-    "https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?w=600&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1590736969955-71cc94d9dbe1?w=600&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=600&auto=format&fit=crop",
-  ],
-  airpods: [
-    "https://images.unsplash.com/photo-1583394838336-acd977736f90?w=600&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1600294037681-c80b4cb5b434?w=600&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1629367494173-c78a56567877?w=600&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1610438235354-a6ae5528385c?w=600&auto=format&fit=crop",
-  ],
+// Fetch reviews function
+// Fetch reviews function
+const fetchReviews = async (productId: number) => {
+  const res = await fetch(`/api/products/${productId}/reviews`);
+  if (!res.ok) throw new Error("Failed to fetch reviews");
+  return res.json();
 };
 
-function RealPhotosSection({ product }: { product: any }) {
-  const photos = REAL_PHOTOS[product.category] ?? REAL_PHOTOS["iphone"];
+// Condition label helper
+function getConditionLabel(score: number, t: any) {
+  if (score >= 10) return { label: t('product.conditionPristine'), color: "text-emerald-500" };
+  if (score >= 9)  return { label: t('product.conditionExcellent'), color: "text-emerald-400" };
+  if (score >= 8)  return { label: t('product.conditionVeryGood'), color: "text-sky-400" };
+  if (score >= 7)  return { label: t('product.conditionGood'), color: "text-amber-400" };
+  return { label: t('product.conditionFair'), color: "text-zinc-400" };
+}
+
+// ── ProductGallery: per-product, per-color image switcher ──────────────────────
+function ProductGallery({ images, fallback, name, color }: { images: string[]; fallback: string; name: string; color: string | null }) {
+  const [activeIdx, setActiveIdx] = useState(0);
+  // Reset to 0 when color changes
+  useMemo(() => { setActiveIdx(0); }, [color]);
+  const mainImg = images[activeIdx] ?? fallback;
+
+  return (
+    <>
+      <div className="bg-surface rounded-[2rem] p-10 aspect-square flex items-center justify-center border border-border/50 mb-4 overflow-hidden">
+        <motion.img
+          key={`${color}-${activeIdx}`}
+          initial={{ opacity: 0, scale: 0.93 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.35 }}
+          src={mainImg}
+          alt={`${name} — ${color ?? ""}`}
+          className="w-full h-full object-contain mix-blend-multiply drop-shadow-xl select-none"
+        />
+      </div>
+      {/* Thumbnail strip */}
+      <div className="flex gap-3 overflow-x-auto pb-2">
+        {images.map((url, i) => (
+          <button
+            key={i}
+            onClick={() => setActiveIdx(i)}
+            className={`w-20 h-20 rounded-xl border-2 p-1.5 flex-shrink-0 transition-all ${
+              i === activeIdx ? "border-primary shadow-sm" : "border-border/40 hover:border-border"
+            }`}
+          >
+            <img src={url} className="w-full h-full object-contain mix-blend-multiply select-none" />
+          </button>
+        ))}
+      </div>
+    </>
+  );
+}
+
+// ── RealPhotosSection: grid of representative photos ──────────────────────────
+function RealPhotosSection({ product, variantImage }: { product: any, variantImage: string }) {
+  // Use unique images from this product/variant combo
+  const images = Array.from(new Set([variantImage, product.imageUrl].filter(Boolean)));
   const [selected, setSelected] = useState<number | null>(null);
+  const { t } = useTranslation();
 
   return (
     <div className="border-t border-border pt-16 mb-20">
       <div className="flex items-center gap-3 mb-8">
         <ImageIcon className="w-6 h-6 text-muted-foreground" />
-        <h2 className="text-2xl font-bold">Real Device Photos</h2>
+        <h2 className="text-2xl font-bold">{t('product.devicePhotos')}</h2>
         <span className="text-xs text-muted-foreground bg-surface border border-border rounded-full px-3 py-1">
-          Representative samples
+          {t('product.representativeSamples')}
         </span>
       </div>
-
-      {/* Gallery grid */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-4">
-        {photos.map((url, i) => (
+      <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+        {images.map((url, i) => (
           <motion.button
             key={i}
             onClick={() => setSelected(selected === i ? null : i)}
@@ -90,8 +111,6 @@ function RealPhotosSection({ product }: { product: any }) {
           </motion.button>
         ))}
       </div>
-
-      {/* Lightbox expanded view */}
       <AnimatePresence>
         {selected !== null && (
           <motion.div
@@ -100,41 +119,13 @@ function RealPhotosSection({ product }: { product: any }) {
             exit={{ opacity: 0, y: 12 }}
             className="mt-4 rounded-3xl overflow-hidden border border-primary/20 bg-surface"
           >
-            <img
-              src={photos[selected]}
-              alt={`${product.name} photo expanded`}
-              className="w-full max-h-[480px] object-cover"
-            />
-            <p className="text-xs text-muted-foreground text-center py-3">
-              Photo {selected + 1} of {photos.length} — Photos are representative of device condition and category.
-            </p>
+            <img src={images[selected]} alt={`${product.name} expanded`} className="w-full max-h-[480px] object-cover" />
+            <p className="text-xs text-muted-foreground text-center py-3">Photo {selected + 1} of {images.length}</p>
           </motion.div>
         )}
       </AnimatePresence>
-
-      <p className="mt-6 text-xs text-muted-foreground/70 leading-relaxed bg-surface/60 border border-border/40 rounded-2xl px-5 py-3">
-        📸 <strong>Note:</strong> These photos are representative samples from our actual inventory of {product.category.charAt(0).toUpperCase() + product.category.slice(1)} devices.
-        Each device is individually inspected and photographed before shipping. Actual device photos will be provided upon request.
-      </p>
     </div>
   );
-}
-
-
-// Fetch reviews function
-const fetchReviews = async (productId: number) => {
-  const res = await fetch(`/api/products/${productId}/reviews`);
-  if (!res.ok) throw new Error("Failed to fetch reviews");
-  return res.json();
-};
-
-// Condition label helper
-function getConditionLabel(score: number) {
-  if (score >= 10) return { label: "Pristine / Like New", color: "text-emerald-500" };
-  if (score >= 9)  return { label: "Excellent", color: "text-emerald-400" };
-  if (score >= 8)  return { label: "Very Good", color: "text-sky-400" };
-  if (score >= 7)  return { label: "Good", color: "text-amber-400" };
-  return { label: "Fair", color: "text-zinc-400" };
 }
 
 export default function ProductDetails() {
@@ -144,6 +135,8 @@ export default function ProductDetails() {
   
   const { data: product, isLoading: productLoading } = useProduct(slug);
   const { addItem } = useCart();
+  const { user } = useAuth();
+  const { toast } = useToast();
 
   // Fetch reviews when product is available
   const { data: reviews = [] } = useQuery({
@@ -154,6 +147,10 @@ export default function ProductDetails() {
 
   const [selectedStorage, setSelectedStorage] = useState<string | null>(null);
   const [selectedColor, setSelectedColor] = useState<string | null>(null);
+  const [selectedCondition, setSelectedCondition] = useState<string | null>(null);
+  const [quantity, setQuantity] = useState(1);
+  const [inWishlist, setInWishlist] = useState(false);
+  const [conditionOpen, setConditionOpen] = useState(false);
 
   // Initialize selections once data loads
   useMemo(() => {
@@ -162,6 +159,36 @@ export default function ProductDetails() {
       setSelectedColor(product.variants[0].color);
     }
   }, [product]);
+
+  // Open condition dropdown when storage+color are both set
+  useMemo(() => {
+    if (selectedStorage && selectedColor) {
+      setConditionOpen(true);
+      setSelectedCondition(null); // reset condition on new storage/color combo
+      setQuantity(1);
+    }
+  }, [selectedStorage, selectedColor]);
+
+  const wishlistMutation = useMutation({
+    mutationFn: async (variantId: number) => {
+      const userId = (user as any)?.id;
+      if (!userId) throw new Error("Login required");
+      const res = await fetch("/api/wishlist", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "x-user-id": String(userId) },
+        body: JSON.stringify({ productVariantId: variantId }),
+      });
+      if (!res.ok) throw new Error("Failed");
+    },
+    onSuccess: () => {
+      setInWishlist(true);
+      toast({ title: "Added to Wishlist!" });
+    },
+    onError: () => {
+      toast({ title: "Login to save items", variant: "destructive" });
+    }
+  });
+
 
   if (productLoading) {
     return <div className="min-h-screen flex items-center justify-center"><div className="w-12 h-12 border-4 border-primary border-t-transparent rounded-full animate-spin"></div></div>;
@@ -177,8 +204,15 @@ export default function ProductDetails() {
   const storageOptions = Array.from(new Set(product.variants.map(v => v.storage).filter(Boolean))) as string[];
   const colorOptions = Array.from(new Set(product.variants.map(v => v.color).filter(Boolean))) as string[];
 
+  // Available conditions for the selected color+storage combo (with stock)
+  const availableConditionVariants = product.variants.filter(
+    v => v.color === selectedColor && v.storage === selectedStorage && v.stockQuantity > 0
+  );
+
   // Find the exact variant based on selections
   const currentVariant = product.variants.find(
+    v => v.storage === selectedStorage && v.color === selectedColor && v.deviceType === selectedCondition
+  ) || product.variants.find(
     v => v.storage === selectedStorage && v.color === selectedColor
   ) || product.variants[0];
 
@@ -187,7 +221,12 @@ export default function ProductDetails() {
   const discountPercent = Math.round(((marketPrice - lunexPrice) / marketPrice) * 100);
 
   const { label: typeLabel, className: typeClass } = getDeviceTypeBadge(product.deviceType);
-  const conditionInfo = getConditionLabel(currentVariant.conditionScore);
+  const conditionInfo = getConditionLabel(currentVariant.conditionScore, t);
+
+  // Get variant-specific images
+  const galleryImages = getProductImages(product.slug, selectedColor, product.imageUrl);
+
+  const maxQty = currentVariant.stockQuantity || 1;
 
   const handleAddToCart = () => {
     addItem({
@@ -196,15 +235,21 @@ export default function ProductDetails() {
       variantId: currentVariant.id,
       name: product.name,
       slug: product.slug,
-      imageUrl: product.imageUrl,
+      imageUrl: galleryImages[0] || product.imageUrl,
       price: lunexPrice,
-      quantity: 1,
+      quantity,
       storage: currentVariant.storage,
       color: currentVariant.color,
       conditionScore: currentVariant.conditionScore,
       batteryHealth: currentVariant.batteryHealth,
     });
+    toast({ title: "Added to Cart!", description: `${product.name} × ${quantity}` });
   };
+
+  const handleWishlist = () => {
+    wishlistMutation.mutate(currentVariant.id);
+  };
+
 
   // Combine shared specs (variantId = null) and variant-specific specs (variantId = currentVariant.id)
   const allSpecs = (product as any).specs ?? [];
@@ -239,23 +284,12 @@ export default function ProductDetails() {
           
           {/* Left Column: Image Gallery */}
           <div className="sticky top-24 self-start">
-            <div className="bg-surface rounded-[2rem] p-12 aspect-square flex items-center justify-center border border-border/50 mb-4 cursor-default">
-              <motion.img 
-                key={selectedColor}
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.4 }}
-                src={product.imageUrl} 
-                alt={product.name}
-                className="w-full h-full object-contain mix-blend-multiply drop-shadow-xl select-none"
-              />
-            </div>
-            {/* Thumbnails placeholder */}
-            <div className="flex gap-4 overflow-x-auto pb-4">
-              <div className="w-20 h-20 rounded-xl bg-surface border-2 border-primary p-2 flex-shrink-0 cursor-pointer">
-                <img src={product.imageUrl} className="w-full h-full object-contain mix-blend-multiply select-none" />
-              </div>
-            </div>
+            <ProductGallery
+              images={galleryImages}
+              color={selectedColor}
+              fallback={product.imageUrl}
+              name={product.name}
+            />
           </div>
 
           {/* Right Column: Configurator */}
@@ -353,6 +387,50 @@ export default function ProductDetails() {
               </div>
             )}
 
+            {/* Condition Dropdown — slides in after storage+color selected */}
+            <AnimatePresence>
+              {conditionOpen && availableConditionVariants.length > 0 && (
+                <motion.div
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: 'auto', opacity: 1 }}
+                  exit={{ height: 0, opacity: 0 }}
+                  transition={{ duration: 0.2 }}
+                  className="overflow-hidden mb-8"
+                >
+                  <div className="border border-border rounded-2xl overflow-hidden">
+                    <div className="flex items-center gap-2 px-4 py-3 bg-surface border-b border-border">
+                      <ChevronDown className="w-4 h-4 text-primary" />
+                      <p className="text-sm font-semibold">Available Conditions</p>
+                      <span className="ml-auto text-xs text-muted-foreground">{availableConditionVariants.length} options</span>
+                    </div>
+                    {availableConditionVariants.map((v) => {
+                      const isSelected = selectedCondition === v.deviceType;
+                      return (
+                        <button
+                          key={v.id}
+                          onClick={() => setSelectedCondition(v.deviceType)}
+                          className={cn(
+                            "w-full flex items-center justify-between px-4 py-3 text-sm border-b border-border/50 last:border-b-0 transition-colors",
+                            isSelected ? "bg-primary/5 text-foreground" : "hover:bg-surface/80 text-muted-foreground"
+                          )}
+                        >
+                          <div className="flex items-center gap-3">
+                            {isSelected && <Check className="w-4 h-4 text-primary" />}
+                            {!isSelected && <div className="w-4 h-4 rounded-full border-2 border-border" />}
+                            <span className="font-semibold capitalize">{v.deviceType || 'Standard'}</span>
+                            <span className="text-xs bg-surface border border-border px-2 py-0.5 rounded-full">
+                              {v.stockQuantity} in stock
+                            </span>
+                          </div>
+                          <span className="font-bold text-foreground">EGP {Number(v.lunexPrice).toLocaleString()}</span>
+                        </button>
+                      );
+                    })}
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+
             {/* Condition & Battery Status */}
             <div className="grid grid-cols-2 gap-4 mb-6 cursor-default">
               <div className="bg-surface p-4 rounded-2xl flex items-start gap-4 border border-border/50">
@@ -362,7 +440,9 @@ export default function ProductDetails() {
                 <div>
                   <div className="text-sm text-muted-foreground mb-1">{t('product.condition', 'Condition Score')}</div>
                   <div className="font-bold text-xl">{currentVariant.conditionScore}<span className="text-sm font-normal text-muted-foreground">/10</span></div>
-                  <div className={cn("text-xs font-medium mt-1 cursor-text", conditionInfo.color)}>{conditionInfo.label}</div>
+                  <div className={cn("text-xs font-medium mt-1 cursor-text", getConditionLabel(currentVariant.conditionScore, t).color)}>
+                    {getConditionLabel(currentVariant.conditionScore, t).label}
+                  </div>
                 </div>
               </div>
               <div className="bg-surface p-4 rounded-2xl flex items-start gap-4 border border-border/50">
@@ -376,8 +456,8 @@ export default function ProductDetails() {
                     currentVariant.batteryHealth >= 90 ? "text-emerald-500" : 
                     currentVariant.batteryHealth >= 80 ? "text-amber-400" : "text-zinc-400"
                   )}>
-                    {currentVariant.batteryHealth >= 90 ? "Original Superior Battery" : 
-                     currentVariant.batteryHealth >= 80 ? "Good Battery Life" : "Acceptable"}
+                    {currentVariant.batteryHealth >= 90 ? t('product.originalBattery') : 
+                     currentVariant.batteryHealth >= 80 ? t('product.goodBattery') : t('product.acceptableBattery')}
                   </div>
                 </div>
               </div>
@@ -386,26 +466,67 @@ export default function ProductDetails() {
             {/* Cosmetic Condition */}
             {(currentVariant as any).cosmeticCondition && (
               <div className="mb-6 bg-surface/60 border border-border/50 rounded-2xl p-4 text-sm text-muted-foreground cursor-text">
-                <span className="font-semibold text-foreground mr-2">Cosmetic:</span>
+                <span className="font-semibold text-foreground mr-2">{t('product.cosmetic')}</span>
                 {(currentVariant as any).cosmeticCondition}
               </div>
             )}
 
             {/* Add to Cart CTA */}
-            <div className="pt-8 border-t border-border mt-auto cursor-default">
-              <button 
-                onClick={handleAddToCart}
-                disabled={!currentVariant.isAvailable}
-                className={`w-full py-5 rounded-full text-xl font-bold shadow-xl transition-all duration-300 flex items-center justify-center ${
-                  currentVariant.isAvailable 
-                    ? 'bg-primary text-primary-foreground shadow-primary/25 hover:shadow-primary/40 hover:-translate-y-1' 
-                    : 'bg-muted text-muted-foreground cursor-not-allowed'
-                }`}
-              >
-                {currentVariant.isAvailable ? t('product.addToCart', 'Add to Cart') : t('product.outOfStock', 'Out of Stock')}
-              </button>
-              
-              <div className="mt-6 flex flex-col gap-3 text-sm text-muted-foreground cursor-text">
+            <div className="pt-8 border-t border-border mt-auto cursor-default space-y-4">
+              {/* Quantity Selector */}
+              <div>
+                <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2">Quantity</p>
+                <div className="flex items-center gap-4">
+                  <div className="flex items-center border border-border rounded-xl overflow-hidden">
+                    <button
+                      onClick={() => setQuantity(q => Math.max(1, q - 1))}
+                      className="px-4 py-2.5 hover:bg-surface transition-colors text-lg font-bold"
+                    >
+                      <Minus className="w-4 h-4" />
+                    </button>
+                    <span className="px-5 py-2.5 text-sm font-bold min-w-[48px] text-center">{quantity}</span>
+                    <button
+                      onClick={() => setQuantity(q => Math.min(maxQty, q + 1))}
+                      className="px-4 py-2.5 hover:bg-surface transition-colors text-lg font-bold"
+                    >
+                      <Plus className="w-4 h-4" />
+                    </button>
+                  </div>
+                  <span className="text-xs text-muted-foreground">{maxQty} in stock</span>
+                </div>
+              </div>
+
+              {/* Add to Cart + Wishlist */}
+              <div className="flex gap-3">
+                <button 
+                  onClick={handleAddToCart}
+                  disabled={!currentVariant.isAvailable}
+                  className={cn(
+                    'flex-1 py-5 rounded-full text-lg font-bold shadow-xl transition-all duration-300 flex items-center justify-center',
+                    currentVariant.isAvailable 
+                      ? 'bg-primary text-primary-foreground shadow-primary/25 hover:shadow-primary/40 hover:-translate-y-1' 
+                      : 'bg-muted text-muted-foreground cursor-not-allowed'
+                  )}
+                >
+                  {currentVariant.isAvailable ? t('product.addToCart', 'Add to Cart') : t('product.outOfStock', 'Out of Stock')}
+                </button>
+
+                <button
+                  onClick={handleWishlist}
+                  disabled={wishlistMutation.isPending}
+                  title={inWishlist ? 'Already in Wishlist' : 'Save to Wishlist'}
+                  className={cn(
+                    'w-16 h-16 rounded-full border-2 flex items-center justify-center transition-all duration-200 hover:-translate-y-0.5',
+                    inWishlist
+                      ? 'border-rose-500 bg-rose-500/10 text-rose-500'
+                      : 'border-border hover:border-rose-400 text-muted-foreground hover:text-rose-400'
+                  )}
+                >
+                  <Heart className={cn("w-6 h-6", inWishlist && "fill-current")} />
+                </button>
+              </div>
+
+              <div className="flex flex-col gap-3 text-sm text-muted-foreground cursor-text">
                 <div className="flex items-center gap-2">
                   <Truck className="w-4 h-4 text-foreground flex-shrink-0" /> 
                   <span>{t('product.shippingDesc', 'Fast shipping to all governorates within 24-48 hours.')}</span>
@@ -496,7 +617,7 @@ export default function ProductDetails() {
         {/* ======================================================= */}
         {/* Real Device Photos Section                               */}
         {/* ======================================================= */}
-        <RealPhotosSection product={product} />
+        <RealPhotosSection product={product} variantImage={(currentVariant as any).imageUrl || product.imageUrl} />
 
         {/* Reviews Section */}
         <div className="border-t border-border pt-16 cursor-default">

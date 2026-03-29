@@ -18,6 +18,7 @@ const productVariantSchema = z.object({
   productId: z.number(),
   storage: z.string().nullable(),
   color: z.string().nullable(),
+  deviceType: z.string().nullable(),   // per-variant device type (overrides product-level if set)
   conditionScore: z.number(),
   batteryHealth: z.number(),
   cosmeticCondition: z.string().nullable(),
@@ -25,6 +26,7 @@ const productVariantSchema = z.object({
   marketPrice: z.union([z.string(), z.number()]),
   stockQuantity: z.number(),
   isAvailable: z.boolean(),
+  imageUrl: z.string().nullable(),
 });
 
 const productSpecSchema = z.object({

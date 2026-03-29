@@ -1,16 +1,38 @@
 import { AdminLayout } from "./AdminLayout";
 import { useQuery } from "@tanstack/react-query";
 import { type orders } from "@shared/schema";
-import { Loader2, Eye, MoreVertical, Package, Truck, User, CreditCard } from "lucide-react";
+import { Loader2, Eye, MoreVertical, Package, Truck, User, CreditCard, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { useState } from "react";
+import { useQueryClient, useMutation } from "@tanstack/react-query";
+import { useToast } from "@/hooks/use-toast";
+import { Input } from "@/components/ui/input";
+import { apiRequest } from "@/lib/queryClient";
 
 export default function AdminOrders() {
   const [selectedOrder, setSelectedOrder] = useState<any | null>(null);
+  const [paymentHandleInput, setPaymentHandleInput] = useState("");
+  const { toast } = useToast();
+  const queryClient = useQueryClient();
 
   const { data: adminOrders, isLoading } = useQuery<any[]>({
     queryKey: ["/api/admin/orders"],
+  });
+
+  const handleUpdateMutation = useMutation({
+    mutationFn: async ({ id, handle }: { id: number; handle: string }) => {
+      const res = await apiRequest("PATCH", `/api/admin/orders/${id}/payment-handle`, { handle });
+      return res.json();
+    },
+    onSuccess: (data) => {
+      queryClient.invalidateQueries({ queryKey: ["/api/admin/orders"] });
+      setSelectedOrder(data);
+      toast({ title: "Handle Assigned", description: "The payment handle has been updated successfully." });
+    },
+    onError: (error: Error) => {
+      toast({ title: "Failed to update", description: error.message, variant: "destructive" });
+    }
   });
 
   return (
@@ -75,6 +97,7 @@ export default function AdminOrders() {
                         <span className="flex items-center gap-1.5">
                           {order.paymentMethod === 'cod' ? 'Cash on Delivery' : 
                            order.paymentMethod === 'card' ? 'Credit Card' : 
+                           order.paymentMethod === 'instapay' ? 'InstaPay' :
                            order.paymentMethod === 'wallet' ? `${order.paymentWallet || 'Wallet'} Cash` : 
                            order.paymentMethod}
                         </span>
@@ -137,13 +160,76 @@ export default function AdminOrders() {
                                   {/* Payment Info */}
                                   <div className="space-y-3">
                                     <h3 className="font-semibold flex items-center gap-2"><CreditCard className="w-4 h-4" /> Payment Details</h3>
-                                    <div className="bg-surface p-4 rounded-xl text-sm flex justify-between items-center">
-                                       <span className="capitalize font-medium">
-                                          {selectedOrder.paymentMethod === 'cod' ? 'Cash on Delivery' : 
-                                           selectedOrder.paymentMethod === 'card' ? 'Credit Card' : 
-                                           selectedOrder.paymentMethod === 'wallet' ? `${selectedOrder.paymentWallet || 'Wallet'} Cash` : 
-                                           selectedOrder.paymentMethod}
-                                       </span>
+                                    <div className="bg-surface p-4 rounded-xl text-sm flex flex-col gap-2">
+                                       <div className="flex justify-between items-center">
+                                         <span className="capitalize font-medium">
+                                            {selectedOrder.paymentMethod === 'cod' ? 'Cash on Delivery' : 
+                                             selectedOrder.paymentMethod === 'card' ? 'Credit Card' : 
+                                             selectedOrder.paymentMethod === 'instapay' ? 'InstaPay' :
+                                             selectedOrder.paymentMethod === 'wallet' ? `${selectedOrder.paymentWallet || 'Wallet'} Cash` : 
+                                             selectedOrder.paymentMethod}
+                                         </span>
+                                       </div>
+                                       {selectedOrder.paymentMethod === 'instapay' && (
+                                         <div className="mt-4 pt-4 border-t border-border/50 text-muted-foreground">
+                                           {selectedOrder.paymentReceipt && !selectedOrder.transferAmount && (
+                                             <div className="mb-4 border-l-2 pl-3">
+                                               <span className="block text-[10px] font-bold uppercase tracking-wider mb-1">Legacy Receipt Handle</span>
+                                               <span className="font-mono text-foreground font-medium text-sm">{selectedOrder.paymentReceipt}</span>
+                                             </div>
+                                           )}
+                                           {selectedOrder.transferAmount && (
+                                             <div className="mb-4 bg-primary/5 border border-primary/20 p-4 rounded-xl flex flex-col gap-3">
+                                               <div className="flex items-center gap-2">
+                                                  <CheckCircle className="w-4 h-4 text-emerald-500" />
+                                                  <span className="font-semibold text-sm text-foreground">Customer Submitted Evidence</span>
+                                               </div>
+                                               <div className="grid grid-cols-2 gap-3">
+                                                 <div>
+                                                   <span className="block text-[10px] uppercase font-bold text-muted-foreground mb-0.5">Amount Transferred</span>
+                                                   <span className="font-mono text-sm text-foreground font-semibold">EGP {Number(selectedOrder.transferAmount).toLocaleString()}</span>
+                                                 </div>
+                                                 <div>
+                                                   <span className="block text-[10px] uppercase font-bold text-muted-foreground mb-0.5">Customer Handle/Number</span>
+                                                   <span className="font-mono text-sm text-foreground font-semibold">{selectedOrder.transferSender}</span>
+                                                 </div>
+                                               </div>
+                                               {selectedOrder.transferScreenshot && (
+                                                 <div className="border-t border-border/50 pt-3 mt-1">
+                                                  <span className="block text-[10px] uppercase font-bold text-muted-foreground mb-1">Screenshot Reference</span>
+                                                  <span className="font-mono text-xs text-foreground bg-background px-2 py-1 rounded inline-block break-all max-w-full">{selectedOrder.transferScreenshot}</span>
+                                                 </div>
+                                               )}
+                                             </div>
+                                           )}
+                                           <div className="space-y-2">
+                                             <span className="block text-xs uppercase tracking-wider">Merchant Handle to Receive Funds</span>
+                                             {selectedOrder.merchantPaymentHandle ? (
+                                               <div className="flex items-center justify-between">
+                                                 <span className="font-mono text-primary font-medium">{selectedOrder.merchantPaymentHandle}</span>
+                                                 <Button variant="ghost" size="sm" onClick={() => setPaymentHandleInput("")} className="text-xs h-6">Edit</Button>
+                                               </div>
+                                             ) : (
+                                                <div className="flex gap-2">
+                                                  <Input 
+                                                    placeholder="eg. instapay@handle" 
+                                                    value={paymentHandleInput} 
+                                                    onChange={e => setPaymentHandleInput(e.target.value)} 
+                                                    className="h-8 text-sm"
+                                                  />
+                                                  <Button 
+                                                    size="sm" 
+                                                    className="h-8"
+                                                    disabled={!paymentHandleInput || handleUpdateMutation.isPending}
+                                                    onClick={() => handleUpdateMutation.mutate({ id: selectedOrder.id, handle: paymentHandleInput })}
+                                                  >
+                                                    Assign
+                                                  </Button>
+                                                </div>
+                                             )}
+                                           </div>
+                                         </div>
+                                       )}
                                     </div>
                                   </div>
 

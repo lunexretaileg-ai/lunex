@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { useCart } from "@/store/use-cart";
+import { useAuth } from "@/hooks/use-auth";
 import { Link, useLocation } from "wouter";
 import Cards from "react-credit-cards-2";
 import "react-credit-cards-2/dist/es/styles-compiled.css";
@@ -104,12 +105,13 @@ function FormInput({
 // ── Main Checkout Page ─────────────────────────────────────────────────────────
 export default function CheckoutPage() {
   const { items, clearCart } = useCart();
+  const { user } = useAuth();
   const [, setLocation] = useLocation();
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [orderComplete, setOrderComplete] = useState(false);
   const [orderNumber, setOrderNumber] = useState<number | null>(null);
-  const [paymentMethod, setPaymentMethod] = useState<"card" | "wallet">("card");
+  const [paymentMethod, setPaymentMethod] = useState<"card" | "wallet" | "instapay">("card");
   const [selectedWallet, setSelectedWallet] = useState<"Vodafone" | "Orange" | "Etisalat" | "WE">("Vodafone");
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [mapLoaded, setMapLoaded] = useState(false);
@@ -123,6 +125,7 @@ export default function CheckoutPage() {
     city: "",
     address: "",
     notes: "",
+    paymentReceipt: "",
   });
 
   const [cardData, setCardData] = useState({
@@ -154,6 +157,9 @@ export default function CheckoutPage() {
         newErrors.cardExpiry = "Format: MM/YY";
       if (!cardData.cvc.match(/^\d{3,4}$/))
         newErrors.cardCvc = "Enter 3 or 4 digit CVC";
+    } else if (paymentMethod === "instapay") {
+      // paymentReceipt is no longer required at checkout for instapay
+      // the user will request the handle first
     }
 
     setErrors(newErrors);
@@ -201,13 +207,15 @@ export default function CheckoutPage() {
           discount: wholesaleDiscount, totalAmount: total,
           paymentMethod,
           paymentWallet: paymentMethod === "wallet" ? selectedWallet : null,
+          paymentReceipt: paymentMethod === "instapay" ? formData.paymentReceipt : null,
           cardLastFour: paymentMethod === "card" ? cardData.number.replace(/\s/g, "").slice(-4) : null,
           items: items.map(item => ({
             productVariantId: item.variantId,
             quantity: item.quantity,
             unitPrice: item.price,
             subtotal: item.price * item.quantity,
-          }))
+          })),
+          userId: (user as any)?.id || null,
         })
       });
       if (!res.ok) throw new Error("Failed to place order");
@@ -383,20 +391,27 @@ export default function CheckoutPage() {
                   <h2 className="font-semibold text-base">Payment Method</h2>
                 </div>
 
-                <div className="grid grid-cols-2 gap-3">
+                <div className="grid grid-cols-3 gap-3">
                   <button type="button" onClick={() => setPaymentMethod("card")}
-                    className={cn("p-4 rounded-2xl border flex flex-col items-center gap-2 transition-all text-sm font-semibold",
+                    className={cn("p-4 rounded-2xl border flex flex-col items-center justify-center gap-2 transition-all text-sm font-semibold text-center",
                       paymentMethod === "card" ? "border-primary bg-primary/5 text-primary" : "border-border text-muted-foreground hover:bg-muted/30"
                     )}>
                     <CreditCard className="w-5 h-5" />
-                    Credit / Debit Card
+                    Credit Card
                   </button>
                   <button type="button" onClick={() => setPaymentMethod("wallet")}
-                    className={cn("p-4 rounded-2xl border flex flex-col items-center gap-2 transition-all text-sm font-semibold",
+                    className={cn("p-4 rounded-2xl border flex flex-col items-center justify-center gap-2 transition-all text-sm font-semibold text-center",
                       paymentMethod === "wallet" ? "border-primary bg-primary/5 text-primary" : "border-border text-muted-foreground hover:bg-muted/30"
                     )}>
                     <Smartphone className="w-5 h-5" />
                     Mobile Wallet
+                  </button>
+                  <button type="button" onClick={() => setPaymentMethod("instapay")}
+                    className={cn("p-4 rounded-2xl border flex flex-col items-center justify-center gap-2 transition-all text-sm font-semibold text-center",
+                      paymentMethod === "instapay" ? "border-primary bg-primary/5 text-primary" : "border-border text-muted-foreground hover:bg-muted/30"
+                    )}>
+                    <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8zm2.293-11.293-4 4-2.293-2.293-1.414 1.414 3.707 3.707 5.414-5.414-1.414-1.414z"/></svg>
+                    InstaPay
                   </button>
                 </div>
 
@@ -478,6 +493,23 @@ export default function CheckoutPage() {
                       </div>
                     </motion.div>
                   )}
+
+                  {paymentMethod === "instapay" && (
+                    <motion.div key="instapay" initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 8 }} className="space-y-4">
+                      <div className="bg-emerald-500/10 border border-emerald-500/20 rounded-2xl p-5 text-sm text-emerald-900 dark:text-emerald-100 flex flex-col items-center text-center gap-3">
+                        <div className="w-12 h-12 rounded-full bg-emerald-500/20 flex items-center justify-center">
+                          <svg className="w-6 h-6 text-emerald-600 dark:text-emerald-400 fill-current" viewBox="0 0 24 24"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8zm2.293-11.293-4 4-2.293-2.293-1.414 1.414 3.707 3.707 5.414-5.414-1.414-1.414z"/></svg>
+                        </div>
+                        <p className="font-semibold text-base">Request InstaPay Payment Details</p>
+                        <p className="text-sm opacity-90 max-w-md mx-auto">
+                          Choose this option to request an InstaPay handle. We will reserve your items, and an admin will securely generate a unique InstaPay username for you to transfer exactly <strong className="text-emerald-700 dark:text-emerald-300">EGP {total.toLocaleString()}</strong>.
+                        </p>
+                        <p className="text-xs font-bold opacity-80 mt-1 uppercase tracking-widest bg-emerald-500/10 px-4 py-2 rounded-full">
+                          Click "Request InstaPay" at the bottom to proceed
+                        </p>
+                      </div>
+                    </motion.div>
+                  )}
                 </AnimatePresence>
               </section>
             </div>
@@ -533,7 +565,7 @@ export default function CheckoutPage() {
                 disabled={isSubmitting}
                 className="w-full py-3.5 rounded-full bg-foreground text-background font-bold text-sm hover:opacity-90 hover:scale-[1.01] transition disabled:opacity-60 disabled:pointer-events-none mt-2"
               >
-                {isSubmitting ? "Processing…" : "Confirm Order →"}
+                {isSubmitting ? "Processing…" : paymentMethod === "instapay" ? "Request InstaPay details →" : "Confirm Order →"}
               </button>
               <p className="text-[11px] text-muted-foreground text-center">
                 🔒 Your order and payment are processed securely through Lunex.

@@ -1,6 +1,6 @@
 import { useAuth } from "@/hooks/use-auth";
 import { Link, useLocation } from "wouter";
-import { LayoutDashboard, Package, ShoppingBag, LogOut, Loader2 } from "lucide-react";
+import { LayoutDashboard, Package, ShoppingBag, LogOut, Loader2, Users as UsersIcon, MessageSquare } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export function AdminLayout({ children }: { children: React.ReactNode }) {
@@ -15,11 +15,10 @@ export function AdminLayout({ children }: { children: React.ReactNode }) {
     );
   }
 
-  // Very basic admin check right now (will be securely enforced by backend/supabase)
-  // For standard users, we just check if they have a special metadata flag or an admin email
-  const isAdmin = user?.user_metadata?.is_admin === true || user?.email === "admin@lunex.com";
+  // Check if the user has the 'admin' role or 'isAdmin' flag in our public database
+  const isUserAdmin = (user as any)?.role === "admin" || (user as any)?.isAdmin === true;
 
-  if (!user || !isAdmin) {
+  if (!user || !isUserAdmin) {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center bg-background gap-4">
         <h1 className="text-2xl font-bold">Unauthorized Access</h1>
@@ -35,6 +34,8 @@ export function AdminLayout({ children }: { children: React.ReactNode }) {
     { href: "/admin", label: "Dashboard", icon: LayoutDashboard },
     { href: "/admin/products", label: "Products", icon: Package },
     { href: "/admin/orders", label: "Orders", icon: ShoppingBag },
+    { href: "/admin/users", label: "Users", icon: UsersIcon },
+    { href: "/admin/chat", label: "Live Chat", icon: MessageSquare },
   ];
 
   return (

@@ -24,36 +24,36 @@ const DEVICE_TYPES = [
   {
     id: "new", label: "New",
     icon: Sparkles,
-    color: "text-emerald-400",
-    bg: "bg-emerald-500/10",
+    color: "text-foreground",
+    bg: "bg-surface border border-border",
     desc: "Factory sealed, never used",
   },
   {
     id: "open_box", label: "Open Box",
     icon: PackageOpen,
-    color: "text-sky-400",
-    bg: "bg-sky-500/10",
+    color: "text-foreground",
+    bg: "bg-surface border border-border",
     desc: "Opened but barely used",
   },
   {
     id: "refurbished", label: "Refurbished",
     icon: Wrench,
-    color: "text-amber-400",
-    bg: "bg-amber-500/10",
+    color: "text-foreground",
+    bg: "bg-surface border border-border",
     desc: "Professionally restored",
   },
   {
     id: "assembled", label: "Assembled",
     icon: Cpu,
-    color: "text-violet-400",
-    bg: "bg-violet-500/10",
+    color: "text-foreground",
+    bg: "bg-surface border border-border",
     desc: "Rebuilt with original parts",
   },
   {
     id: "used", label: "Used",
     icon: Clock,
-    color: "text-zinc-400",
-    bg: "bg-zinc-500/10",
+    color: "text-foreground",
+    bg: "bg-surface border border-border",
     desc: "Pre-owned device",
   },
 ];
@@ -264,13 +264,7 @@ export default function Shop() {
                   )}
                 </div>
                 {isActive && (
-                  <span className={cn("w-1.5 h-1.5 rounded-full flex-shrink-0",
-                    type.id === "new" ? "bg-emerald-400" :
-                    type.id === "open_box" ? "bg-sky-400" :
-                    type.id === "refurbished" ? "bg-amber-400" :
-                    type.id === "assembled" ? "bg-violet-400" :
-                    type.id === "used" ? "bg-zinc-400" : "bg-primary"
-                  )} />
+                  <span className={cn("w-1.5 h-1.5 rounded-full flex-shrink-0 bg-foreground")} />
                 )}
               </button>
             );
@@ -346,20 +340,9 @@ export default function Shop() {
             </h1>
             {deviceType && (
               <span className={cn(
-                "mb-1 inline-flex items-center gap-1.5 px-3 py-1 text-xs font-bold rounded-full",
-                deviceType === "new"         && "bg-emerald-500/10 text-emerald-400",
-                deviceType === "open_box"    && "bg-sky-500/10 text-sky-400",
-                deviceType === "refurbished" && "bg-amber-500/10 text-amber-400",
-                deviceType === "assembled"   && "bg-violet-500/10 text-violet-400",
-                deviceType === "used"        && "bg-zinc-500/10 text-zinc-400",
+                "mb-1 inline-flex items-center gap-1.5 px-3 py-1 text-xs font-bold rounded-full border border-border bg-surface text-foreground"
               )}>
-                <span className={cn("w-1.5 h-1.5 rounded-full",
-                  deviceType === "new"         && "bg-emerald-500",
-                  deviceType === "open_box"    && "bg-sky-500",
-                  deviceType === "refurbished" && "bg-amber-500",
-                  deviceType === "assembled"   && "bg-violet-500",
-                  deviceType === "used"        && "bg-zinc-400",
-                )} />
+                <span className={cn("w-1.5 h-1.5 rounded-full bg-foreground")} />
                 {DEVICE_TYPES.find(d => d.id === deviceType)?.label}
               </span>
             )}
@@ -454,7 +437,7 @@ export default function Shop() {
               <div className="flex flex-wrap gap-2 mb-6">
                 {category && (
                   <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-primary/10 text-primary text-xs font-semibold rounded-full">
-                    {CATEGORIES.find(c => c.id === category)?.emoji} {CATEGORIES.find(c => c.id === category)?.name}
+                    {CATEGORIES.find(c => c.id === category)?.name}
                     <button onClick={() => setCategory("")}><X className="w-3 h-3" /></button>
                   </span>
                 )}

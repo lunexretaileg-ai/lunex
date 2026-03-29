@@ -14,7 +14,8 @@
     "compare": "Compare",
     "admin": "Admin",
     "logout": "Logout",
-    "login": "Sign In"
+    "login": "Sign In",
+    "about": "About"
   },
   "cart": {
     "title": "Your Bag",
@@ -24,20 +25,34 @@
   "home": {
     "heroTitle": "Full power.",
     "heroSubtitle": "Refurbished right.",
+    "heroBadge": "Genuine Apple Devices at Lunex Prices",
     "heroDesc": "Premium Apple devices professionally tested, guaranteed, and priced up to 40% less than retail in Egypt.",
     "shopAll": "Shop All Devices",
     "learnMore": "How Lunex Works",
-    "trust1Title": "Professionally Tested",
-    "trust1Desc": "Every device undergoes a strict 40-point inspection before it reaches you.",
-    "trust2Title": "Unbeatable Value",
-    "trust2Desc": "Save up to 40% compared to brand new retail prices in Egypt.",
-    "trust3Title": "Warranty Included",
-    "trust3Desc": "Buy with confidence with our standard 3-6 month hardware warranty.",
-    "featuredTitle": "Pristine Condition.",
-    "featuredDesc": "Our highest graded devices, ready to ship.",
+    "trust1Title": "8-Stage Professional Inspection",
+    "trust1Desc": "Every device passes a strict multi-point check covering hardware, battery, and cameras.",
+    "trust2Title": "Up to 40% Below Retail",
+    "trust2Desc": "Save significantly compared to Egypt's official retail market.",
+    "trust3Title": "3–6 Month Warranty",
+    "trust3Desc": "Buy with confidence — full hardware warranty and a 7-day return window.",
+    "featuredTitle": "Top Rated.",
+    "featuredDesc": "Our highest-graded devices, ready to ship immediately.",
     "viewAll": "View all",
     "shopByCategory": "Shop by Category",
-    "explore": "Explore"
+    "explore": "Explore",
+    "whyTitle": "Why Lunex?",
+    "whyDesc": "The complete Apple experience — total transparency, unbeatable price.",
+    "whyLearnMore": "Learn more about Lunex",
+    "why1Title": "40% Below Market",
+    "why1Desc": "Always cheaper than Egypt's official retail — without compromising quality",
+    "why2Title": "8-Stage Testing",
+    "why2Desc": "Every device passes 8 precise testing stages before it ships",
+    "why3Title": "Battery Health",
+    "why3Desc": "Precisely measured with Apple diagnostics and displayed on every listing",
+    "why4Title": "Warranty & Returns",
+    "why4Desc": "3–6 months hardware warranty plus a full 7-day return window",
+    "why5Title": "Fast Delivery",
+    "why5Desc": "Delivery to all Egyptian governorates within 1–3 business days"
   },
   "shop": {
     "allDevices": "All Devices",
@@ -55,6 +70,25 @@
     "failedLoad": "Failed to load products.",
     "noProducts": "No products found",
     "clearFilters": "Clear Filters"
+  },
+  "about": {
+    "heroBadge": "The Real Difference",
+    "heroTitle": "Why",
+    "heroTitleHighlight": "Lunex?",
+    "heroDesc": "Genuine Apple devices. Professionally inspected. Priced up to 40% below Egypt's retail market.",
+    "priceSectionTitle": "Why are our prices lower?",
+    "marketLabel": "Egypt Retail Market",
+    "lunexLabel": "Lunex",
+    "deviceTypesTitle": "Our Device Types",
+    "deviceTypesDesc": "We are completely transparent — every device is fully documented.",
+    "testTitle": "Inspection & Testing Process",
+    "testDesc": "Every device — regardless of type — passes 8 standardized testing stages.",
+    "conditionTitle": "Condition Rating System",
+    "conditionDesc": "The score reflects cosmetic condition only — performance is never compromised.",
+    "warrantyTitle": "Warranty & Returns",
+    "ctaTitle": "Ready to start?",
+    "ctaDesc": "Browse 30+ Apple devices available now at Lunex prices.",
+    "ctaButton": "Shop Now"
   },
   "product": {
     "notFound": "Product Not Found",
@@ -78,6 +112,16 @@
     "warrantyDesc": "Certified with 30-day free replacement and 6-month warranty.",
     "reviews": "Customer Reviews",
     "verifiedBuyer": "Verified Buyer",
-    "noReviews": "No reviews for this product yet. Be the first to review!"
+    "noReviews": "No reviews for this product yet. Be the first to review!",
+    "devicePhotos": "Device Photos",
+    "representativeSamples": "Representative samples",
+    "goodBattery": "Good Battery Life",
+    "acceptableBattery": "Acceptable",
+    "conditionPristine": "Pristine / Like New",
+    "conditionExcellent": "Excellent",
+    "conditionVeryGood": "Very Good",
+    "conditionGood": "Good",
+    "conditionFair": "Fair",
+    "cosmetic": "Cosmetic:"
   }
 }

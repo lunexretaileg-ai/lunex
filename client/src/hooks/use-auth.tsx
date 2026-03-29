@@ -23,21 +23,41 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const [error, setError] = useState<Error | null>(null);
 
   useEffect(() => {
+    const fetchLocalUser = async (sessionUser: User | null) => {
+      if (!sessionUser?.email) {
+        setUser(null);
+        setIsLoading(false);
+        return;
+      }
+      try {
+        const res = await fetch(`/api/users/me?email=${encodeURIComponent(sessionUser.email)}`);
+        if (res.ok) {
+          const dbUser = await res.json();
+          // Merge standard Supabase user props with our DB's role/fullName logic
+          setUser({ ...sessionUser, ...dbUser });
+        } else {
+          setUser(sessionUser);
+        }
+      } catch (err) {
+        setUser(sessionUser);
+      }
+      setIsLoading(false);
+    };
+
     // Get initial session
     supabase.auth.getSession().then(({ data: { session }, error }) => {
       if (error) {
         console.error("Supabase auth error", error);
         setError(error);
       }
-      setUser(session?.user ?? null);
-      setIsLoading(false);
+      fetchLocalUser(session?.user ?? null);
     });
 
     // Listen to changes
     const { data: { subscription } } = supabase.auth.onAuthStateChange(
       (_event, session) => {
-        setUser(session?.user ?? null);
-        setIsLoading(false);
+        setIsLoading(true);
+        fetchLocalUser(session?.user ?? null);
       }
     );
 

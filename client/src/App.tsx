@@ -8,6 +8,7 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { CartDrawer } from "@/components/cart/CartDrawer";
 import { WishlistDrawer } from "@/components/WishlistDrawer";
+import { FloatingChat } from "@/components/FloatingChat";
 
 import Home from "@/pages/Home";
 import Shop from "@/pages/Shop";
@@ -24,6 +25,9 @@ import WishlistPage from "@/pages/Wishlist";
 import AdminDashboard from "@/pages/admin/Dashboard";
 import AdminProducts from "@/pages/admin/Products";
 import AdminOrders from "@/pages/admin/Orders";
+import AdminUsers from "@/pages/admin/Users";
+import AdminChat from "@/pages/admin/Chat";
+import AboutUs from "@/pages/AboutUs";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -46,10 +50,13 @@ function Router() {
           <Route path="/admin" component={AdminDashboard} />
           <Route path="/admin/products" component={AdminProducts} />
           <Route path="/admin/orders" component={AdminOrders} />
+          <Route path="/admin/users" component={AdminUsers} />
+          <Route path="/admin/chat" component={AdminChat} />
 
           {/* Tools */}
           <Route path="/compare" component={ComparePage} />
           <Route path="/build" component={BuildDevicePage} />
+          <Route path="/about-us" component={AboutUs} />
 
           {/* Category Pages */}
           <Route path="/iphone">
@@ -99,6 +106,7 @@ function Router() {
       <Footer />
       <CartDrawer />
       <WishlistDrawer />
+      <FloatingChat />
     </main>
   );
 }

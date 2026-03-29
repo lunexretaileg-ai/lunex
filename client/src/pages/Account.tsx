@@ -1,14 +1,16 @@
 import { useState } from "react";
 import { useAuth } from "@/hooks/use-auth";
-import { useQuery } from "@tanstack/react-query";
+import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { Link } from "wouter";
 import { cn } from "@/lib/utils";
+import { useToast } from "@/hooks/use-toast";
 import {
   Loader2, User, Mail, Package, ShoppingBag, LogOut,
   CheckCircle2, Clock, Truck, MapPin, ChevronDown, ChevronUp,
-  CircleDot, Circle
+  CircleDot, Circle, Upload, DollarSign, AtSign, Send, CheckCircle
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { getProductImages } from "@/lib/images";
 
 // ── Order Status Timeline ─────────────────────────────────────────────────────
 const ORDER_STEPS = [
@@ -76,6 +78,32 @@ function OrderTrackingTimeline({ status }: { status: string }) {
 
 function OrderCard({ order }: { order: any }) {
   const [expanded, setExpanded] = useState(false);
+  const { toast } = useToast();
+  const queryClient = useQueryClient();
+  const [evidenceData, setEvidenceData] = useState({ amount: "", sender: "", screenshot: "" });
+
+  const submitEvidence = useMutation({
+    mutationFn: async () => {
+      const res = await fetch(`/api/orders/${order.id}/transfer-evidence`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          transferAmount: evidenceData.amount,
+          transferSender: evidenceData.sender,
+          transferScreenshot: evidenceData.screenshot || "Pending Upload",
+        }),
+      });
+      if (!res.ok) throw new Error("Failed to submit evidence");
+    },
+    onSuccess: () => {
+      toast({ title: "Evidence Submitted", description: "We are processing your transfer." });
+      queryClient.invalidateQueries({ queryKey: ["/api/my-orders"] });
+    },
+    onError: () => {
+      toast({ title: "Error", description: "Could not submit evidence.", variant: "destructive" });
+    }
+  });
+
   return (
     <div className="bg-card border border-border/60 rounded-2xl overflow-hidden">
       {/* Header */}
@@ -122,13 +150,36 @@ function OrderCard({ order }: { order: any }) {
               {order.items && order.items.length > 0 && (
                 <div>
                   <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2">Items</p>
-                  <div className="space-y-2">
-                    {order.items.map((item: any, i: number) => (
-                      <div key={i} className="flex justify-between text-sm bg-surface rounded-xl px-4 py-2.5">
-                        <span className="text-foreground/80">Item #{item.productVariantId} × {item.quantity}</span>
-                        <span className="font-medium">EGP {Number(item.subtotal).toLocaleString()}</span>
-                      </div>
-                    ))}
+                  <div className="space-y-3">
+                    {order.items.map((item: any, i: number) => {
+                       const pVariant = item.productVariant;
+                       const product = pVariant?.product;
+                       
+                       // Safely get image 
+                       let displayImg = "";
+                       if (product) {
+                         displayImg = getProductImages(product.slug, pVariant.color, product.imageUrl)[0];
+                       }
+
+                       return (
+                        <div key={i} className="flex items-center gap-4 text-sm bg-surface rounded-xl px-4 py-3">
+                          {displayImg ? (
+                            <img src={displayImg} alt="Product" className="w-12 h-12 rounded object-contain bg-background" />
+                          ) : (
+                            <div className="w-12 h-12 rounded bg-background flex items-center justify-center shrink-0 text-muted-foreground text-xs">No Img</div>
+                          )}
+                          <div className="flex-1">
+                            <p className="font-semibold">{product ? product.name : `Item #${item.productVariantId}`}</p>
+                            {pVariant && (
+                              <p className="text-xs text-muted-foreground mt-0.5">
+                                {pVariant.color} {pVariant.storage ? `· ${pVariant.storage}` : ""} · Qty {item.quantity}
+                              </p>
+                            )}
+                          </div>
+                          <span className="font-medium">EGP {Number(item.subtotal).toLocaleString()}</span>
+                        </div>
+                       );
+                    })}
                   </div>
                 </div>
               )}
@@ -147,6 +198,72 @@ function OrderCard({ order }: { order: any }) {
                   <p className="text-xs text-muted-foreground border-t border-border/40 pt-1 mt-1">📝 {order.notes}</p>
                 )}
               </div>
+              
+              {/* Payment Instructions for InstaPay */}
+              {order.paymentMethod === 'instapay' && order.merchantPaymentHandle && order.status === 'pending' && !order.transferAmount && (
+                <div className="bg-primary/5 border border-primary/30 rounded-xl p-4 mt-4">
+                  <p className="text-sm font-bold text-foreground mb-1">Upload InstaPay Evidence</p>
+                  <p className="text-xs text-muted-foreground mb-4">
+                    Please transfer exactly <strong className="text-foreground">EGP {Number(order.totalAmount).toLocaleString()}</strong> to the handle <strong className="bg-background px-1.5 py-0.5 rounded text-foreground">{order.merchantPaymentHandle}</strong> and submit the details here to clear your order.
+                  </p>
+
+                  <div className="space-y-3">
+                    <div className="flex items-center gap-2 bg-background border border-border/60 rounded-lg px-3 py-2">
+                      <DollarSign className="w-4 h-4 text-muted-foreground" />
+                      <input 
+                        type="text" 
+                        placeholder="Amount Transferred (e.g. 15000)"
+                        value={evidenceData.amount}
+                        onChange={(e) => setEvidenceData({...evidenceData, amount: e.target.value})}
+                        className="bg-transparent border-none outline-none text-sm w-full font-medium" 
+                      />
+                    </div>
+                    
+                    <div className="flex items-center gap-2 bg-background border border-border/60 rounded-lg px-3 py-2">
+                      <AtSign className="w-4 h-4 text-muted-foreground" />
+                      <input 
+                        type="text" 
+                        placeholder="Your InstaPay Handle / Number"
+                        value={evidenceData.sender}
+                        onChange={(e) => setEvidenceData({...evidenceData, sender: e.target.value})}
+                        className="bg-transparent border-none outline-none text-sm w-full font-medium" 
+                      />
+                    </div>
+
+                    {/* Simple text input for screenshot reference or link for now */}
+                    <div className="flex items-center gap-2 bg-background border border-border/60 rounded-lg px-3 py-2">
+                      <Upload className="w-4 h-4 text-muted-foreground" />
+                      <input 
+                        type="text" 
+                        placeholder="Screenshot Reference or Confirmation Number"
+                        value={evidenceData.screenshot}
+                        onChange={(e) => setEvidenceData({...evidenceData, screenshot: e.target.value})}
+                        className="bg-transparent border-none outline-none text-sm w-full font-medium" 
+                      />
+                    </div>
+
+                    <button 
+                      onClick={() => submitEvidence.mutate()}
+                      disabled={submitEvidence.isPending || !evidenceData.amount || !evidenceData.sender}
+                      className="w-full bg-primary text-primary-foreground font-semibold text-sm rounded-lg py-3 flex items-center justify-center gap-2 hover:opacity-90 disabled:opacity-50 transition"
+                    >
+                      {submitEvidence.isPending ? <Loader2 className="w-4 h-4 animate-spin" /> : <Send className="w-4 h-4" />}
+                      Submit Evidence
+                    </button>
+                  </div>
+                </div>
+              )}
+              
+              {/* Evidence Already Submitted UI */}
+              {order.paymentMethod === 'instapay' && order.transferAmount && (
+                <div className="flex items-center gap-3 bg-emerald-500/10 border border-emerald-500/20 rounded-xl px-4 py-3 mt-3">
+                  <CheckCircle className="w-5 h-5 text-emerald-500 shrink-0" />
+                  <div>
+                    <p className="text-sm font-semibold text-emerald-500">Money Transfer Details Submitted</p>
+                    <p className="text-xs text-muted-foreground mt-0.5">We are reviewing the transfer of EGP {Number(order.transferAmount).toLocaleString()} from {order.transferSender}. Processing will begin shortly.</p>
+                  </div>
+                </div>
+              )}
             </div>
           </motion.div>
         )}
@@ -164,12 +281,16 @@ export default function AccountPage() {
   const [fullName, setFullName] = useState("");
 
   const { data: orders = [], isLoading: ordersLoading } = useQuery<any[]>({
-    queryKey: ["/api/my-orders", user?.email],
+    queryKey: ["/api/my-orders", (user as any)?.id ?? (user as any)?.email],
     enabled: !!user,
     queryFn: async () => {
+      const userId = (user as any)?.id;
       const email = (user as any)?.email || "";
-      if (!email) return [];
-      const res = await fetch(`/api/my-orders?email=${encodeURIComponent(email)}`);
+      if (!userId && !email) return [];
+      const url = userId
+        ? `/api/my-orders?userId=${userId}`
+        : `/api/my-orders?email=${encodeURIComponent(email)}`;
+      const res = await fetch(url);
       if (!res.ok) return [];
       return res.json();
     },
